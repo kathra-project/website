@@ -1,4 +1,4 @@
-baseURL = "http://kathra.org/"
+baseURL = "http://www.kathra.org/"
 languageCode = "en-us"
 title = "Kathra"
 theme = "timer-hugo"
