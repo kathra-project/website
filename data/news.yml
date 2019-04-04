@@ -1,0 +1,19 @@
+enable  : true
+title   : WHAT WE DO
+subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis porro recusandae non quibusdam iure adipisci.
+items :
+  - title   : May 29, 2019
+    description: >  
+      KATHRA Build 1.7.0 Beta is available. Supports experimentation environments.
+
+  - title : May 04, 2019
+    description: >  
+      KATHRA 1.4.0 Provides access to build, deployment, and applications logs.
+
+  - title   : April 28, 2019
+    description: >  
+      KATHRA 1.3.1 Mostly bug fixes and stability improvements.
+
+  - title   : April 15, 2019 
+    description: >  
+      KATHRA 1.3.0 Fully automatic build and deployment of the KATHRA stack.

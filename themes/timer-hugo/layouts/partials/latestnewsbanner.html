@@ -1,0 +1,21 @@
+{{ if .Site.Params.latestnewsbanner.enable }}
+{{ "<!-- Latest News Section Start -->" | safeHTML }}
+<section id="latestnewsbanner" style="background-color: rgba(57, 57, 57, 1)">
+    <div class="container">
+        <div class="row">
+            {{ range $index, $element := .Site.Data.news.items }}
+            {{ if (lt $index 4) }}
+            <div class="col-sm-3">
+                {{ $delay := mul (add $index 1) 300 }}
+                <div class="block wow fadeInLeft" data-wow-delay="{{ $delay }}ms" data-wow-duration="500ms">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description | safeHTML }}</p>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ "<!-- Latest News Section End -->" | safeHTML }}
+{{ end }}

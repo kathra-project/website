@@ -1,0 +1,33 @@
+enable  : true
+title   : WHAT WE DO
+subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis porro recusandae non quibusdam iure adipisci.
+serviceItem :
+  - icon  : ion-ios-paper-outline
+    title : SIMULATION
+    description: >
+      Veritatis eligendi, dignissimos. Porta fermentum mus aute pulvinar earum minus platea massa feugiat rutrum urna facilisi ipsameum
+
+  - icon  : ion-ios-pint-outline
+    title : PREDICTION
+    description: >
+      Veritatis eligendi, dignissimos. Porta fermentum mus aute pulvinar earum minus platea massa feugiat rutrum urna facilisi ipsameum
+
+  - icon  : ion-ios-paper-outline
+    title : PLANIFICATION
+    description: >
+      Veritatis eligendi, dignissimos. Porta fermentum mus aute pulvinar earum minus platea massa feugiat rutrum urna facilisi ipsameum
+
+  - icon  : ion-ios-paper-outline
+    title : SUPPORT
+    description: >
+      Veritatis eligendi, dignissimos. Porta fermentum mus aute pulvinar earum minus platea massa feugiat rutrum urna facilisi ipsameum
+  
+  - icon  : ion-ios-paper-outline
+    title : SUPPORT
+    description: >
+      Veritatis eligendi, dignissimos. Porta fermentum mus aute pulvinar earum minus platea massa feugiat rutrum urna facilisi ipsameum
+
+  - icon  : ion-ios-paper-outline
+    title : SUPPORT
+    description: >
+      Veritatis eligendi, dignissimos. Porta fermentum mus aute pulvinar earum minus platea massa feugiat rutrum urna facilisi ipsameum

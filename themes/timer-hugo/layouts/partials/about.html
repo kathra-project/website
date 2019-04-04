@@ -1,0 +1,18 @@
+{{ if .Site.Params.about.enable }}
+{{ "<!-- About Section Start -->" | safeHTML }}
+<section id="about" style="background-color:rgba(159, 188, 187, 0.3)">
+    <div class="container">
+        <div class="wow fadeInLeft" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s" data-wow-duration="500ms">
+            {{ with .Site.Params.about.content }}<p>{{ . | safeHTML }}</p>{{ end }}
+        </div>
+
+        <div>
+            <a class="btn-lines wow fadeInUp btn btn-default" data-wow-delay=".9s" style="font-weight:100; background-color: rgba(159, 188, 187, 1);"
+                                href="{{ .Site.Params.banner.btnURL }}" target="_blank">
+                                <p>{{ .Site.Params.banner.btnText }}</p>
+                            </a>
+        </div>
+    </div>
+</section>
+{{ "<!-- About Section End -->" | safeHTML }}
+{{ end }}
