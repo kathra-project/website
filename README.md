@@ -1,5 +1,7 @@
 # Quick Demo (Development)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9ac0d7b7-8ae9-43b3-bff9-d6b8355e2f16/deploy-status)](https://app.netlify.com/sites/stoic-carson-04c63b/deploys)
+
 ## Hugo
 ### Prerequisites:
 - Hugo
