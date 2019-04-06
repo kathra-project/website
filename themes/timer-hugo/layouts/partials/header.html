@@ -36,8 +36,8 @@
 
 <body>
 
-<section class="top-bar animated-header">
-    <div class="container" style="margin-left:10em;">
+<section class="top-bar">
+    <div class="container">
         <div class="row">
             <div class="col-lg-14">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,9 +51,6 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
-                            <li style="margin-left:10em;" class="nav-item">
-                                <a class="nav-link" href="{{ .Site.BaseURL }}">{{ with .Site.Params.home }}{{ . }}{{ end }}</a>
-                            </li>
                             {{ range .Site.Menus.nav }}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
@@ -64,4 +61,8 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="top-bar-mask">
+
 </section>

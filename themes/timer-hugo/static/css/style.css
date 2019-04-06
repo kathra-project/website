@@ -4,6 +4,8 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  width: 100%;
+  background: #ffffff;
 }
 
 h1,
@@ -24,10 +26,6 @@ p {
   line-height: 22px;
   font-size: 16px;
   font-weight: 300;
-}
-
-body {
-  background: #ffffff;
 }
 
 ul {
@@ -194,17 +192,10 @@ a:hover {
   width: 100%;
   background: #fff;
   color: #fff;
-  transition: all 0.2s ease-out 0s;
   padding: 15px 0;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #dedede;
   z-index: 10;
-}
-
-.top-bar.animated-header {
-  padding: 20px 0;
-  background: #fff;
-  box-shadow: none;
 }
 
 .navbar {
@@ -250,7 +241,7 @@ a:hover {
   transition: visibility 500ms, opacity 500ms, transform 500ms cubic-bezier(0.43, 0.26, 0.11, 0.99);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1230px) {
   .dropdown-menu {
     display: none;
     opacity: unset;

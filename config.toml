@@ -9,28 +9,28 @@ theme = "timer-hugo"
 [menu]
     # Navbar Menus
     [[menu.nav]]
-        name    = "Community"
-        url     = "/service"
+        name    = "News"
+        url     = "/news"
         weight  = 1
     [[menu.nav]]
-        name    = "News"
-        url     = "/gallery"
+        name    = "Get Started"
+        url     = "/get-started"
         weight  = 2
     [[menu.nav]]
         name    = "Demo"
-        url     = "/blog"
+        url     = "/demo"
         weight  = 3
     [[menu.nav]]
-        name    = "Team"
-        url     = "/contact"
+        name    = "Community"
+        url     = "/community"
         weight  = 4
     [[menu.nav]]
-        name    = "Get started"
-        url     = "/contact"
+        name    = "About us"
+        url     = "/aboutus"
         weight  = 5
     [[menu.nav]]
         name    = "git"
-        url     = "/contact"
+        url     = "/git"
         weight  = 6
 
 
