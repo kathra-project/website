@@ -45,12 +45,11 @@
                         <img src="{{ .Site.Params.logo | absURL }}" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        aria-expanded="false" aria-label="Toggle navigation" style="position: fixed;left: 80%;">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
                             {{ range .Site.Menus.nav }}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
