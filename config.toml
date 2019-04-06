@@ -51,10 +51,7 @@ theme = "timer-hugo"
         bgImage = ""
         heading = ""
         description = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
-        btn     = false
-        btnText = "Get Started"
-        btnURL  = "http://localhost:1313"
-
+        
     [params.latestnewsbanner]
         enable  = true
     
@@ -63,7 +60,27 @@ theme = "timer-hugo"
         enable  = true
         title   = ""
         content = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
-        image   = ""
+        image   = "images/molecules.png"
+        btnText = "Get Started"
+        btnURL  = "http://localhost:1313"
+
+    # Homepage features Section
+    [params.features]
+        enable  = true
+
+    # Homepage demo Section
+    [params.demo]
+        enable  = true
+        title   = "Intrigued ? come and see how kathra works"
+        btnText = "try the demo"
+        btnURL  = "http://localhost:1313"
+
+    # Homepage roadmap Section
+    [params.roadmap]
+        enable  = true
+        title   = "the kathra roadmap"
+        btnText = "see the roadmap"
+        btnURL  = "http://localhost:1313"
 
     # Call to Action
     [params.cta]

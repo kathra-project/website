@@ -4,7 +4,7 @@
     <div class="container">
         <div class="wow fadeInLeft" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
-            <img src="images/molecules.png">
+            {{ with .Site.Params.about.image }}<img src="{{ . | absURL }}" alt="about-image">{{ end }}
         </div>
         <div class="wow fadeInLeft" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
@@ -14,8 +14,8 @@
         <div id="gt-button">
             <a class="btn-lines wow fadeInUp btn btn-default" data-wow-delay=".9s"
                 style="font-weight:100; background-color: rgba(159, 188, 187, 1);"
-                href="{{ .Site.Params.banner.btnURL }}" target="_blank">
-                <p>{{ .Site.Params.banner.btnText }}</p>
+                href="{{ .Site.Params.about.btnURL }}" target="_blank">
+                <p>{{ .Site.Params.about.btnText }}</p>
             </a>
         </div>
     </div>
