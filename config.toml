@@ -9,28 +9,28 @@ theme = "timer-hugo"
 [menu]
     # Navbar Menus
     [[menu.nav]]
-        name    = "Community"
-        url     = "/service"
+        name    = "News"
+        url     = "/news"
         weight  = 1
     [[menu.nav]]
-        name    = "News"
-        url     = "/gallery"
+        name    = "Get Started"
+        url     = "/get-started"
         weight  = 2
     [[menu.nav]]
         name    = "Demo"
-        url     = "/blog"
+        url     = "/demo"
         weight  = 3
     [[menu.nav]]
-        name    = "Team"
-        url     = "/contact"
+        name    = "Community"
+        url     = "/community"
         weight  = 4
     [[menu.nav]]
-        name    = "Get started"
-        url     = "/contact"
+        name    = "About us"
+        url     = "/aboutus"
         weight  = 5
     [[menu.nav]]
         name    = "git"
-        url     = "/contact"
+        url     = "/git"
         weight  = 6
 
 
@@ -51,10 +51,7 @@ theme = "timer-hugo"
         bgImage = ""
         heading = ""
         description = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
-        btn     = false
-        btnText = "Get Started"
-        btnURL  = "http://localhost:1313"
-
+        
     [params.latestnewsbanner]
         enable  = true
     
@@ -63,7 +60,27 @@ theme = "timer-hugo"
         enable  = true
         title   = ""
         content = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
-        image   = ""
+        image   = "images/molecules.png"
+        btnText = "Get Started"
+        btnURL  = "http://localhost:1313"
+
+    # Homepage features Section
+    [params.features]
+        enable  = true
+
+    # Homepage demo Section
+    [params.demo]
+        enable  = true
+        title   = "Intrigued ? come and see how kathra works"
+        btnText = "try the demo"
+        btnURL  = "http://localhost:1313"
+
+    # Homepage roadmap Section
+    [params.roadmap]
+        enable  = true
+        title   = "the kathra roadmap"
+        btnText = "see the roadmap"
+        btnURL  = "http://localhost:1313"
 
     # Call to Action
     [params.cta]

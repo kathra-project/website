@@ -1,0 +1,25 @@
+{{ if .Site.Params.demo.enable }}
+{{ "<!-- demo Section Start -->" | safeHTML }}
+<section id="demo" style="background-color:rgba(188, 159, 159, 0.3)">
+    <div class="container">
+        <div class="section-heading">
+            {{ with .Site.Params.demo.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
+        </div>
+
+        <video id="demo-video" width="320" height="240">
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+
+        <div id="gt-button">
+            <a class="btn-lines wow fadeInUp btn btn-default" data-wow-delay=".9s"
+                style="font-weight:100; background-color: rgba(188, 159, 159, 1);"
+                href="{{ .Site.Params.demo.btnURL }}" target="_blank">
+                <p>{{ .Site.Params.demo.btnText }}</p>
+            </a>
+        </div>
+    </div>
+</section>
+{{ "<!-- demo Section End -->" | safeHTML }}
+{{ end }}
