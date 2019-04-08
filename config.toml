@@ -1,4 +1,4 @@
-baseURL = "https://www.kathra.org/"
+baseURL = "https://stoic-carson-04c63b.netlify.com/"
 languageCode = "en-us"
 title = "Kathra"
 theme = "timer-hugo"
