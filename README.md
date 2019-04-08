@@ -12,6 +12,11 @@ Launch command from folder:
 $ hugo server
 ```
 
+For netlify:
+```console
+hugo --baseURL $DEPLOY_URL
+```
+
 ## Docker
 ### Prerequisites:
 - Docker
