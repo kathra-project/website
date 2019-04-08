@@ -1,8 +1,8 @@
-baseURL = "https://kathra.org/"
+#baseURL = "https://www.kathra.org/"
 languageCode = "en-us"
 title = "Kathra"
 theme = "timer-hugo"
-
+relativeurls = true
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
 # Site Menus
