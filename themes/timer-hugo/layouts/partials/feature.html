@@ -1,6 +1,7 @@
 {{ if .Site.Params.features.enable }}
 {{ "<!-- Feature Section Start -->" | safeHTML }}
 <section id="feature" style="background-color:rgba(167, 188, 153, 0.3)">
+    <div id="features-anchor" class="section-anchor"></div>
     <div class="container">
         <div class="section-heading">
             {{ with .Site.Data.feature.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}

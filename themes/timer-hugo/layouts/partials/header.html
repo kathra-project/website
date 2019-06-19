@@ -41,8 +41,16 @@
         <div class="row">
             <div class="col-lg-14" style="width: 100%;">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}">
-                        <img src="{{ .Site.Params.logo | absURL }}" alt="logo">
+                    
+                    <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}" style="margin-top: 40px; padding-left: 80px; ">
+                        <img style="position: fixed;
+                                    top: 20px;
+                                    left: 20px;
+                                    width: 150px;
+                                    min-width: 0px;" 
+                            src="{{ .Site.BaseURL }}/images/molecules.png" />
+                        <p style="text-align:center; font-size: 3.5em; font-weight: bold;">KATHRA</p>
+                        <p style="text-align:center; font-size: 0.8em">GENERATE - BUILD - DEPLOY - RUN</p>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation" style="position: fixed;right:15px;">

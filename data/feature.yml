@@ -2,27 +2,27 @@ enable  : true
 title   : WHAT CAN KATHRA DO FOR ME ?
 subtitle: 
 item    :
-  - icon  : ion-ios-flask-outline
+  - icon  : ion-ios-box
     title : Bootstrap
     description : >
       Bootstrap your next project instantly with automatically generated git repositories - implementation, model, interface, and client - and the associated CI/CD pipelines.
 
-  - icon  : ion-ios-lightbulb-outline
-    title : Build & Deploy
+  - icon  : ion-gear-b
+    title : Run & Deploy
     description : >
       Kathra uses OCI compliant containers to automatically build and deploy your code in the appropriate environment for each branch - Master/Production, Dev/Staging, or Feature Branch/Name.
 
-  - icon  : ion-ios-americanfootball-outline
+  - icon  : ion-social-buffer
     title : Code Generation
     description : >
       Concentrate on the code with automatic OpenAPI compliant code generation of your implementation.
 
-  - icon  : ion-ios-keypad-outline
+  - icon  : ion-lock-combination
     title : Secure By Default
     description : >
       Kathra is built to be secure by out of the box, with deep, granular integration of OpenID Connect based permission and access controls.
 
-  - icon  : ion-ios-barcode-outline
+  - icon  : ion-wrench
     title : Kathra Framework
     description : >
       Exploit Kathra's library of frameworks to automatically implement common functionality. Contribute to the community by creating and sharing your own frameworks.

@@ -1,13 +1,14 @@
 {{ if .Site.Params.roadmap.enable }}
 {{ "<!-- roadmap Section Start -->" | safeHTML }}
 <section id="roadmap" style="background-color:rgba(201, 187, 125, 0.3);">
+    <div id="roadmap-anchor" class="section-anchor"></div>
     <div class="container">
         <div class="section-heading">
             {{ with .Site.Params.roadmap.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
         </div>
 
         <img id="roadmap-video" width="100%" height="auto" src="images/roadmap.png">
-          </img>
+        </img>
 
     </div>
 </section>
