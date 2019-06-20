@@ -34,3 +34,6 @@ other = "Kathra uses OCI compliant containers to automatically build and deploy 
 other = "Kathra is built to be secure by out of the box, with deep, granular integration of OpenID Connect based permission and access controls."
 ["FeatureUI"]
 other = "Kathra is designed for everyone, it's clean, functional UI allows frequent development & integration tasks to be accomplished easily, regardless of the users coding experience."
+
+["DemoTitle"]
+other = "Intrigued ? come and see how kathra works"

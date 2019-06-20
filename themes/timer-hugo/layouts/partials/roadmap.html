@@ -6,10 +6,171 @@
         <div class="section-heading">
             {{ with .Site.Params.roadmap.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
         </div>
-
         <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png">
         </img>
-
+        <style>
+            #roadmap table {
+                border-collapse: none;
+                font-size: 1em;
+            }
+            #roadmap table thead tr td{
+                font-size: 1.2em;
+            }
+            #roadmap table * tr td{
+                width: 250px;
+            }
+            #roadmap table * tr td[data-roadmap=true]{
+                background-color:rgba(167, 167, 167, 0.2);
+            }
+            #roadmap table * tr .release{
+                width: 150px;
+            }
+            #roadmap table * tr .feature{
+                width: 450px;
+            }
+        </style>
+        <!--
+        <svg height="300" width="300">
+            <polygon points="0,0 150,0 200,50 150,100 20,100 20,250 0,250 0,0" style="fill:red;stroke:black;stroke-width:2" />
+            <text x="50" y="50" fill="white">Version 1.x</text>
+        </svg> 
+        -->
+        <table>
+            <thead>
+                <tr>
+                    <td class="release">Release</td>
+                    <td class="feature">Features</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s">Kathra 1.5 or +++</td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s">Yours wishes.. !</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s">Kathra 1.4</td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s">Open API v3</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s">Kathra 1.3</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s">Catalog management</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s">Kathra 1.2</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s">Running environment management</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s">Kathra 1.1</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s">Release Cycle Management</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s">Kathra 1.0</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s">OpenSourcing Smite Project</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay=".9s">Smite 1.2</td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s">Implementation Creation</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s"  data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay=".9s">Smite 1.2</td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s">Component Creation</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" ></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s"  data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay=".3s">Smite 1.1</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s">Software Factory Base</td>
+                    <td class="wow fadeInDown" data-wow-delay=".3s"  data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s"  data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s"  data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" data-roadmap="true"></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" data-roadmap="true"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="wow fadeInDown" data-wow-delay="" >2018</td>
+                    <td class="wow fadeInDown" data-wow-delay=".6s" >2019 - T1</td>
+                    <td class="wow fadeInDown" data-wow-delay=".9s" >2019 - T2</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.2s" >2019 - T3</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" >2019 - T4</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.8s" >2020 - T1</td>
+                    <td class="wow fadeInDown" data-wow-delay="2.1s" >2020 - T2</td>
+                    <td class="wow fadeInDown" data-wow-delay="2.3s" >2020 - T3</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>
 {{ "<!-- roadmap Section End -->" | safeHTML }}

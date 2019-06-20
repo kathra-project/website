@@ -29,8 +29,11 @@ other = "Génère le code source de vos projets OpenAPI, vous n'aurez qu'à vous
 ["FeatureFramework"]
 other = "Fournit un framework vous permettant d'implémenter automatiquement des fonctionnalitées."
 ["FeatureCICD"]
-other = "Construit et déploie vos conteneurs OCI au sein de vos différents environements selon vos branches (Production, développement)."
+other = "Construit et déploie vos conteneurs OCI au sein de vos différents environnements selon vos branches (Production, développement)."
 ["FeatureSecurity"]
 other = "Permet la sécurisation de vos projets en exploitant OpenID Connect."
 ["FeatureUI"]
 other = "Conçu pour tous, Kathra fournit une UI vous permettant de développer et intégrer vos projets facilement indépendament de votre expérience."
+
+["DemoTitle"]
+other = "Curieux ? Venez voir comment Kathra fonctionne"
