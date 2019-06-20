@@ -45,7 +45,7 @@ a:hover {
 
 .section-anchor {
   position: relative;
-  top: -235px;
+  top: -270px;
   display: hidden;
 }
 
@@ -525,7 +525,7 @@ a:hover {
 }
 
 #about {
-  height: 100vh;
+  height: calc(100vh - 200px);
 }
 
 #about p {
@@ -743,7 +743,7 @@ figure figcaption p {
 
 #roadmap {
   padding: 70px 0;
-  height: 100vh;
+  height: calc(100vh - 200px);
 }
 
 #roadmap .container {
@@ -761,7 +761,7 @@ figure figcaption p {
 
 #partners {
   padding: 70px 0;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
 }
 
 #partners .media .media-left {
@@ -790,7 +790,7 @@ figure figcaption p {
 }
 #demo {
   padding: 70px 0;
-  height: 100vh;
+  height: calc(100vh - 200px);
 }
 
 #demo .container {
@@ -823,7 +823,7 @@ figure figcaption p {
 
 #feature {
   padding: 70px 0;
-  height: 100vh;
+  height: calc(100vh - 200px);
 }
 
 #feature .container {
