@@ -528,6 +528,26 @@ a:hover {
   height: calc(100vh - 200px);
 }
 
+#about .btn-get-started {
+  background-color: rgba(159, 188, 187, 1); 
+  margin-right: 5px;
+}
+
+#about .btn-get-started:hover {
+  background-color: rgb(149, 175, 174); 
+}
+
+#about .btn-watch-demo {
+  color: rgb(180, 209, 208); 
+  background-color: white; 
+  border-color: rgb(180, 212, 211); 
+  margin-left: 5px;
+}
+
+#about .btn-watch-demo:hover {
+  background-color: rgb(231, 231, 231); 
+}
+
 #about p {
   line-height: 1.2em;
   font-size: 28px;

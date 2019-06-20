@@ -1,3 +1,5 @@
+["LogoTitle"]
+other = "GENERATE - BUILD - DEPLOY - RUN"
 [home]
 other = "Home"
 [Product]
@@ -12,3 +14,23 @@ other = "Source Code"
 other = "Road Map"
 [Partners]
 other = "Partners"
+
+["Watch The Demo"]
+other = "Watch The Demo"
+["Brief"]
+other = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
+
+["FeatureTitle"]
+other = "WHAT CAN KATHRA DO FOR ME ?"
+["FeatureBootstrap"]
+other = "Bootstrap your next project instantly with automatically generated git repositories - implementation, model, interface, and client - and the associated CI/CD pipelines."
+["FeatureCodeGen"]
+other = "Concentrate on the code with automatic OpenAPI compliant code generation of your implementation. "
+["FeatureFramework"]
+other = "Exploit Kathra's library of frameworks to automatically implement common functionality. Contribute to the community by creating and sharing your own frameworks."
+["FeatureCICD"]
+other = "Kathra uses OCI compliant containers to automatically build and deploy your code in the appropriate environment for each branch - Master/Production, Dev/Staging, or Feature Branch/Name."
+["FeatureSecurity"]
+other = "Kathra is built to be secure by out of the box, with deep, granular integration of OpenID Connect based permission and access controls."
+["FeatureUI"]
+other = "Kathra is designed for everyone, it's clean, functional UI allows frequent development & integration tasks to be accomplished easily, regardless of the users coding experience."

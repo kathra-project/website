@@ -4,7 +4,7 @@
     <div id="features-anchor" class="section-anchor"></div>
     <div class="container">
         <div class="section-heading">
-            {{ with .Site.Data.feature.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
+            {{ with .Site.Data.feature.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ T "FeatureTitle" }}</h1>{{ end }}
             {{ with .Site.Data.feature.subtitle }}<p class="wow fadeInDown" data-wow-delay=".5s">{{ . | safeHTML }}</p>{{ end }}
         </div>
         <div class="row">
@@ -19,7 +19,9 @@
                     </div>
                     <div class="media-body">
                         {{ with .title }}<h4 class="media-heading" style="font-weight: bold;">{{ . }}</h4>{{ end }}
-                        {{ with .description }}<p>{{ . }}</p>{{ end }}
+                        
+                        {{ $featureKey := printf "%s%s" "Feature" .key }}
+                        {{ with T $featureKey }}<p>{{ . }}</p>{{ end }}
                     </div>
                 </div>
             </div>
