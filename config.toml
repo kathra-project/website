@@ -5,15 +5,15 @@ theme = "timer-hugo"
 relativeurls = true
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "fr"
 copyright = "Everything is mine"
 
 [languages]
   [languages.en]
-    title = "My blog"
+    title = "Kathra"
     weight = 1
   [languages.fr]
-    title = "Mon blogue"
+    title = "Kathra"
     weight = 2
 
 # Site Menus

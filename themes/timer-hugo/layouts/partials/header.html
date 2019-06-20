@@ -42,14 +42,14 @@
             <div class="col-lg-14" style="width: 100%;">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     
-                    <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}" style="margin-top: 40px; padding-left: 80px; ">
+                    <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}" style="padding-left:80px;height: 130px; ">
                         <img style="position: fixed;
                                     top: 20px;
                                     left: 20px;
                                     width: 150px;
                                     min-width: 0px;" 
                             src="{{ .Site.BaseURL }}/images/molecules.png" />
-                        <p style="text-align:center; font-size: 3.5em; font-weight: bold;">KATHRA</p>
+                        <p style="text-align:center;font-size:3.5em;font-weight:700;line-height: 70px;margin: 20px 0px 0px 0px;">KATHRA</p>
                         <p style="text-align:center; font-size: 0.8em">GENERATE - BUILD - DEPLOY - RUN</p>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -61,8 +61,16 @@
                         <ul class="navbar-nav">
                             {{ range .Site.Menus.nav }}
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                                <a class="nav-link" href="{{ .URL }}">{{ T .Name }}</a>
                             </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul>
+                            {{ range .Site.Home.AllTranslations }}
+                            <li class="nav-item"><a class="nav-link" href="{{ .Permalink }}">{{ .Language }}</a></li>
                             {{ end }}
                         </ul>
                     </div>

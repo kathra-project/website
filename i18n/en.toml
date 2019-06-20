@@ -1,0 +1,14 @@
+[home]
+other = "Home"
+[Product]
+other = "Product"
+[Demo]
+other = "Demo"
+["Get Started"]
+other = "Get Started"
+["Source Code"]
+other = "Source Code"
+["Road Map"]
+other = "Road Map"
+[Partners]
+other = "Partners"

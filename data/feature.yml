@@ -8,7 +8,7 @@ item    :
       Bootstrap your next project instantly with automatically generated git repositories - implementation, model, interface, and client - and the associated CI/CD pipelines.
 
   - icon  : ion-gear-b
-    title : Run & Deploy
+    title : Build & Deploy
     description : >
       Kathra uses OCI compliant containers to automatically build and deploy your code in the appropriate environment for each branch - Master/Production, Dev/Staging, or Feature Branch/Name.
 
