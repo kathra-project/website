@@ -763,9 +763,8 @@ figure figcaption p {
 
 #roadmap {
   padding: 70px 0;
-  height: calc(100vh - 200px);
+  height: calc(200vh - 200px);
 }
-
 #roadmap .container {
   max-width: 90%;
   text-align:center;
