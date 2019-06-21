@@ -1,0 +1,66 @@
+enable  : true
+dates:
+  - 2018 - T4
+  - 2019 - T1
+  - 2019 - T2
+  - 2019 - T3
+  - 2019 - T4
+  - 2020 - T1
+  - 2020 - T2
+  - 2020 - T3
+  - 2020 - T4
+  - 2021 - T1
+features :
+  - name   : Software factory base
+    date   : 2018 - T4
+    release : SMITE 1.1
+    description: >  
+      GitLab, Jenkins, Nexus, Keycloak, Harbor, Kubernetes
+
+  - name : Component create
+    date   : 2019 - T2
+    release : SMITE 1.2
+    description: >  
+      Creation component from OpenApi File with repositories and CI/CD
+
+  - name : Implementation create
+    date   : 2019 - T2
+    release : SMITE 1.2
+    description: >  
+      Creation implementation from OpenApi File with repositories and CI/CD
+
+  - name : OpenSourcing Smite Project
+    date   : 2019 - T3
+    release : Kathra 1.0
+    description: >  
+      Open sourcing project, rebranding to Kathra
+
+  - name : Release Cycle Management
+    date   : 2019 - T4
+    release : Kathra 1.1
+    description: >  
+      Release Cycle Management	
+
+  - name : Running environment management
+    date   : 2020 - T1
+    release : Kathra 1.2
+    description: >  
+      Running environment management
+
+  - name : Catalog management
+    date   : 2020 - T3
+    release : Kathra 1.3
+    description: >  
+      Catalog management
+
+  - name : Open API v3
+    date   : 2020 - T4
+    release : Kathra 1.4
+    description: >  
+      Open API v3
+
+  - name : Yours wishes.. !
+    date   : 2021 - T1
+    release : Kathra 1.5 or +++
+    description: >  
+      Yours wishes.. !
