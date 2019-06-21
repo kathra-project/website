@@ -10,6 +10,23 @@ dates:
   - 2020 - T3
   - 2020 - T4
   - 2021 - T1
+releases:
+  - name : SMITE 1.1
+    date   : 2018 - T4
+  - name : SMITE 1.2
+    date   : 2019 - T2
+  - name : KATHRA 1.0
+    date   : 2019 - T3
+  - name : KATHRA 1.1
+    date   : 2019 - T4
+  - name : KATHRA 1.2
+    date   : 2020 - T1
+  - name : KATHRA 1.3
+    date   : 2020 - T3
+  - name : KATHRA 1.4
+    date   : 2020 - T4
+  - name : KATHRA 1.5
+    date   : 2021 - T1
 features :
   - name   : Software factory base
     date   : 2018 - T4

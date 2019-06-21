@@ -29,12 +29,8 @@
                 width: 450px;
             }
         </style>
-        <!--
-        <svg height="300" width="300">
-            <polygon points="0,0 150,0 200,50 150,100 20,100 20,250 0,250 0,0" style="fill:red;stroke:black;stroke-width:2" />
-            <text x="50" y="50" fill="white">Version 1.x</text>
-        </svg> 
-        -->
+        
+        {{ $delay := 0.3 }}
         <table>
             <thead>
                 <tr>
@@ -43,7 +39,6 @@
                 </tr>
             </thead>
             <tbody>
-                {{ $delay := 0.3 }}
                 {{ range $iFeature, $feature := sort .Site.Data.roadmap.features "date" "desc" }}
                     {{ $delayTofeature := 0 }}
                     {{ range $idate, $date := $.Site.Data.roadmap.dates }}
@@ -84,6 +79,79 @@
                 </tr>
             </tfoot>
         </table>
+
+        <table>
+                <thead>
+                    <tr>
+                        <td class="feature">Features</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
+                            {{ $tdToShow := mul $delay $idate }}
+                            {{ $tdToShow = add $tdToShow $delay }}
+
+                            {{ $releaseToShow := "" }}
+                            {{ range $irelease, $release := $.Site.Data.roadmap.releases }}
+                                {{ if eq $date $release.date }}
+                                    {{ $releaseToShow = $release.name }}
+                                {{ end }}
+                            {{ end }}
+
+                            {{ if eq $releaseToShow "" }}
+                                <td></td>
+                            {{ else }}
+                                <td style="text-align: right;">
+                                    <svg height="75" width="75" viewBox="0 0 250 250">
+                                            <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
+                                            <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="32"> {{ $releaseToShow }}</text>
+                                    </svg> 
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+                    {{ $delay := 0.3 }}
+                    {{ range $iFeature, $feature := sort .Site.Data.roadmap.features "date" "desc" }}
+                        {{ $delayTofeature := 0 }}
+                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
+                            {{ if eq . $feature.date }}
+                                {{ $delayTofeature = mul $delay $idate }}
+                                {{ $delayTofeature = add $delayTofeature $delay }}
+                            {{ end }}
+                        {{ end }}
+                        <tr>
+                            <td class="wow fadeInDown" data-wow-delay="{{ $delayTofeature }}s" class="feature" > {{ $feature.name }}</td>
+                            
+                            {{ $featureImplemented := 0 }}
+                            {{ range $idate, $date := $.Site.Data.roadmap.dates }}
+                                {{ $tdToShow := mul $delay $idate }}
+                                {{ $tdToShow = add $tdToShow $delay }}
+    
+                                {{ if eq . $feature.date }}
+                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
+                                        <svg height="25" width="25" viewBox="0 0 200 200">
+                                                <polygon points="100,0 200,100 100,200 0,100" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
+                                        </svg>
+                                    </td>
+                                {{ else }}
+                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s" ></td>
+                                {{ end }}
+                            {{ end }}
+                        </tr>
+                    {{ end }}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="feature"></td>
+                        {{ range $index, $date := .Site.Data.roadmap.dates }}
+                        <td class="">{{ . }}</td>
+                        {{ end }}
+                    </tr>
+                </tfoot>
+            </table>
+
     </div>
 </section>
 {{ "<!-- roadmap Section End -->" | safeHTML }}
