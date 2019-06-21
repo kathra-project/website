@@ -16,7 +16,7 @@ items :
       
   - title : Apr 30, 2019 -
     description: >  
-      SMITE 1.2-RC is available.
+      SMITE 1.2 Release Candidate is available. We are going to validate use cases and fix issues. For more information, <a href="https://redmine.irt-systemx.fr/projects/smite-tracker/issues?utf8=%E2%9C%93&set_filter=1&sort=status%2Cid%3Adesc&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=467&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=&t%5B%5D="> issue tracker</a>.
 
   - title   : June 21, 2019 -
     description: >  
