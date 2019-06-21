@@ -10,12 +10,13 @@ dates:
   - 2020 - T3
   - 2020 - T4
   - 2021 - T1
+
 releases:
   - name : SMITE 1.1
     date : 2018 - T4
     url  : ""
   - name : SMITE 1.2
-    date  : 2019 - T2
+    date : 2019 - T2
     url  : https://git.irt-systemx.fr/SMITE/specifications/tree/v1.2
   - name : KATHRA 1.0
     date : 2019 - T3
@@ -24,7 +25,7 @@ releases:
     date : 2019 - T4
     url  : ""
   - name : KATHRA 1.2
-    date   : 2020 - T1
+    date : 2020 - T1
     url  : ""
   - name : KATHRA 1.3
     date : 2020 - T3
@@ -35,6 +36,7 @@ releases:
   - name : KATHRA 1.5
     date : 2021 - T1
     url  : ""
+
 features :
   - name   : Software factory base
     date   : 2018 - T4
@@ -60,17 +62,17 @@ features :
     description: >  
       Open sourcing project, rebranding to Kathra
 
-  - name : Release Cycle Management
+  - name : Running environment management
     date   : 2019 - T4
     release : Kathra 1.1
     description: >  
-      Release Cycle Management	
+      Running environment management
 
-  - name : Running environment management
+  - name : Release Cycle Management
     date   : 2020 - T1
     release : Kathra 1.2
     description: >  
-      Running environment management
+      Release Cycle Management	
 
   - name : Catalog management
     date   : 2020 - T3
