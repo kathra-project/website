@@ -12,21 +12,29 @@ dates:
   - 2021 - T1
 releases:
   - name : SMITE 1.1
-    date   : 2018 - T4
+    date : 2018 - T4
+    url  : ""
   - name : SMITE 1.2
-    date   : 2019 - T2
+    date  : 2019 - T2
+    url  : https://git.irt-systemx.fr/SMITE/specifications/tree/v1.2
   - name : KATHRA 1.0
-    date   : 2019 - T3
+    date : 2019 - T3
+    url  : https://git.irt-systemx.fr/SMITE/specifications/tree/feature/v1.3
   - name : KATHRA 1.1
-    date   : 2019 - T4
+    date : 2019 - T4
+    url  : ""
   - name : KATHRA 1.2
     date   : 2020 - T1
+    url  : ""
   - name : KATHRA 1.3
-    date   : 2020 - T3
+    date : 2020 - T3
+    url  : ""
   - name : KATHRA 1.4
-    date   : 2020 - T4
+    date : 2020 - T4
+    url  : ""
   - name : KATHRA 1.5
-    date   : 2021 - T1
+    date : 2021 - T1
+    url  : ""
 features :
   - name   : Software factory base
     date   : 2018 - T4

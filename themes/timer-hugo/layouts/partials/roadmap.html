@@ -6,8 +6,7 @@
         <div class="section-heading">
             {{ with .Site.Params.roadmap.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
         </div>
-        <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png">
-        </img>
+        <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
         <style>
             #roadmap table {
                 border-collapse: separate;
@@ -37,6 +36,14 @@
             #roadmap table tfoot tr .feature {
                 border : 0px;
             }
+            #roadmap table a.release,
+            #roadmap table span.release {
+                opacity: 0.8;
+            }
+            #roadmap table a.release:not([href=""]):hover {
+                opacity: 1;
+            }
+
         </style>
         
         {{ $delay := 0.3 }}
@@ -103,9 +110,11 @@
                             {{ $tdToShow = add $tdToShow $delay }}
 
                             {{ $releaseToShow := "" }}
+                            {{ $releaseUrlToShow := "" }}
                             {{ range $irelease, $release := $.Site.Data.roadmap.releases }}
                                 {{ if eq $date $release.date }}
                                     {{ $releaseToShow = $release.name }}
+                                    {{ $releaseUrlToShow = $release.url }}
                                 {{ end }}
                             {{ end }}
 
@@ -113,10 +122,21 @@
                                 <td></td>
                             {{ else }}
                                 <td style="text-align: right;" class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
-                                    <svg height="70" width="70" viewBox="0 0 250 250">
-                                            <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
-                                            <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="32"> {{ $releaseToShow }}</text>
-                                    </svg> 
+                                    
+                                    {{ if ne $releaseUrlToShow "" }}
+                                    <a href="{{ $releaseUrlToShow }}" class="release">
+                                    {{ else }}
+                                    <span class="release">
+                                    {{ end }}
+                                        <svg height="70" width="70" viewbox="0 0 250 250">
+                                                <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
+                                                <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="32"> {{ $releaseToShow }}</text>
+                                        </svg> 
+                                    {{ if ne $releaseUrlToShow "" }}
+                                    </a>
+                                    {{ else }}
+                                    </span>
+                                    {{ end }}
                                 </td>
                             {{ end }}
                         {{ end }}
@@ -131,7 +151,7 @@
                             {{ end }}
                         {{ end }}
                         <tr>
-                            <td class="wow fadeInDown" data-wow-delay="{{ $delayTofeature }}s" class="feature" > {{ $feature.name }}</td>
+                            <td class="wow fadeInDown feature" data-wow-delay="{{ $delayTofeature }}s" > {{ $feature.name }}</td>
                             
                             {{ $featureImplemented := 0 }}
                             {{ range $idate, $date := $.Site.Data.roadmap.dates }}
@@ -140,8 +160,8 @@
     
                                 {{ if eq . $feature.date }}
                                     <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
-                                        <svg height="25" width="25" viewBox="0 0 200 200">
-                                                <polygon points="100,0 200,100 100,200 0,100" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
+                                        <svg height="25" width="25" viewbox="0 0 200 200">
+                                            <polygon points="100,0 200,100 100,200 0,100" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
                                         </svg>
                                     </td>
                                 {{ else }}
