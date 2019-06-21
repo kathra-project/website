@@ -3,7 +3,7 @@ other = "GENERE - CONSTRUIT - DEPLOIE - EXECUTE"
 [home]
 other = "Home"
 [Product]
-other = "Product"
+other = "Produit" 
 [Demo]
 other = "Démonstration"
 ["Get Started"]
