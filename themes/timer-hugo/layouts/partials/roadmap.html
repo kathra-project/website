@@ -112,7 +112,7 @@
                             {{ if eq $releaseToShow "" }}
                                 <td></td>
                             {{ else }}
-                                <td style="text-align: right;">
+                                <td style="text-align: right;" class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
                                     <svg height="70" width="70" viewBox="0 0 250 250">
                                             <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
                                             <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="32"> {{ $releaseToShow }}</text>
