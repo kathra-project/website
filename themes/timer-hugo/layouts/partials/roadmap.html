@@ -10,8 +10,10 @@
         </img>
         <style>
             #roadmap table {
-                border-collapse: none;
+                border-collapse: separate;
+                border-spacing: 5px;
                 font-size: 1em;
+                font-family: Raleway,sans-serif;
             }
             #roadmap table thead tr td{
                 font-size: 1.2em;
@@ -26,7 +28,14 @@
                 width: 150px;
             }
             #roadmap table * tr .feature{
-                width: 450px;
+                width: 500px;
+            }
+            #roadmap table tfoot tr td {
+                border-top : 1px solid rgba(73, 62, 29, 0.5);
+            }
+            #roadmap table tfoot tr .release,
+            #roadmap table tfoot tr .feature {
+                border : 0px;
             }
         </style>
         
@@ -104,7 +113,7 @@
                                 <td></td>
                             {{ else }}
                                 <td style="text-align: right;">
-                                    <svg height="75" width="75" viewBox="0 0 250 250">
+                                    <svg height="70" width="70" viewBox="0 0 250 250">
                                             <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
                                             <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="32"> {{ $releaseToShow }}</text>
                                     </svg> 
