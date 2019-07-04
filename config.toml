@@ -29,7 +29,7 @@ copyright = "Everything is mine"
         weight  = 2
     [[menu.nav]]
         name    = "Get Started"
-        url     = "https://gitlab.com/kathra/kathra/blob/master/README.md"
+        url     = "#gettingstarted-anchor"
         weight  = 2
     [[menu.nav]]
         name    = "Source Code"
@@ -85,6 +85,9 @@ copyright = "Everything is mine"
         title   = "Intrigued ? come and see how kathra works"
         btnText = "try the demo"
         btnURL  = "http://localhost:1313"
+    # Homepage About Section
+    [params.gettingstarted]
+        enable  = true
 
     # Homepage roadmap Section
     [params.roadmap]

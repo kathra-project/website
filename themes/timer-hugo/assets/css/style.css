@@ -807,6 +807,11 @@ figure figcaption p {
 .partner-element p {
   color: #828282;
 }
+#gettingstarted {
+  padding: 70px 0;
+  height: calc(100vh - 200px);
+  background-color: rgba(159,188,187,.3);
+}
 
 #demo-video {
   border: none;
@@ -815,6 +820,7 @@ figure figcaption p {
 #demo {
   padding: 70px 0;
   height: calc(100vh - 200px);
+  background-color: rgba(188, 159, 159, 0.3);
 }
 #demo:hover ~ #logo {
   display:none;
