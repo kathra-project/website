@@ -64,6 +64,40 @@
     ga('create', '{{ .Site.Params.googleAnalitycsID }}', 'auto');
     ga('send', 'pageview');
 </script>
+
+
+<script>
+        (function(){ 
+            function isScrolledIntoView(elem)  {
+                var docViewTop = $(window).scrollTop();
+                var docViewBottom = docViewTop + $(window).height();
+                var elemTop = $(elem).offset().top ;
+                var elemBottom = elemTop + $(elem).height();
+                return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+            };
+        
+            function updateMenuFromAfterScroll() {
+                var links = $('#navbarSupportedContent .nav-link');
+                var classHover='nav-link-scroll';
+                links.removeClass(classHover);
+                var firstSectionVisible = $('.section-anchor').filter(function() { 
+                    return (isScrolledIntoView($(this).parent()));
+                }).first();
+                if (firstSectionVisible) {
+                    links.filter('[href=#'+$(firstSectionVisible).attr('id')+']').addClass(classHover);
+                }
+            };
+        
+            $(document).ready(function(){       
+                $(document).scroll(function() { 
+                    updateMenuFromAfterScroll();
+                });
+                updateMenuFromAfterScroll();
+            });
+        })();
+    </script>
+
+
 </body>
 
 </html>

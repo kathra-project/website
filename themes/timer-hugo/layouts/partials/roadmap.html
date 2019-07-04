@@ -9,10 +9,13 @@
         <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
         <style>
             #roadmap table {
-                border-collapse: separate;
-                border-spacing: 5px;
+                border-collapse: collapse;
                 font-size: 1em;
                 font-family: Raleway,sans-serif;
+            }
+            #roadmap table tfoot {
+                border-collapse: separate;
+                border-spacing: 5px;
             }
             #roadmap table thead tr td{
                 font-size: 1.2em;
@@ -21,7 +24,7 @@
                 width: 250px;
             }
             #roadmap table * tr td[data-roadmap=true]{
-                background-color:rgba(167, 167, 167, 0.2);
+                background-color:rgba(167, 167, 167, 1);
             }
             #roadmap table * tr .release{
                 width: 150px;
@@ -42,6 +45,9 @@
             }
             #roadmap table a.release:not([href=""]):hover {
                 opacity: 1;
+            }
+            #roadmap table tbody tr:nth-child(even) {
+                background-color: white;
             }
 
         </style>

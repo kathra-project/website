@@ -61,7 +61,7 @@
                         <ul class="navbar-nav">
                             {{ range .Site.Menus.nav }}
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ .URL }}">{{ T .Name }}</a>
+                                <a class="nav-link" href="{{ .URL }}"  {{ if in .URL "http" }} target="_blank" {{ end }} >{{ T .Name }}</a>
                             </li>
                             {{ end }}
                         </ul>
