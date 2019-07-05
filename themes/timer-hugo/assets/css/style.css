@@ -239,7 +239,11 @@ a:hover {
   margin-left:unset;
   justify-content: space-evenly;
   width:100%;
-  padding-left: 450px;
+  padding-left: 500px;
+}
+.nav-item {
+  margin-right: 15px;
+  margin-left: 15px;
 }
 @media (min-width: 401px) {
   .navbar-brand img {

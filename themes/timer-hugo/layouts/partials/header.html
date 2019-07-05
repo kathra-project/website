@@ -67,10 +67,14 @@
                         </ul>
                     </div>
 
-                    <div>
-                        <ul>
+                    <div class="lang" style="position: fixed; top:10px; right:10px;">
+                        <ul class="navbar-nav">
                             {{ range .Site.Home.AllTranslations }}
-                            <li class="nav-item"><a class="nav-link" href="{{ .Permalink }}">{{ .Language }}</a></li>
+                            <li class="nav-item">
+                                <a href="{{ .Permalink }}">
+                                    <img class="nav-link" style="width: 40px; height: 40px;" src="{{ .Site.BaseURL }}/images/{{ .Language }}.svg" alt="{{ .Language }}" />
+                                </a>
+                            </li>
                             {{ end }}
                         </ul>
                     </div>
