@@ -44,17 +44,11 @@ features :
     description: >  
       GitLab, Jenkins, Nexus, Keycloak, Harbor, Kubernetes
 
-  - name : Component create
+  - name : API Generation
     date   : 2019 - T2
     release : SMITE 1.2
     description: >  
-      Creation component from OpenApi File with repositories and CI/CD
-
-  - name : Implementation create
-    date   : 2019 - T2
-    release : SMITE 1.2
-    description: >  
-      Creation implementation from OpenApi File with repositories and CI/CD
+      API generation from OpenApi File with repositories and CI/CD
 
   - name : OpenSourcing Smite Project
     date   : 2019 - T3

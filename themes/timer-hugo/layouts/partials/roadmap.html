@@ -11,7 +11,7 @@
             #roadmap table {
                 border-collapse: collapse;
                 font-size: 1em;
-                font-family: Raleway,sans-serif;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
             }
             #roadmap table tfoot {
                 border-collapse: separate;
@@ -54,55 +54,6 @@
         
         {{ $delay := 0.3 }}
         <table>
-            <thead>
-                <tr>
-                    <td class="release">Release</td>
-                    <td class="feature">Features</td>
-                </tr>
-            </thead>
-            <tbody>
-                {{ range $iFeature, $feature := sort .Site.Data.roadmap.features "date" "desc" }}
-                    {{ $delayTofeature := 0 }}
-                    {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                        {{ if eq . $feature.date }}
-                            {{ $delayTofeature = mul $delay $idate }}
-                            {{ $delayTofeature = add $delayTofeature $delay }}
-                        {{ end }}
-                    {{ end }}
-                    <tr>
-                        <td class="wow fadeInDown" data-wow-delay="{{ $delayTofeature }}s" class="release">{{ $feature.release }}</td>
-                        <td class="wow fadeInDown" data-wow-delay="{{ $delayTofeature }}s" class="feature">{{ $feature.name }}</td>
-                        
-                        {{ $featureImplemented := 0 }}
-                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                            {{ $tdToShow := mul $delay $idate }}
-                            {{ $tdToShow = add $tdToShow $delay }}
-
-                            {{ if eq . $feature.date }}
-                                {{ $featureImplemented = 1 }}
-                            {{ end }}
-
-                            {{ if eq $featureImplemented 1 }}
-                                <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s" data-roadmap="true"></td>
-                            {{ else }}
-                                <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s" ></td>
-                            {{ end }}
-                        {{ end }}
-                    </tr>
-                {{ end }}
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td class="release"></td>
-                    <td class="feature"></td>
-                    {{ range $index, $date := .Site.Data.roadmap.dates }}
-                    <td class="">{{ . }}</td>
-                    {{ end }}
-                </tr>
-            </tfoot>
-        </table>
-
-        <table>
                 <thead>
                     <tr>
                         <td class="feature">Features</td>
@@ -135,7 +86,7 @@
                                     <span class="release">
                                     {{ end }}
                                         <svg height="70" width="70" viewbox="0 0 250 250">
-                                                <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
+                                                <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(198, 187, 125);stroke:rgb(100, 112, 91);stroke-width:2" />
                                                 <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="32"> {{ $releaseToShow }}</text>
                                         </svg> 
                                     {{ if ne $releaseUrlToShow "" }}
@@ -166,7 +117,7 @@
     
                                 {{ if eq . $feature.date }}
                                     <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
-                                        <svg height="25" width="25" viewbox="0 0 200 200">
+                                        <svg height="25" width="25" viewbox="0 0 200 200" style="margin-top:5px;">
                                             <polygon points="100,0 200,100 100,200 0,100" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
                                         </svg>
                                     </td>
