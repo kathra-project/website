@@ -1,24 +1,40 @@
 enable  : true
-title   : WHAT WE DO
-subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis porro recusandae non quibusdam iure adipisci.
+title   : 
+subtitle: 
 items :
-  - title   : Jan 22, 2019 -
+  - title  : SMITE is presente to CRiP.
+    date   : 2019-01-22
+    author : Julien Boubechtoula
     description: >  
       SMITE is presented to <a href="https://www.crip-asso.fr">CRiP</a>, for more information, see the <a href="https://presentation-smite.irtsysx.fr">slideshow</a>.
 
-  - title   : Feb 22, 2019 -
+  - title  : Go-ahead for open sourcing !
+    date   : 2019-02-22
+    author : Julien Boubechtoula
     description: >  
-      IRT SystemX give the go-ahead for SMITE's open sourcing
+      IRT SystemX give the go-ahead for SMITE's open sourcing.
 
-  - title   : Mar 03, 2019 -
+  - title  : SMITE rebranding.
+    date   : 2019-03-03
+    author : Julien Boubechtoula
     description: >  
-      SMITE will be renamed Kathra for open sourcing.
+      SMITE will be renamed Kathra for open sourcing. 
       
-  - title : Apr 30, 2019 -
+  - title  : SMITE 1.2 RC is available
+    date   : 2019-04-03
+    author : Julien Boubechtoula
     description: >  
       SMITE 1.2 Release Candidate is available. We are going to validate use cases and fix issues. For more information, <a href="https://redmine.irt-systemx.fr/projects/smite-tracker/issues?utf8=%E2%9C%93&set_filter=1&sort=status%2Cid%3Adesc&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=467&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=&t%5B%5D="> issue tracker</a>.
 
-  - title   : June 21, 2019 -
+  - title  : Source code will be available in few weeks.
+    date   : 2019-05-21
+    author : Julien Boubechtoula
     description: >  
-      Kathra's source code should be published on 1st July, if god wants
+      Kathra's source code should be published on 31th July, if god wants.
+
+  - title  : Deployment script is ready.
+    date   : 2019-07-08
+    author : Julien Boubechtoula
+    description: >  
+      Auto-deployment from bash script has been finalized. This procedure permits to deploy Kathra and its factory on k8s cluster from bash script. For more details, <a href="https://git.irt-systemx.fr/SMITE/deployment/tree/140-RC">open repository.</a>
 

@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+<section id="news" style="background-color:rgba(159, 188, 187, 0.3)">
+    <div class="container">
+        {{ range $index, $element := sort .Site.Data.news.items "date" "desc"  }}
+        <div class="row" style="padding: 30px;">
+            <div class="container">
+            <div id="new-{{ .title }}" class="section-anchor"></div>
+                <div class="row">
+                    <h3>{{ .title }}</h3>
+                </div>
+                <div class="row">
+                    <p>{{ .description | safeHTML }}</p>
+                </div>
+                <div class="row">
+                    <p>By {{ .author }}, {{ .date }}</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "footer.html" . }}
