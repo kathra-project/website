@@ -25,7 +25,7 @@ releases:
     date : 2019 - T4
     url  : ""
   - name : KATHRA 1.2
-    date : 2020 - T1
+    date : 2020 - T2
     url  : ""
   - name : KATHRA 1.3
     date : 2020 - T3
@@ -56,19 +56,19 @@ features :
     description: >  
       Open sourcing project, rebranding to Kathra
 
-  - name : Running environment management
+  - name : Running environment
     date   : 2019 - T4
     release : Kathra 1.1
     description: >  
       Running environment management
 
-  - name : Release Cycle Management
-    date   : 2020 - T1
+  - name : Release cycle
+    date   : 2020 - T2
     release : Kathra 1.2
     description: >  
-      Release Cycle Management	
+      Release cycle management	
 
-  - name : Catalog management
+  - name : Catalog
     date   : 2020 - T3
     release : Kathra 1.3
     description: >  
