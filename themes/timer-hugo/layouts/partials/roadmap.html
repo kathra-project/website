@@ -54,14 +54,9 @@
         
         {{ $delay := 0.3 }}
         <table>
-                <thead>
-                    <tr>
-                        <td class="feature">Features</td>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <td></td>
+                        <td style="font-weight: bold;">Features</td>
                         {{ range $idate, $date := $.Site.Data.roadmap.dates }}
                             {{ $tdToShow := mul $delay $idate }}
                             {{ $tdToShow = add $tdToShow $delay }}

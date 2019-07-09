@@ -46,14 +46,14 @@ a:hover {
 
 .section-anchor {
   position: relative;
-  top: -270px;
+  top: -195px;
   display: hidden;
 }
 
 .section-heading {
   text-align: center;
-  padding-bottom: 65px;
-  padding-top: 65px;
+  padding-bottom: 70px;
+  padding-top: 70px;
   width: 100%;
 }
 
