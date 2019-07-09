@@ -84,7 +84,7 @@
                     return (isScrolledIntoView($(this).parent()));
                 }).first();
                 if (firstSectionVisible) {
-                    links.filter('[href=#'+$(firstSectionVisible).attr('id')+']').addClass(classHover);
+                    links.filter('[href*=#'+$(firstSectionVisible).attr('id')+']').addClass(classHover);
                 }
             };
         

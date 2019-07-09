@@ -1,13 +1,67 @@
 {{ if .Site.Params.features.enable }}
 {{ "<!-- Feature Section Start -->" | safeHTML }}
-<section id="feature" style="background-color:rgba(167, 188, 153, 0.3)">
+<style>
+#feature {
+  height: calc(100vh - 200px);
+  background-color:rgba(167, 188, 153, 0.3);
+}
+
+#feature .container {
+  max-width: 90%;
+}
+
+#feature .media {
+  margin: 0px 0 70px 0;
+}
+
+#feature .media .media-left {
+  padding-right: 25px;
+}
+
+#feature h3 {
+  color: #222222;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin: 0px 0px 15px;
+  font-weight: 400;
+}
+
+#feature p {
+  line-height: 25px;
+  font-size: 20px;
+  color: #393939;
+  max-width: 82%;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+#feature .icon {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: #02bdd5;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+  font-size: 50px;
+  line-height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+</style>
+<section id="feature" >
     <div id="features-anchor" class="section-anchor"></div>
     <div class="container">
-        <div class="section-heading">
-            {{ with .Site.Data.feature.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ T "FeatureTitle" }}</h1>{{ end }}
-            {{ with .Site.Data.feature.subtitle }}<p class="wow fadeInDown" data-wow-delay=".5s">{{ . | safeHTML }}</p>{{ end }}
+        <div class="row h-25">
+            <div class="section-heading">
+                {{ with .Site.Data.feature.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ T "FeatureTitle" }}</h1>{{ end }}
+                {{ with .Site.Data.feature.subtitle }}<p class="wow fadeInDown" data-wow-delay=".5s">{{ . | safeHTML }}</p>{{ end }}
+            </div>
         </div>
-        <div class="row">
+        <div class="row h-75">
             {{ range $index, $elemrnt := .Site.Data.feature.item }}
             <div class="col-sm-6 col-lg-6">
                 {{ $delay := mul (add $index 1) 300 }}
