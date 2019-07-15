@@ -1,0 +1,103 @@
+{{ if .Site.Params.gettingstarted.enable }}
+{{ "<!-- demo Section Start -->" | safeHTML }}
+<section id="gettingstarted" >
+    <div id="gettingstarted-anchor" class="section-anchor"></div>
+    <div class="container">
+        <div class="section-heading">
+            {{ with T "Get Started" }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
+        </div>
+        <style>
+        #gettingstarted table {
+            margin: auto;
+            font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+        }
+        #gettingstarted table .step-icon {
+            text-decoration: none;
+            color: #000;
+            background-color: rgba(112, 133, 131, 0.3);
+            height: 100px;
+            text-align: center;
+            width: 100px;
+            font-size: 50px;
+            line-height: 100px;
+            overflow: hidden;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            margin-left: 75px;
+        }
+        #gettingstarted table .step-label {
+            font-size: 30px;
+            width: 250px;
+            text-align: center;
+        }
+        #gettingstarted table .step-description {
+            font-size: 15px;
+            width: 250px;
+            text-align: center;
+            vertical-align: top;
+        }
+        
+        
+        </style>
+        <table>
+            <tbody>
+                <tr>
+                    <td class="wow fadeInDown" data-wow-delay="1.0s"><div class="step-icon" style="background-color: rgba(188,159,159)">1</div></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.0s"><div class="step-icon" style="background-color: rgba(201, 187, 125)">2</div></td>
+                    <td class="wow fadeInDown" data-wow-delay="3.0s"><div class="step-icon" style="background-color:rgba(159, 188, 187)">3</div></td>
+                    <td class="wow fadeInDown" data-wow-delay="4.0s"><div class="step-icon" style="background-color: rgba(167, 188, 153)">4</div></td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown step-label" data-wow-delay="1.0s" >Install Kubernetes</td>
+                    <td class="wow fadeInDown step-label" data-wow-delay="2.0s" >Install Kathra</td>
+                    <td class="wow fadeInDown step-label" data-wow-delay="3.0s" >Create your API</td>
+                    <td class="wow fadeInDown step-label" data-wow-delay="4.0s" >Consume it</td>
+                </tr>
+                <tr>
+                    <td class="wow fadeInDown step-description" data-wow-delay="1.0s">
+                        <ul>
+                            <li><a target="_blank" href="https://kubernetes.io/docs/tasks/tools/install-minikube">You doesn't have K8S cluster, you can start with Minikube</a></li>
+                            <li>If your run localy with Minikube, open your cluster to Internet</li>
+                            <li><a target="_blank" href="https://docs.traefik.io/user-guide/kubernetes/">Install Traefik</a></li>
+                            <li>Create domain's name pointing to your cluster.</li>
+                            <li>Configure Treafik to auto generate SSL certificate.</li>
+                        </ul>
+                    </td>
+                    <td class="wow fadeInDown step-description" data-wow-delay="2.0s">
+                        <a href="https://git.irt-systemx.fr/SMITE/deployment/blob/140-RC/README.md" target="_blank">Install Kathra</a>
+                    </td>
+                    <td class="wow fadeInDown step-description" data-wow-delay="3.0s">
+                        Create your first API and generate it in Java or Python
+                    </td>
+                    <td class="wow fadeInDown step-description" data-wow-delay="4.0s">
+                        Consume your REST Web Service
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="wow fadeInDown step-description" data-wow-delay="5.0s">
+                    <td colspan="4" style="text-align: center;">
+                        Too difficult ? <a href="https://git.irt-systemx.fr/SMITE/deployment/blob/140-RC/Example-Minikube-OVH.md" target="_blank">See an example !</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <div style="display:none;">
+            <h2 class="wow fadeInDown" data-wow-delay="1.0s" >1. Install and configure your Kubernetes cluster</h2>
+            <ul>
+                <li class="wow fadeInDown" data-wow-delay="1.2s">If you doesn't have cluster, you can start with Minikube <a target="_blank" href="https://kubernetes.io/docs/tasks/tools/install-minikube">See more</a></li>
+                <li class="wow fadeInDown" data-wow-delay="1.4s">Install Traefik as ingress controller if not exists : <a target="_blank" href="https://docs.traefik.io/user-guide/kubernetes/">Follow theses instructions on official documentation</a></li>
+                <li class="wow fadeInDown" data-wow-delay="1.6s">If you run Minikube localy : Open your cluster to Internet</li>
+                <li class="wow fadeInDown" data-wow-delay="1.8s">Create domain's name pointing to your cluster.</li>
+                <li class="wow fadeInDown" data-wow-delay="2.0s">Configure Treafik to auto generate SSL certificate with Let's Encrypt.</li>
+            </ul>
+            <h2 class="wow fadeInDown" data-wow-delay="2.5s">2. <a href="https://git.irt-systemx.fr/SMITE/deployment/tree/140-RC" target="_blank">Install Kathra</a></h2>
+            <h2 class="wow fadeInDown" data-wow-delay="3.0s">3. Create your first API and generate it in Java or Python</h2>
+            <h2 class="wow fadeInDown" data-wow-delay="3.5s">4. Consume it !</h2>
+        </div>
+    </div>
+</section>
+{{ "<!-- demo Section End -->" | safeHTML }}
+{{ end }}
