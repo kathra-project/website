@@ -1,137 +1,13 @@
 {{ if .Site.Params.roadmap.enable }}
 {{ "<!-- roadmap Section Start -->" | safeHTML }}
 <section id="roadmap" style="background-color:rgba(201, 187, 125, 0.3);">
-    <div id="roadmap-anchor" class="section-anchor"></div>
     <div class="container">
         <div class="section-heading">
             {{ with .Site.Params.roadmap.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
         </div>
-        <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
-        <style>
-            #roadmap table {
-                border-collapse: collapse;
-                font-size: 1em;
-                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-            }
-            #roadmap table tfoot {
-                border-collapse: separate;
-                border-spacing: 5px;
-            }
-            #roadmap table thead tr td{
-                font-size: 1.2em;
-            }
-            #roadmap table * tr td{
-                width: 250px;
-            }
-            #roadmap table * tr td[data-roadmap=true]{
-                background-color:rgba(167, 167, 167, 1);
-            }
-            #roadmap table * tr .release{
-                width: 150px;
-            }
-            #roadmap table * tr .feature{
-                width: 500px;
-            }
-            #roadmap table tfoot tr td {
-                border-top : 1px solid rgba(73, 62, 29, 0.5);
-            }
-            #roadmap table tfoot tr .release,
-            #roadmap table tfoot tr .feature {
-                border : 0px;
-            }
-            #roadmap table a.release,
-            #roadmap table span.release {
-                opacity: 0.8;
-            }
-            #roadmap table a.release:not([href=""]):hover {
-                opacity: 1;
-            }
-            #roadmap table tbody tr:nth-child(even) {
-                background-color: rgba(255,255,255,0.4);
-            }
 
-        </style>
-        
-        {{ $delay := 0.3 }}
-        <table>
-                <tbody>
-                    <tr>
-                        <td style="font-weight: bold;">Features</td>
-                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                            {{ $tdToShow := mul $delay $idate }}
-                            {{ $tdToShow = add $tdToShow $delay }}
-
-                            {{ $releaseToShow := "" }}
-                            {{ $releaseUrlToShow := "" }}
-                            {{ range $irelease, $release := $.Site.Data.roadmap.releases }}
-                                {{ if eq $date $release.date }}
-                                    {{ $releaseToShow = $release.name }}
-                                    {{ $releaseUrlToShow = $release.url }}
-                                {{ end }}
-                            {{ end }}
-
-                            {{ if eq $releaseToShow "" }}
-                                <td></td>
-                            {{ else }}
-                                <td style="text-align: right;" class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
-                                    
-                                    {{ if ne $releaseUrlToShow "" }}
-                                    <a href="{{ $releaseUrlToShow }}" class="release">
-                                    {{ else }}
-                                    <span class="release">
-                                    {{ end }}
-                                        <svg height="100" width="100" viewbox="0 0 250 250">
-                                                <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(198, 187, 125);stroke:rgb(112, 106, 69);stroke-width:2" />
-                                                <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="34"> {{ $releaseToShow }}</text>
-                                        </svg> 
-                                    {{ if ne $releaseUrlToShow "" }}
-                                    </a>
-                                    {{ else }}
-                                    </span>
-                                    {{ end }}
-                                </td>
-                            {{ end }}
-                        {{ end }}
-                    </tr>
-                    {{ $delay := 0.3 }}
-                    {{ range $iFeature, $feature := sort .Site.Data.roadmap.features "date" "desc" }}
-                        {{ $delayTofeature := 0 }}
-                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                            {{ if eq . $feature.date }}
-                                {{ $delayTofeature = mul $delay $idate }}
-                                {{ $delayTofeature = add $delayTofeature $delay }}
-                            {{ end }}
-                        {{ end }}
-                        <tr>
-                            <td class="wow fadeInDown feature" data-wow-delay="{{ $delayTofeature }}s" > {{ $feature.name }}</td>
-                            
-                            {{ $featureImplemented := 0 }}
-                            {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                                {{ $tdToShow := mul $delay $idate }}
-                                {{ $tdToShow = add $tdToShow $delay }}
-    
-                                {{ if eq . $feature.date }}
-                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
-                                        <svg height="25" width="25" viewbox="0 0 200 200" style="margin-top:5px;">
-                                            <polygon points="100,0 200,100 100,200 0,100" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
-                                        </svg>
-                                    </td>
-                                {{ else }}
-                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s" ></td>
-                                {{ end }}
-                            {{ end }}
-                        </tr>
-                    {{ end }}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td class="feature"></td>
-                        {{ range $index, $date := .Site.Data.roadmap.dates }}
-                        <td class="">{{ . }}</td>
-                        {{ end }}
-                    </tr>
-                </tfoot>
-            </table>
+        <img id="roadmap-video" width="100%" height="auto" src="images/roadmap.png">
+          </img>
 
     </div>
 </section>
