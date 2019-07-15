@@ -8,20 +8,15 @@
         </div>
         <div class="wow fadeInLeft" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
-            {{ with .Site.Params.about.content }}<p>{{ T "Brief" }}</p>{{ end }}
+            {{ with .Site.Params.about.content }}<p>{{ . | safeHTML }}</p>{{ end }}
         </div>
-        <div class="row">
-            <div class="col-sm" style="text-align: center;">
-                <a class="btn-lines wow fadeInUp btn btn-default btn-get-started" data-wow-delay=".9s"
-                    href="#gettingstarted-anchor">
-                    <p style="font-weight: normal;">{{ T "Get Started" }}</p>
-                </a>
-                <a  class="btn-lines wow fadeInUp btn btn-default btn-watch-demo" 
-                    data-wow-delay=".9s"
-                    href="#demo-anchor">
-                    <p style="font-weight: normal;">{{ T "Watch The Demo" }}</p>
-                </a>
-            </div>
+
+        <div id="gt-button">
+            <a class="btn-lines wow fadeInUp btn btn-default" data-wow-delay=".9s"
+                style="font-weight:100; background-color: rgba(159, 188, 187, 1);"
+                href="{{ .Site.Params.about.btnURL }}" target="_blank">
+                <p>{{ .Site.Params.about.btnText }}</p>
+            </a>
         </div>
     </div>
 </section>

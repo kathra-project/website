@@ -3,16 +3,13 @@
 <section id="latestnewsbanner">
     <div class="container">
         <div class="row">
-            {{ $indexBeginToDisplay := len .Site.Data.news.items }}
-            {{ $indexBeginToDisplay = sub $indexBeginToDisplay 4 }}
-            
-            {{ range $index, $element := sort .Site.Data.news.items "date" "asc" }}
-            {{ if (ge $index $indexBeginToDisplay) }}
+            {{ range $index, $element := .Site.Data.news.items }}
+            {{ if (lt $index 4) }}
             <div class="col-sm-3 latestnewsbanner-element">
                 {{ $delay := mul (add $index 1) 300 }}
                 <div class="block wow fadeInLeft" data-wow-delay="{{ $delay }}ms" data-wow-duration="500ms">
-                    <h3>{{ dateFormat "2 Jan 2006" .date }}</h3>
-                    <a href="./news#new-{{ .title }}">{{ .title }}</a>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description | safeHTML }}</p>
                 </div>
             </div>
             {{ end }}
