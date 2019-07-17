@@ -6,12 +6,12 @@
         {{ with .Site.Params.partners.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-md-center">
             {{ range $index, $element := .Site.Params.partners.items }}
-            <div class="col-sm justify-content-md-center partner-element">
+            <div class="col-md-6 justify-content-md-center partner-element">
                 {{ $delay := mul (add $index 1) 300 }}
                 <div class="block wow fadeInLeft" data-wow-delay="{{ $delay }}ms" data-wow-duration="500ms">
-                    <div><img class="mr-3" style="width: 75%;"  {{printf "src='%s'" .logo | safeHTMLAttr}} alt="" /></div>
+                    <div><img class="mr-3" style="width: 50%;"  {{printf "src='%s'" .logo | safeHTMLAttr}} alt="" /></div>
                     <h3>{{ .name }}</h3>
                     <p>{{ .description | safeHTML }}</p>
                     <p><a href="{{ .link }}">{{ .name }} Website</a></p>
