@@ -7,14 +7,19 @@
     </div>
     <div class="container">
         <div class="row justify-content-md-center">
-            {{ range $index, $element := .Site.Params.partners.items }}
+            {{ $lang := .Site.Language.Lang  }}
+            {{ range $index, $element := .Site.Data.partners.items }}
             <div class="col-md-6 justify-content-md-center partner-element">
                 {{ $delay := mul (add $index 1) 300 }}
                 <div class="block wow fadeInLeft" data-wow-delay="{{ $delay }}ms" data-wow-duration="500ms">
                     <div><img class="mr-3" style="width: 50%;"  {{printf "src='%s'" .logo | safeHTMLAttr}} alt="" /></div>
                     <h3>{{ .name }}</h3>
-                    <p>{{ .description | safeHTML }}</p>
-                    <p><a href="{{ .link }}">{{ .name }} Website</a></p>
+                    {{ if in $lang "fr" }} 
+                        <p>{{ .description.fr | safeHTML }}</p>
+                    {{ else }}
+                        <p>{{ .description.en | safeHTML }}</p>
+                    {{ end }}
+                    <p><a href="{{ .link }}">{{ .name }} {{ T "WebSite" }}</a></p>
                 </div>
             </div>
             {{ end }}

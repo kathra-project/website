@@ -37,3 +37,24 @@ other = "Conçu pour tous, Kathra fournit une UI vous permettant de développer 
 
 ["DemoTitle"]
 other = "Curieux ? Venez voir comment Kathra fonctionne"
+
+["GettingStartedTitle0"]
+other = "Installer Kubernetes"
+["GettingStartedTitle1"]
+other = "Installer Kathra"
+["GettingStartedTitle2"]
+other = "Créer votre API"
+["GettingStartedTitle3"]
+other = "Consommer là"
+
+["GettingStartedDescription0"]
+other = "Installer and configurer votre K8S"
+["GettingStartedDescription1"]
+other = "Installer Kathra et votre factory (GitLab, Jenkins, Nexus, Harbor)"
+["GettingStartedDescription2"]
+other = "Créer votre première API and générer là en Java ou Python"
+["GettingStartedDescription3"]
+other = "Consommer votre web service REST"
+
+["WebSite"]
+other = "Site web"

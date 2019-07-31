@@ -36,8 +36,13 @@ ul li {
   list-style: none;
 }
 
+a {
+  color: rgb(97, 91, 66);
+}
+
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  color: rgb(97, 91, 66);
 }
 
 .slick-slide:focus {
@@ -582,10 +587,11 @@ a:hover {
 
 #about .container {
   text-align: center;
+  padding-top: 1em;
 }
 
 #about > div > div:nth-child(2) {
-  margin-top: 3em;
+  margin: 1em;
   display:inline-block;
 }
 

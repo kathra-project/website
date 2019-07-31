@@ -2,11 +2,11 @@
 {{ "<!-- About Section Start -->" | safeHTML }}
 <section id="about" style="background-color:rgba(159, 188, 187, 0.3)">
     <div class="container">
-        <div class="wow fadeInLeft" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
+        <div class="wow fadeInDown" style="display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
-            {{ with .Site.Params.about.image }}<img src="{{ . | absURL }}" alt="about-image">{{ end }}
+            {{ with .Site.Params.about.image }}<img src="{{ . | absURL }}" style="border: 1px solid #9fbcbb;" alt="about-image">{{ end }}
         </div>
-        <div class="wow fadeInLeft" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
+        <div class="wow fadeInUp" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
             {{ with .Site.Params.about.content }}<p>{{ T "Brief" }}</p>{{ end }}
         </div>

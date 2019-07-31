@@ -77,7 +77,7 @@ copyright = "Everything is mine"
         enable  = true
         title   = ""
         content = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
-        image   = "images/molecules.png"
+        image   = "images/kathra-screenshot.png"
         btnText = "Get Started"
         btnURL  = "http://localhost:1313"
 

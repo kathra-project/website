@@ -8,10 +8,15 @@
         </div>
         <style>
         #gettingstarted table {
-            margin: auto;
+            margin: none;
+            height: 50vh;
+            width: 100%;
             font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
         }
         #gettingstarted table .step-icon {
+            height: 120px;
+        }
+        #gettingstarted table .step-icon td div {
             text-decoration: none;
             color: #000;
             background-color: rgba(112, 133, 131, 0.3);
@@ -25,12 +30,12 @@
             -webkit-border-radius: 50%;
             margin-left: 75px;
         }
-        #gettingstarted table .step-label {
+        #gettingstarted table .step-label td {
             font-size: 30px;
             width: 250px;
             text-align: center;
         }
-        #gettingstarted table .step-description {
+        #gettingstarted table .step-description td {
             font-size: 15px;
             width: 250px;
             text-align: center;
@@ -41,41 +46,39 @@
         </style>
         <table>
             <tbody>
-                <tr>
-                    <td class="wow fadeInDown" data-wow-delay="1.0s"><div class="step-icon" style="background-color: rgba(188,159,159)">1</div></td>
-                    <td class="wow fadeInDown" data-wow-delay="2.0s"><div class="step-icon" style="background-color: rgba(201, 187, 125)">2</div></td>
-                    <td class="wow fadeInDown" data-wow-delay="3.0s"><div class="step-icon" style="background-color:rgba(159, 188, 187)">3</div></td>
-                    <td class="wow fadeInDown" data-wow-delay="4.0s"><div class="step-icon" style="background-color: rgba(167, 188, 153)">4</div></td>
+                <tr class="step-icon">
+                    <td class="wow fadeInDown" data-wow-delay="1.0s"><div  style="background-color: rgba(188,159,159)">1</div></td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s"><div  style="background-color: rgba(201, 187, 125)">2</div></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.0s"><div  style="background-color:rgba(159, 188, 187)">3</div></td>
+                    <td class="wow fadeInDown" data-wow-delay="2.5s"><div  style="background-color: rgba(167, 188, 153)">4</div></td>
                 </tr>
-                <tr>
-                    <td class="wow fadeInDown step-label" data-wow-delay="1.0s" >Install Kubernetes</td>
-                    <td class="wow fadeInDown step-label" data-wow-delay="2.0s" >Install Kathra</td>
-                    <td class="wow fadeInDown step-label" data-wow-delay="3.0s" >Create your API</td>
-                    <td class="wow fadeInDown step-label" data-wow-delay="4.0s" >Consume it</td>
+                <tr class="step-label">
+                    <td class="wow fadeInDown" data-wow-delay="1.0s" >{{ T "GettingStartedTitle0"}}</td>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s" >{{ T "GettingStartedTitle1"}}</td>
+                    <td class="wow fadeInDown" data-wow-delay="2.0s" >{{ T "GettingStartedTitle2"}}</td>
+                    <td class="wow fadeInDown" data-wow-delay="2.5s" >{{ T "GettingStartedTitle3"}}</td>
                 </tr>
-                <tr>
-                    <td class="wow fadeInDown step-description" data-wow-delay="1.0s">
+                <tr class="step-description">
+                    <td class="wow fadeInDown" data-wow-delay="1.0s">
                         <ul>
-                            <li><a target="_blank" href="https://kubernetes.io/docs/tasks/tools/install-minikube">You doesn't have K8S cluster, you can start with Minikube</a></li>
-                            <li>If your run localy with Minikube, open your cluster to Internet</li>
-                            <li><a target="_blank" href="https://docs.traefik.io/user-guide/kubernetes/">Install Traefik</a></li>
-                            <li>Create domain's name pointing to your cluster.</li>
-                            <li>Configure Treafik to auto generate SSL certificate.</li>
+                            <li>{{ T "GettingStartedDescription0"}}</li>
+                            <li><a target="_blank" href="https://kubernetes.io/docs/tasks/tools/install-minikube">Minikube doc</a></li>
+                            <li><a target="_blank" href="https://docs.traefik.io/user-guide/kubernetes/">Traefik doc</a></li>
                         </ul>
                     </td>
-                    <td class="wow fadeInDown step-description" data-wow-delay="2.0s">
-                        <a href="https://git.irt-systemx.fr/SMITE/deployment/blob/140-RC/README.md" target="_blank">Install Kathra</a>
+                    <td class="wow fadeInDown" data-wow-delay="1.5s">
+                        <a href="https://git.irt-systemx.fr/SMITE/deployment/blob/140-RC/README.md" target="_blank">{{ T "GettingStartedDescription1"}}</a>
                     </td>
-                    <td class="wow fadeInDown step-description" data-wow-delay="3.0s">
-                        <a href="https://git.irt-systemx.fr/SMITE/documentation/blob/master/createComponent/createComponent.md">Create your first API and generate it in Java or Python</a>
+                    <td class="wow fadeInDown" data-wow-delay="2.0s">
+                        <a href="https://git.irt-systemx.fr/SMITE/documentation/blob/master/createComponent/createComponent.md">{{ T "GettingStartedDescription2"}}</a>
                     </td>
-                    <td class="wow fadeInDown step-description" data-wow-delay="4.0s">
-                        Consume your REST Web Service
+                    <td class="wow fadeInDown" data-wow-delay="2.5s">
+                        {{ T "GettingStartedDescription3"}}
                     </td>
                 </tr>
             </tbody>
             <tfoot>
-                <tr class="wow fadeInDown step-description" data-wow-delay="5.0s">
+                <tr class="wow fadeInDown" data-wow-delay="5.0s">
                     <td colspan="4" style="text-align: center;">
                         Too difficult ? <a href="https://git.irt-systemx.fr/SMITE/deployment/blob/140-RC/Example-Minikube-OVH.md" target="_blank">See an example !</a>
                     </td>
