@@ -41,8 +41,16 @@
         <div class="row">
             <div class="col-lg-14" style="width: 100%;">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}">
-                        <img src="{{ .Site.Params.logo | absURL }}" alt="logo">
+                    
+                    <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}" style="padding-left:80px;height: 130px; ">
+                        <img style="position: fixed;
+                                    top: 20px;
+                                    left: 20px;
+                                    width: 150px;
+                                    min-width: 0px;" 
+                            src="{{ .Site.BaseURL }}/images/molecules.png" />
+                        <p style="text-align:center;font-size:3.5em;font-weight:700;line-height: 70px;margin: 20px 0px 0px 0px;">KATHRA</p>
+                        <p style="text-align:center; font-size: 0.8em">{{ T "LogoTitle" }}</p>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation" style="position: fixed;right:15px;">
@@ -51,9 +59,29 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
+                            {{ $home := printf "%s/%s/" .Site.BaseURL .Site.Language.Lang }}
+                            {{ if in .Site.Language.Lang "fr" }} 
+                                {{ $home = printf "%s" .Site.BaseURL }}
+                            {{ end }}
                             {{ range .Site.Menus.nav }}
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                                {{ if in .URL "http" }} 
+                                    <a class="nav-link"  href="{{ .URL }}" target="_blank" >{{ T .Name }}</a>
+                                {{ else }}
+                                    <a class="nav-link"  href="{{ $home }}{{ .URL }}" >{{ T .Name }}</a>
+                                {{ end }}
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <div class="lang" style="position: fixed; top:10px; right:10px;">
+                        <ul class="navbar-nav">
+                            {{ range .Site.Home.AllTranslations }}
+                            <li class="nav-item">
+                                <a href="{{ .Permalink }}">
+                                    <img class="nav-link" style="width: 40px; height: 40px; opacity: 0.7;" src="{{ .Site.BaseURL }}/images/{{ .Language }}.svg" alt="{{ .Language }}" />
+                                </a>
                             </li>
                             {{ end }}
                         </ul>

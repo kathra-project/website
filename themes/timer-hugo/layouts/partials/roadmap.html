@@ -1,13 +1,329 @@
 {{ if .Site.Params.roadmap.enable }}
 {{ "<!-- roadmap Section Start -->" | safeHTML }}
-<section id="roadmap" style="background-color:rgba(201, 187, 125, 0.3);">
+<section id="roadmap" style="background-color:rgba(235, 238, 217, 1);">
+    <div id="roadmap-anchor" class="section-anchor"></div>
     <div class="container">
         <div class="section-heading">
-            {{ with .Site.Params.roadmap.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ . }}</h1>{{ end }}
+            {{ with .Site.Params.roadmap.title }}<h1 class="title wow fadeInDown" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ T . }}</h1>{{ end }}
         </div>
+        <!--
+            <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
+        -->
+        
+        {{ $baseColorR := 150 }}
+        {{ $baseColorG := 153 }}
+        {{ $baseColorB := 132 }}
 
-        <img id="roadmap-video" width="100%" height="auto" src="images/roadmap.png">
-          </img>
+        {{ $deltaDegrade := 50 }}
+
+        {{ $r := add $baseColorR $deltaDegrade }}
+        {{ $g := add $baseColorG $deltaDegrade }}
+        {{ $b := add $baseColorB $deltaDegrade }}
+
+
+        <style>
+            #roadmap table {
+                border-collapse: collapse;
+                font-size: 1em;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            }
+            #roadmap table tfoot {
+                border-collapse: separate;
+                border-spacing: 5px;
+            }
+            #roadmap table thead tr td{
+                font-size: 1.2em;
+            }
+            #roadmap table * tr td{
+                width: 250px;
+            }
+            #roadmap table * tr td[data-roadmap=true]{
+                background-color:rgba(167, 167, 167, 1);
+            }
+            #roadmap table * tr .release{
+                width: 150px;
+            }
+            #roadmap table * tr .feature{
+                width: 500px;
+            }
+            #roadmap table tfoot tr td {
+                border-top : 1px solid rgba(73, 62, 29, 0.5);
+            }
+            #roadmap table tfoot tr .release,
+            #roadmap table tfoot tr .feature {
+                border : 0px;
+            }
+            #roadmap table a.release,
+            #roadmap table span.release {
+                opacity: 0.8;
+            }
+            #roadmap table a.release:not([href=""]):hover {
+                opacity: 1;
+            }
+            #roadmap table tbody tr:nth-child(even) {
+                background-color: rgba(255,255,255,0.4);
+            }
+            
+            
+
+            #interactive-roadmap {
+                border: 1px solid rgb({{ $baseColorR }}, {{ $baseColorG }}, {{ $baseColorB }});
+                border-radius: 5px;
+            }
+
+            #interactive-roadmap a,
+            #interactive-roadmap a:hover {
+                text-decoration: none;
+            }
+
+            #interactive-roadmap text {
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            }
+
+            #interactive-roadmap .release-bullet,
+            #interactive-roadmap .timeline {
+                fill: rgb({{ $baseColorR | add 70 }}, {{ $baseColorG | add 70 }}, {{ $baseColorB | add 70 }});
+                stroke:rgb({{ $baseColorR }}, {{ $baseColorG }}, {{ $baseColorB }});
+                stroke-width: 1;
+            }
+            #interactive-roadmap .release:hover .release-bullet {
+                fill: rgb({{ $baseColorR | add 10 }}, {{ $baseColorG | add 10 }}, {{ $baseColorB | add 10 }});
+                stroke:rgb({{ $baseColorR | add -20 }}, {{ $baseColorG | add -20  }}, {{ $baseColorB | add -20  }});
+            }
+            #interactive-roadmap .release:hover .release-name {
+                fill: rgb({{ $baseColorR | add -20 }}, {{ $baseColorG | add -20 }}, {{ $baseColorB | add -20 }});
+            }
+            #interactive-roadmap-current-time {
+                stroke: rgba(255, 3, 3, 0.5);
+                stroke-dasharray: 1px;
+            }
+
+            #interactive-roadmap-timeline,
+            #interactive-roadmap-timeline2 {
+                stroke: rgb({{ $baseColorR }}, {{ $baseColorG }}, {{ $baseColorB }});
+            }
+
+        </style>
+        
+        
+        {{ $delay := 0.3 }}
+        <div class="wow fadeInUp" data-wow-delay=".5s">
+        <svg id="interactive-roadmap"   width="100%" viewbox="0 0 1000 300">
+            
+            {{ $nbSection := len $.Site.Data.roadmap.dates}}
+            {{ $deltaW := div 1000 $nbSection }}
+            {{ $deltaW2 := div $deltaW 4 }}
+            {{ $timeline := 250 }}
+            
+            {{ $degrade := div 60 $nbSection }}
+
+            {{ range $index, $date := .Site.Data.roadmap.dates }}
+            
+            {{ $w := $deltaW }}
+            {{ $h := 720 }}
+            {{ $r = add $r $degrade  }}
+            {{ $g = add $g $degrade  }}
+            {{ $b = add $b $degrade  }}
+            {{ $x := mul $index $deltaW }}
+            {{ $y := 0 }}
+
+            <rect x="{{ $x }}" y="{{ $y }}" width="100%" height="{{ $h }}" style="fill:rgb({{ $r }}, {{ $g }}, {{ $b }});">
+            </rect>
+
+            <text x="{{ add $x $deltaW2 }}" y="30" fill="rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}})" font-size="12">{{ $date }}</text>
+            {{ end }}
+            
+            <line id="interactive-roadmap-current-time" class="current-time" x1="50%" y1="0" x2="50%" y2="400" style="stroke-width:1;" />
+            
+            <line id="interactive-roadmap-timeline" x1="0" y1="{{ $timeline }}" x2="{{ mul $deltaW $nbSection }}" y2="{{ $timeline }}" />
+            <line id="interactive-roadmap-timeline2" x1="{{ mul $deltaW $nbSection }}" y1="{{ $timeline }}" x2="100%" y2="{{ $timeline }}" />
+
+            {{ range $idate, $date := $.Site.Data.roadmap.dates }}
+                {{ $tdToShow := mul $delay $idate }}
+                {{ $tdToShow = add $tdToShow $delay }}
+
+                {{ $releaseToShow := "" }}
+                {{ $releaseUrlToShow := "" }}
+                {{ range $irelease, $release := $.Site.Data.roadmap.releases }}
+                    {{ if eq $date $release.date }}
+                        {{ $releaseToShow = $release.name }}
+                        {{ $releaseUrlToShow = $release.url }}
+                    {{ end }}
+                {{ end }}
+
+                {{ if ne $releaseToShow "" }}
+                    {{ $x := mul $idate $deltaW | add $deltaW }}
+                    {{ $y := sub $timeline 25 }}
+
+                    {{ if ne $releaseUrlToShow "" }}
+                    <a href="{{ $releaseUrlToShow }}" class="release">
+                    {{ end }}
+                        <circle class="release-bullet" cx="{{ $x }}" cy="{{ $timeline }}" r="25">
+                        </circle >
+                    {{ if ne $releaseUrlToShow "" }}
+                    </a>
+                    {{ end }}
+
+                    {{ $x2 := add $x 50 }}
+                    {{ $y2 := sub $y 100 }}
+                    <line class="timeline" x1="{{ $x }}" y1="{{ $y }}" x2="{{ $x2 }}" y2="{{ $y2 }}" style="stroke:rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}});stroke-width:1" />
+                    {{ $x := sub $x 5 }}
+                    {{ $y := sub $y 10 }}
+
+                    
+
+                    {{ if ne $releaseUrlToShow "" }}
+                    <a href="{{ $releaseUrlToShow }}" class="release">
+                    {{ end }}
+                    <text class="release-name" x="{{ $x }}" y="{{ $y }}" fill="rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}})" transform="rotate(-62 {{ $x }}, {{ $y }})" font-size="12">{{ $releaseToShow }}</text>
+                    {{ if ne $releaseUrlToShow "" }}
+                    </a>
+                    {{ end }}
+                    
+                    {{ $y := sub $timeline 110 }}
+                    {{ $x := mul $idate $deltaW | add $deltaW }}
+                    {{ $x := add $x 50 }}
+                    {{ range $iFeature, $feature := sort $.Site.Data.roadmap.features "date" "desc" }}
+
+                        {{ if eq $releaseToShow $feature.release }}
+                        <text x="{{ $x }}" y="{{ $y }}" fill="rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}})" font-size="10">* {{ $feature.name }}</text>
+                        {{ $y = add $y 20 }}
+                        {{ $x = sub $x 10 }}
+                        {{ end }}
+
+                    {{ end }}
+
+
+                {{ end }}
+            {{ end }}
+                   
+                {{ $sorteByDateDesc := sort $.Site.Data.roadmap.dates "" "desc" }}
+                {{ $sorteByDateAsc := sort $.Site.Data.roadmap.dates "" "asc" }}
+        </svg>
+        </div>
+        <script>
+            {
+                var quarterMin="{{(index ($sorteByDateAsc) 0) }}";
+                var quarterMax="{{(index ($sorteByDateDesc) 0) }}";
+                var yearMin=quarterMin.split('-')[0].trim();
+                var yearMax=quarterMax.split('-')[0].trim();
+                var monthMin=(quarterMin.split('-')[1].replace('T', '').trim()*3)-2;
+                var monthMax=(quarterMax.split('-')[1].replace('T', '').trim()*3);
+                if (monthMin < 10) {
+                    monthMin = "0"+monthMin;
+                } else if (monthMin < 0) {
+                    monthMin = 12 + monthMin;
+                }
+                if (monthMax < 10 ) {
+                    monthMax = "0"+monthMax;
+                }
+
+                var dateMin=yearMin+"-"+monthMin+"-01";
+                var dateMax=yearMax+"-"+monthMax+"-30";
+                console.log(dateMin, dateMax)
+                document.getElementById("interactive-roadmap-current-time").setAttribute("x1", "-10px");
+                document.getElementById("interactive-roadmap-current-time").setAttribute("x2", "-10px");
+                var min=Math.round(new Date(dateMin).getTime()/1000);
+                var max=Math.round(new Date(dateMax).getTime()/1000);
+                var current=Math.round(new Date().getTime()/1000);
+                var current=Math.round(new Date().getTime()/1000);
+                console.log(min, max, current)
+                if (current > min && current < max) {
+                    var x=current-min;
+                    var xMax=max-min;
+                    var maxTimeLinePx = document.getElementById("interactive-roadmap-timeline").getAttribute("x2");
+                    console.log(x, xMax, maxTimeLinePx)
+                    var curentTimelinePx=x*maxTimeLinePx/xMax;
+                    var pc=x*100/xMax;
+                    document.getElementById("interactive-roadmap-current-time").setAttribute("x1", curentTimelinePx+"px");
+                    document.getElementById("interactive-roadmap-current-time").setAttribute("x2", curentTimelinePx+"px");
+                    document.getElementById("interactive-roadmap-current-time").setAttribute("x1", pc+"%");
+                    document.getElementById("interactive-roadmap-current-time").setAttribute("x2", pc+"%");
+                }
+            }
+        </script>
+
+        {{ $delay := 0.3 }}
+        <table style="display:none;">
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;">See The Future</td>
+                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
+                            {{ $tdToShow := mul $delay $idate }}
+                            {{ $tdToShow = add $tdToShow $delay }}
+
+                            {{ $releaseToShow := "" }}
+                            {{ $releaseUrlToShow := "" }}
+                            {{ range $irelease, $release := $.Site.Data.roadmap.releases }}
+                                {{ if eq $date $release.date }}
+                                    {{ $releaseToShow = $release.name }}
+                                    {{ $releaseUrlToShow = $release.url }}
+                                {{ end }}
+                            {{ end }}
+
+                            {{ if eq $releaseToShow "" }}
+                                <td></td>
+                            {{ else }}
+                                <td style="text-align: right;" class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
+                                    
+                                    {{ if ne $releaseUrlToShow "" }}
+                                    <a href="{{ $releaseUrlToShow }}" class="release">
+                                    {{ else }}
+                                    <span class="release">
+                                    {{ end }}
+                                        <svg height="100" width="100" viewbox="0 0 250 250">
+                                                <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(198, 187, 125);stroke:rgb(112, 106, 69);stroke-width:2" />
+                                                <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="34"> {{ $releaseToShow }}</text>
+                                        </svg> 
+                                    {{ if ne $releaseUrlToShow "" }}
+                                    </a>
+                                    {{ else }}
+                                    </span>
+                                    {{ end }}
+                                </td>
+                            {{ end }}
+                        {{ end }}
+                    </tr>
+
+                    {{ $delay := 0.3 }}
+                    {{ range $iFeature, $feature := sort .Site.Data.roadmap.features "date" "desc" }}
+                        {{ $delayTofeature := 0 }}
+                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
+                            {{ if eq . $feature.date }}
+                                {{ $delayTofeature = mul $delay $idate }}
+                                {{ $delayTofeature = add $delayTofeature $delay }}
+                            {{ end }}
+                        {{ end }}
+                        <tr>
+                            <td class="wow fadeInDown feature" data-wow-delay="{{ $delayTofeature }}s" > {{ $feature.name }}</td>
+                            
+                            {{ $featureImplemented := 0 }}
+                            {{ range $idate, $date := $.Site.Data.roadmap.dates }}
+                                {{ $tdToShow := mul $delay $idate }}
+                                {{ $tdToShow = add $tdToShow $delay }}
+    
+                                {{ if eq . $feature.date }}
+                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
+                                        <svg height="25" width="25" viewbox="0 0 200 200" style="margin-top:5px;">
+                                            <polygon points="100,0 200,100 100,200 0,100" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
+                                        </svg>
+                                    </td>
+                                {{ else }}
+                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s" ></td>
+                                {{ end }}
+                            {{ end }}
+                        </tr>
+                    {{ end }}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="feature"></td>
+                        {{ range $index, $date := .Site.Data.roadmap.dates }}
+                        <td class="">{{ . }}</td>
+                        {{ end }}
+                    </tr>
+                </tfoot>
+            </table>
 
     </div>
 </section>

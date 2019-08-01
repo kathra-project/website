@@ -1,19 +1,80 @@
 enable  : true
-title   : WHAT WE DO
-subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis porro recusandae non quibusdam iure adipisci.
+title   : 
+subtitle: 
 items :
-  - title   : May 29, 2019 -
-    description: >  
-      KATHRA Build 1.7.0 Beta is available. Supports experimentation environments.
+  - title: 
+      fr: SMITE a été présenté au CRiP.
+      en: SMITE is presented to CRiP.
+    date   : 2019-01-22
+    author : Julien Boubechtoula
+    description:
+      fr: >
+        SMITE a été présenté <a href="https://www.crip-asso.fr">CRiP</a>, pour plus d'information, voir <a href="https://presentation-smite.irtsysx.fr">la présentation</a>. 
+      en: >
+        SMITE is presented to <a href="https://www.crip-asso.fr">CRiP</a>, for more information, see the <a href="https://presentation-smite.irtsysx.fr">slideshow</a>.
 
-  - title : May 04, 2019 -
-    description: >  
-      KATHRA 1.4.0 Provides access to build, deployment, and applications logs.
+  - title: 
+      fr: Go pour open sourcing !
+      en: Go-ahead for open sourcing !
+    date   : 2019-02-22
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        IRT SystemX donne le feu vert pour l'open sourcing de SMITE.
+      en: >  
+        IRT SystemX give the go-ahead for SMITE's open sourcing.
 
-  - title   : April 28, 2019 -
-    description: >  
-      KATHRA 1.3.1 Mostly bug fixes and stability improvements.
+  - title: 
+      fr: SMITE change de nom.
+      en: SMITE rebranding.
+    date   : 2019-03-03
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        SMITE sera renommé Kathra pour l'open sourcing.
+      en: >  
+        SMITE will be renamed Kathra for open sourcing. 
+      
+  - title: 
+      fr: SMITE 1.2 RC est disponible
+      en: SMITE 1.2 RC is available
+    date   : 2019-04-03
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        SMITE 1.2 Release Candidate est disponible. Nous validons actuellement les différents cas d'utilisations et corrigons les bugs. Pour plus d'information <a href="https://redmine.irt-systemx.fr/projects/smite-tracker/issues?utf8=%E2%9C%93&set_filter=1&sort=status%2Cid%3Adesc&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=467&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=&t%5B%5D="> voici le bug tracker</a>.
+      en: >  
+        SMITE 1.2 Release Candidate is available. We are going to validate use cases and fix issues. For more information, <a href="https://redmine.irt-systemx.fr/projects/smite-tracker/issues?utf8=%E2%9C%93&set_filter=1&sort=status%2Cid%3Adesc&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=467&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=&t%5B%5D="> issue tracker</a>.
 
-  - title   : April 15, 2019 -
-    description: >  
-      KATHRA 1.3.0 Fully automatic build and deployment of the KATHRA stack.
+  - title: 
+      fr: Le code source sera disponible d'ici quelques semaines
+      en: Source code will be available in few weeks.
+    date   : 2019-05-21
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        Le code source de Kathra devrait être publié pour le 31 juillet.
+      en: >  
+        Kathra's source code should be published on 31th July, if god wants.
+
+  - title: 
+      fr: Script de déploiement disponible.
+      en: Deployment script is ready.
+    date   : 2019-07-08
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        L'automatisation du déploiement a été finalisée. Cette procédure permet de déployer Kathra, ainsi que sa factory sur un cluster Kubernetes. Pour plus d'information, <a href="https://git.irt-systemx.fr/SMITE/deployment/tree/140-RC"> consulter ce dépôt.</a>
+      en: >  
+        Auto-deployment has been finalized. This procedure permits to deploy Kathra and its factory on k8s cluster. For more details, <a href="https://git.irt-systemx.fr/SMITE/deployment/tree/140-RC">see this repository.</a>
+
+  - title: 
+      fr: SMITE-CLI est disponible.
+      en: SMITE-CLI is ready.
+    date   : 2019-07-31
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        SMITE-CLI est en client en ligne de commande permettant d'effectuer des opérations au sein de SMITE. Pour plus d'information, <a href="https://git.irt-systemx.fr/SMITE/smite-cli"> consulter ce dépôt.</a>
+      en: >  
+        SMITE-CLI is command line client permetting to do basic operation. For more informations, <a href="https://git.irt-systemx.fr/SMITE/smite-cli">see this repository.</a>

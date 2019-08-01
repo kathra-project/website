@@ -5,33 +5,47 @@ theme = "timer-hugo"
 relativeurls = true
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
+
+DefaultContentLanguage = "fr"
+copyright = "Everything is mine"
+
+[languages]
+  [languages.en]
+    title = "Kathra"
+    weight = 1
+  [languages.fr]
+    title = "Kathra"
+    weight = 2
+
 # Site Menus
 [menu]
     # Navbar Menus
     [[menu.nav]]
-        name    = "News"
-        url     = "/news"
+        name    = "Product"
+        url     = "#features-anchor"
         weight  = 1
     [[menu.nav]]
-        name    = "Get Started"
-        url     = "/get-started"
+        name    = "Demo"
+        url     = "#demo-anchor"
         weight  = 2
     [[menu.nav]]
-        name    = "Demo"
-        url     = "/demo"
-        weight  = 3
+        name    = "Get Started"
+        url     = "#gettingstarted-anchor"
+        weight  = 2
     [[menu.nav]]
-        name    = "Community"
-        url     = "/community"
+        name    = "Source Code"
+        url     = "https://gitlab.com/kathra"
         weight  = 4
     [[menu.nav]]
-        name    = "About us"
-        url     = "/aboutus"
+        name    = "Road Map"
+        url     = "#roadmap-anchor"
         weight  = 5
     [[menu.nav]]
-        name    = "git"
-        url     = "/git"
+        name    = "Partners"
+        url     = "#partners-anchor"
         weight  = 6
+
+
 
 
 # Site Params
@@ -51,7 +65,10 @@ relativeurls = true
         bgImage = ""
         heading = ""
         description = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
-        
+
+    [params.gettingstarted]
+        enable  = true
+      
     [params.latestnewsbanner]
         enable  = true
     
@@ -60,7 +77,7 @@ relativeurls = true
         enable  = true
         title   = ""
         content = "KATHRA is the first tool to help you automatically generate, build, deploy, and run code, all from an API specification."
-        image   = "images/molecules.png"
+        image   = "images/kathra-screenshot.png"
         btnText = "Get Started"
         btnURL  = "http://localhost:1313"
 
@@ -78,11 +95,14 @@ relativeurls = true
     # Homepage roadmap Section
     [params.roadmap]
         enable  = true
-        title   = "the kathra roadmap"
+        title   = "Road Map"
         btnText = "see the roadmap"
         btnURL  = "http://localhost:1313"
 
-    # Call to Action
+    [params.partners]
+        enable  = true
+        title   = "Partners"
+        
     [params.cta]
         enable  = false
         title   = "SO WHAT DO YOU THINK ?"
