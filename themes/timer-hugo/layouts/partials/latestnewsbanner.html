@@ -5,14 +5,18 @@
         <div class="row">
             {{ $indexBeginToDisplay := len .Site.Data.news.items }}
             {{ $indexBeginToDisplay = sub $indexBeginToDisplay 4 }}
-            
             {{ range $index, $element := sort .Site.Data.news.items "date" "asc" }}
             {{ if (ge $index $indexBeginToDisplay) }}
             <div class="col-sm-3 latestnewsbanner-element">
                 {{ $delay := mul (add $index 1) 300 }}
                 <div class="block wow fadeInLeft" data-wow-delay="{{ $delay }}ms" data-wow-duration="500ms">
                     <h3>{{ dateFormat "2 Jan 2006" .date }}</h3>
-                    <a href="./news#new-{{ .title }}">{{ .title }}</a>
+                    <a href="./news#new-{{ .title }}">
+                        {{ if in $.Site.Language.Lang "fr" }} 
+                            {{ .title.fr }}
+                        {{ else }}
+                            {{ .title.en }}
+                        {{ end }}</a>
                 </div>
             </div>
             {{ end }}

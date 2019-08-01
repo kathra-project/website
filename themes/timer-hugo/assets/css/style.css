@@ -55,6 +55,12 @@ a:hover {
   display: hidden;
 }
 
+.news-anchor {
+  position: relative;
+  top: -210px;
+  display: hidden;
+}
+
 .section-heading {
   text-align: center;
   padding-bottom: 70px;
@@ -260,7 +266,7 @@ a:hover {
     min-width:310px;
   }
   #about > div > div > img {
-    width: 80%;
+    width: 70%;
     height: auto;
   }
 }
@@ -785,7 +791,7 @@ figure figcaption p {
 }
 
 #roadmap {
-  height: calc(150vh - 200px);
+  height: calc(100vh - 200px);
 }
 #roadmap .container {
   max-width: 90%;
