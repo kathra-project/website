@@ -10,6 +10,10 @@
             <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
         -->
         
+        {{ $textColorR := 128 }}
+        {{ $textColorG := 117 }}
+        {{ $textColorB := 55 }}
+
         <style>
             #roadmap table {
                 border-collapse: collapse;
@@ -53,8 +57,10 @@
                 background-color: rgba(255,255,255,0.4);
             }
             
+            
+
             #interactive-roadmap {
-                border: 1px solid rgb(128,117,55);
+                border: 1px solid rgb({{ $textColorR }}, {{ $textColorG }}, {{ $textColorB }});
                 border-radius: 5px;
             }
 
@@ -69,8 +75,8 @@
 
             #interactive-roadmap .release-bullet,
             #interactive-roadmap .timeline {
-                fill: rgb(198,187,125);
-                stroke:rgb(128,117,55);
+                fill: rgb({{ $textColorR | add 70 }}, {{ $textColorG | add 70 }}, {{ $textColorB | add 70 }});
+                stroke:rgb({{ $textColorR }}, {{ $textColorG }}, {{ $textColorB }});
                 stroke-width: 1;
             }
             #interactive-roadmap .release:hover .release-bullet {
@@ -87,7 +93,7 @@
 
             #interactive-roadmap-timeline,
             #interactive-roadmap-timeline2 {
-                stroke: rgba(128, 117, 55, 1);
+                stroke: rgb({{ $textColorR }}, {{ $textColorG }}, {{ $textColorB }});
             }
 
         </style>
@@ -96,9 +102,6 @@
         {{ $delay := 0.3 }}
         <svg id="interactive-roadmap" width="100%" viewbox="0 0 1000 300">
             
-            {{ $textColorR := 128 }}
-            {{ $textColorG := 117 }}
-            {{ $textColorB := 55 }}
             {{ $nbSection := len $.Site.Data.roadmap.dates}}
             {{ $deltaW := div 1000 $nbSection }}
             {{ $deltaW2 := div $deltaW 4 }}
