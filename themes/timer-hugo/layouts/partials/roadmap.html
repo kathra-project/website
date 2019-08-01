@@ -1,6 +1,6 @@
 {{ if .Site.Params.roadmap.enable }}
 {{ "<!-- roadmap Section Start -->" | safeHTML }}
-<section id="roadmap" style="background-color:rgba(201, 187, 125, 0.3);">
+<section id="roadmap" style="background-color:rgba(235, 238, 217, 1);">
     <div id="roadmap-anchor" class="section-anchor"></div>
     <div class="container">
         <div class="section-heading">
@@ -10,9 +10,9 @@
             <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
         -->
         
-        {{ $baseColorR := 139 }}
-        {{ $baseColorG := 134 }}
-        {{ $baseColorB := 116 }}
+        {{ $baseColorR := 150 }}
+        {{ $baseColorG := 153 }}
+        {{ $baseColorB := 132 }}
 
         {{ $deltaDegrade := 50 }}
 
@@ -91,7 +91,7 @@
                 stroke:rgb({{ $baseColorR | add -20 }}, {{ $baseColorG | add -20  }}, {{ $baseColorB | add -20  }});
             }
             #interactive-roadmap .release:hover .release-name {
-                fill: rgb({{ $baseColorR | add 10 }}, {{ $baseColorG | add 10 }}, {{ $baseColorB | add 10 }});
+                fill: rgb({{ $baseColorR | add -20 }}, {{ $baseColorG | add -20 }}, {{ $baseColorB | add -20 }});
             }
             #interactive-roadmap-current-time {
                 stroke: rgba(255, 3, 3, 0.5);
@@ -107,14 +107,15 @@
         
         
         {{ $delay := 0.3 }}
-        <svg id="interactive-roadmap" width="100%" viewbox="0 0 1000 300">
+        <div class="wow fadeInUp" data-wow-delay=".5s">
+        <svg id="interactive-roadmap"   width="100%" viewbox="0 0 1000 300">
             
             {{ $nbSection := len $.Site.Data.roadmap.dates}}
             {{ $deltaW := div 1000 $nbSection }}
             {{ $deltaW2 := div $deltaW 4 }}
             {{ $timeline := 250 }}
             
-            {{ $degrade := 5 }}
+            {{ $degrade := div 60 $nbSection }}
 
             {{ range $index, $date := .Site.Data.roadmap.dates }}
             
@@ -199,7 +200,7 @@
                 {{ $sorteByDateDesc := sort $.Site.Data.roadmap.dates "" "desc" }}
                 {{ $sorteByDateAsc := sort $.Site.Data.roadmap.dates "" "asc" }}
         </svg>
-
+        </div>
         <script>
             {
                 var quarterMin="{{(index ($sorteByDateAsc) 0) }}";
