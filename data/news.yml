@@ -75,6 +75,6 @@ items :
     author : Julien Boubechtoula
     description: 
       fr: >  
-        SMITE-CLI est en client en ligne de commande permettant d'effectuer des opérations au sein de SMITE. Pour plus d'information, <a href="https://git.irt-systemx.fr/SMITE/smite-cli"> consulter ce dépôt.</a>
+        SMITE-CLI est un client en ligne de commande permettant d'effectuer des opérations au sein de SMITE. Pour plus d'informations, <a href="https://git.irt-systemx.fr/SMITE/smite-cli"> consulter ce dépôt.</a>
       en: >  
         SMITE-CLI is command line client permetting to do basic operation. For more informations, <a href="https://git.irt-systemx.fr/SMITE/smite-cli">see this repository.</a>
