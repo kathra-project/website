@@ -10,13 +10,16 @@
             <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
         -->
         
-        {{ $r := 169 }}
-        {{ $g := 164 }}
-        {{ $b := 136 }}
+        {{ $baseColorR := 139 }}
+        {{ $baseColorG := 134 }}
+        {{ $baseColorB := 116 }}
 
-        {{ $textColorR := sub $r 50 }}
-        {{ $textColorG := sub $g 50 }}
-        {{ $textColorB := sub $b 50 }}
+        {{ $deltaDegrade := 50 }}
+
+        {{ $r := add $baseColorR $deltaDegrade }}
+        {{ $g := add $baseColorG $deltaDegrade }}
+        {{ $b := add $baseColorB $deltaDegrade }}
+
 
         <style>
             #roadmap table {
@@ -64,7 +67,7 @@
             
 
             #interactive-roadmap {
-                border: 1px solid rgb({{ $textColorR }}, {{ $textColorG }}, {{ $textColorB }});
+                border: 1px solid rgb({{ $baseColorR }}, {{ $baseColorG }}, {{ $baseColorB }});
                 border-radius: 5px;
             }
 
@@ -79,16 +82,16 @@
 
             #interactive-roadmap .release-bullet,
             #interactive-roadmap .timeline {
-                fill: rgb({{ $textColorR | add 70 }}, {{ $textColorG | add 70 }}, {{ $textColorB | add 70 }});
-                stroke:rgb({{ $textColorR }}, {{ $textColorG }}, {{ $textColorB }});
+                fill: rgb({{ $baseColorR | add 70 }}, {{ $baseColorG | add 70 }}, {{ $baseColorB | add 70 }});
+                stroke:rgb({{ $baseColorR }}, {{ $baseColorG }}, {{ $baseColorB }});
                 stroke-width: 1;
             }
             #interactive-roadmap .release:hover .release-bullet {
-                fill: rgb({{ $textColorR | add 10 }}, {{ $textColorG | add 10 }}, {{ $textColorB | add 10 }});
-                stroke:rgb({{ $textColorR | add -20 }}, {{ $textColorG | add -20  }}, {{ $textColorB | add -20  }});
+                fill: rgb({{ $baseColorR | add 10 }}, {{ $baseColorG | add 10 }}, {{ $baseColorB | add 10 }});
+                stroke:rgb({{ $baseColorR | add -20 }}, {{ $baseColorG | add -20  }}, {{ $baseColorB | add -20  }});
             }
             #interactive-roadmap .release:hover .release-name {
-                fill: rgb({{ $textColorR | add 10 }}, {{ $textColorG | add 10 }}, {{ $textColorB | add 10 }});
+                fill: rgb({{ $baseColorR | add 10 }}, {{ $baseColorG | add 10 }}, {{ $baseColorB | add 10 }});
             }
             #interactive-roadmap-current-time {
                 stroke: rgba(255, 3, 3, 0.5);
@@ -97,7 +100,7 @@
 
             #interactive-roadmap-timeline,
             #interactive-roadmap-timeline2 {
-                stroke: rgb({{ $textColorR }}, {{ $textColorG }}, {{ $textColorB }});
+                stroke: rgb({{ $baseColorR }}, {{ $baseColorG }}, {{ $baseColorB }});
             }
 
         </style>
@@ -126,7 +129,7 @@
             <rect x="{{ $x }}" y="{{ $y }}" width="100%" height="{{ $h }}" style="fill:rgb({{ $r }}, {{ $g }}, {{ $b }});">
             </rect>
 
-            <text x="{{ add $x $deltaW2 }}" y="30" fill="rgb({{$textColorR}},{{$textColorG}},{{$textColorB}})" font-size="12">{{ $date }}</text>
+            <text x="{{ add $x $deltaW2 }}" y="30" fill="rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}})" font-size="12">{{ $date }}</text>
             {{ end }}
             
             <line id="interactive-roadmap-current-time" class="current-time" x1="50%" y1="0" x2="50%" y2="400" style="stroke-width:1;" />
@@ -162,7 +165,7 @@
 
                     {{ $x2 := add $x 50 }}
                     {{ $y2 := sub $y 100 }}
-                    <line class="timeline" x1="{{ $x }}" y1="{{ $y }}" x2="{{ $x2 }}" y2="{{ $y2 }}" style="stroke:rgb({{$textColorR}},{{$textColorG}},{{$textColorB}});stroke-width:1" />
+                    <line class="timeline" x1="{{ $x }}" y1="{{ $y }}" x2="{{ $x2 }}" y2="{{ $y2 }}" style="stroke:rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}});stroke-width:1" />
                     {{ $x := sub $x 5 }}
                     {{ $y := sub $y 10 }}
 
@@ -171,7 +174,7 @@
                     {{ if ne $releaseUrlToShow "" }}
                     <a href="{{ $releaseUrlToShow }}" class="release">
                     {{ end }}
-                    <text class="release-name" x="{{ $x }}" y="{{ $y }}" fill="rgb({{$textColorR}},{{$textColorG}},{{$textColorB}})" transform="rotate(-62 {{ $x }}, {{ $y }})" font-size="12">{{ $releaseToShow }}</text>
+                    <text class="release-name" x="{{ $x }}" y="{{ $y }}" fill="rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}})" transform="rotate(-62 {{ $x }}, {{ $y }})" font-size="12">{{ $releaseToShow }}</text>
                     {{ if ne $releaseUrlToShow "" }}
                     </a>
                     {{ end }}
@@ -182,7 +185,7 @@
                     {{ range $iFeature, $feature := sort $.Site.Data.roadmap.features "date" "desc" }}
 
                         {{ if eq $releaseToShow $feature.release }}
-                        <text x="{{ $x }}" y="{{ $y }}" fill="rgb({{$textColorR}},{{$textColorG}},{{$textColorB}})" font-size="10">* {{ $feature.name }}</text>
+                        <text x="{{ $x }}" y="{{ $y }}" fill="rgb({{$baseColorR}},{{$baseColorG}},{{$baseColorB}})" font-size="10">* {{ $feature.name }}</text>
                         {{ $y = add $y 20 }}
                         {{ $x = sub $x 10 }}
                         {{ end }}
