@@ -10,9 +10,13 @@
             <img id="roadmap-video" width="100%" height="auto" src="{{ .Site.BaseURL }}/images/roadmap.png" />
         -->
         
-        {{ $textColorR := 128 }}
-        {{ $textColorG := 117 }}
-        {{ $textColorB := 55 }}
+        {{ $r := 169 }}
+        {{ $g := 164 }}
+        {{ $b := 136 }}
+
+        {{ $textColorR := sub $r 50 }}
+        {{ $textColorG := sub $g 50 }}
+        {{ $textColorB := sub $b 50 }}
 
         <style>
             #roadmap table {
@@ -80,11 +84,11 @@
                 stroke-width: 1;
             }
             #interactive-roadmap .release:hover .release-bullet {
-                fill: rgb(129, 122, 83);
-                stroke: rgb(77, 70, 49);
+                fill: rgb({{ $textColorR | add 10 }}, {{ $textColorG | add 10 }}, {{ $textColorB | add 10 }});
+                stroke:rgb({{ $textColorR | add -20 }}, {{ $textColorG | add -20  }}, {{ $textColorB | add -20  }});
             }
             #interactive-roadmap .release:hover .release-name {
-                fill: rgb(77, 70, 49);
+                fill: rgb({{ $textColorR | add 10 }}, {{ $textColorG | add 10 }}, {{ $textColorB | add 10 }});
             }
             #interactive-roadmap-current-time {
                 stroke: rgba(255, 3, 3, 0.5);
@@ -107,10 +111,6 @@
             {{ $deltaW2 := div $deltaW 4 }}
             {{ $timeline := 250 }}
             
-            {{ $r := 169 }}
-            {{ $g := 164 }}
-            {{ $b := 136 }}
-
             {{ $degrade := 5 }}
 
             {{ range $index, $date := .Site.Data.roadmap.dates }}
