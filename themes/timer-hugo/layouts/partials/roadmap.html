@@ -85,6 +85,11 @@
                 stroke-dasharray: 1px;
             }
 
+            #interactive-roadmap-timeline,
+            #interactive-roadmap-timeline2 {
+                stroke: rgba(128, 117, 55, 1);
+            }
+
         </style>
         
         
@@ -123,8 +128,8 @@
             
             <line id="interactive-roadmap-current-time" class="current-time" x1="50%" y1="0" x2="50%" y2="400" style="stroke-width:1;" />
             
-            <line id="interactive-roadmap-timeline" x1="0" y1="{{ $timeline }}" x2="{{ mul $deltaW $nbSection }}" y2="{{ $timeline }}" style="stroke:rgb({{$textColorR}},{{$textColorG}},{{$textColorB}});stroke-width:1" />
-            <line x1="{{ mul $deltaW $nbSection }}" y1="{{ $timeline }}" x2="100%" y2="{{ $timeline }}" style="stroke:rgb({{$textColorR}},{{$textColorG}},{{$textColorB}});stroke-width:1" />
+            <line id="interactive-roadmap-timeline" x1="0" y1="{{ $timeline }}" x2="{{ mul $deltaW $nbSection }}" y2="{{ $timeline }}" />
+            <line id="interactive-roadmap-timeline2" x1="{{ mul $deltaW $nbSection }}" y1="{{ $timeline }}" x2="100%" y2="{{ $timeline }}" />
 
             {{ range $idate, $date := $.Site.Data.roadmap.dates }}
                 {{ $tdToShow := mul $delay $idate }}
