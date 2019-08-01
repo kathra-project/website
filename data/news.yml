@@ -64,9 +64,9 @@ items :
     author : Julien Boubechtoula
     description: 
       fr: >  
-        L'automatisation du déploiement a été finalisée. Cette procédure permet de déployer Kathra, ainsi que sa factory sur un cluster Kubernetes. Pour plus d'information, <a href="https://git.irt-systemx.fr/SMITE/deployment/tree/140-RC"> consulter ce dépôt.</a>
+        L'automatisation du déploiement a été finalisée. Cette procédure permet de déployer Kathra, ainsi que sa factory sur un cluster Kubernetes. Pour plus d'information, <a href="https://gitlab.com/kathra/kathra-staging/deployment/"> consulter ce dépôt.</a>
       en: >  
-        Auto-deployment has been finalized. This procedure permits to deploy Kathra and its factory on k8s cluster. For more details, <a href="https://git.irt-systemx.fr/SMITE/deployment/tree/140-RC">see this repository.</a>
+        Auto-deployment has been finalized. This procedure permits to deploy Kathra and its factory on k8s cluster. For more details, <a href="https://gitlab.com/kathra/kathra-staging/deployment/">see this repository.</a>
 
   - title: 
       fr: SMITE-CLI est disponible.
