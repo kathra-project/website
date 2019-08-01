@@ -553,7 +553,7 @@ a:hover {
 }
 
 #about {
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
 }
 
 #about .btn-get-started {
@@ -830,7 +830,7 @@ figure figcaption p {
   color: #828282;
 }
 #gettingstarted {
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   background-color: rgba(159,188,187,.3);
 }
 
@@ -839,7 +839,7 @@ figure figcaption p {
   display:inline-block;
 }
 #demo {
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   background-color: rgba(188, 159, 159, 0.3);
 }
 #demo:hover ~ #logo {
