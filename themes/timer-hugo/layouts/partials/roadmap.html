@@ -220,25 +220,21 @@
 
                 var dateMin=yearMin+"-"+monthMin+"-01";
                 var dateMax=yearMax+"-"+monthMax+"-30";
-                console.log(dateMin, dateMax)
                 document.getElementById("interactive-roadmap-current-time").setAttribute("x1", "-10px");
                 document.getElementById("interactive-roadmap-current-time").setAttribute("x2", "-10px");
                 var min=Math.round(new Date(dateMin).getTime()/1000);
                 var max=Math.round(new Date(dateMax).getTime()/1000);
                 var current=Math.round(new Date().getTime()/1000);
                 var current=Math.round(new Date().getTime()/1000);
-                console.log(min, max, current)
+                
                 if (current > min && current < max) {
                     var x=current-min;
                     var xMax=max-min;
                     var maxTimeLinePx = document.getElementById("interactive-roadmap-timeline").getAttribute("x2");
-                    console.log(x, xMax, maxTimeLinePx)
                     var curentTimelinePx=x*maxTimeLinePx/xMax;
                     var pc=x*100/xMax;
                     document.getElementById("interactive-roadmap-current-time").setAttribute("x1", curentTimelinePx+"px");
                     document.getElementById("interactive-roadmap-current-time").setAttribute("x2", curentTimelinePx+"px");
-                    document.getElementById("interactive-roadmap-current-time").setAttribute("x1", pc+"%");
-                    document.getElementById("interactive-roadmap-current-time").setAttribute("x2", pc+"%");
                 }
             }
         </script>
