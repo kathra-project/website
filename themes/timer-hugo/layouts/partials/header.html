@@ -52,7 +52,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-14" style="width: 100%;">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light ">
                     
                     <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}" style="padding-left:80px;height: 130px; ">
                         <img style="position: fixed;
@@ -70,9 +70,10 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            {{ $home := printf "%s/%s/" .Site.BaseURL .Site.Language.Lang }}
-                            {{ if in .Site.Language.Lang "fr" }} 
+                        <ul class="nav navbar-nav ">
+                            {{ $currentLang := .Site.Language.Lang }}
+                            {{ $home := printf "%s/%s/" .Site.BaseURL $currentLang}}
+                            {{ if in $currentLang "en" }} 
                                 {{ $home = printf "%s" .Site.BaseURL }}
                             {{ end }}
                             {{ range .Site.Menus.nav }}
@@ -84,17 +85,14 @@
                                 {{ end }}
                             </li>
                             {{ end }}
-                        </ul>
-                    </div>
-
-                    <div class="lang" style="position: fixed; top:10px; right:10px;">
-                        <ul class="navbar-nav">
                             {{ range .Site.Home.AllTranslations }}
-                            <li class="nav-item">
-                                <a href="{{ .Permalink }}">
-                                    <img class="nav-link" style="width: 40px; height: 40px; opacity: 0.7;" src="{{ .Site.BaseURL }}/images/{{ .Language }}.svg" alt="{{ .Language }}" />
-                                </a>
-                            </li>
+                                {{ if ne .Language.Lang $currentLang }} 
+                                <li class="nav-item">
+                                    <a href="{{ .Permalink }}">
+                                        <img class="nav-link" style="width: 40px; height: 40px; opacity: 0.7;" src="{{ .Site.BaseURL }}/images/{{ .Language }}.svg" alt="{{ .Language }}" />
+                                    </a>
+                                </li>
+                                {{ end }}
                             {{ end }}
                         </ul>
                     </div>
