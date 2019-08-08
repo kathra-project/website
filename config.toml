@@ -6,7 +6,7 @@ relativeurls = true
 # We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
 
 
-DefaultContentLanguage = "fr"
+DefaultContentLanguage = "en"
 copyright = "Everything is mine"
 
 [languages]
