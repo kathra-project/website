@@ -193,12 +193,11 @@
 
                     {{ end }}
 
-
                 {{ end }}
             {{ end }}
                    
-                {{ $sorteByDateDesc := sort $.Site.Data.roadmap.dates "" "desc" }}
-                {{ $sorteByDateAsc := sort $.Site.Data.roadmap.dates "" "asc" }}
+            {{ $sorteByDateDesc := sort $.Site.Data.roadmap.dates "" "desc" }}
+            {{ $sorteByDateAsc := sort $.Site.Data.roadmap.dates "" "asc" }}
         </svg>
         </div>
         <script>
@@ -217,110 +216,20 @@
                 if (monthMax < 10 ) {
                     monthMax = "0"+monthMax;
                 }
-
-                var dateMin=yearMin+"-"+monthMin+"-01";
-                var dateMax=yearMax+"-"+monthMax+"-30";
-                document.getElementById("interactive-roadmap-current-time").setAttribute("x1", "-10px");
-                document.getElementById("interactive-roadmap-current-time").setAttribute("x2", "-10px");
-                var min=Math.round(new Date(dateMin).getTime()/1000);
-                var max=Math.round(new Date(dateMax).getTime()/1000);
+                var timeline=document.getElementById("interactive-roadmap-current-time");
+                timeline.setAttribute("x1", "-10px");
+                timeline.setAttribute("x2", "-10px");
+                var min=Math.round(new Date(yearMin+"-"+monthMin+"-01").getTime()/1000);
+                var max=Math.round(new Date(yearMax+"-"+monthMax+"-30").getTime()/1000);
                 var current=Math.round(new Date().getTime()/1000);
-                var current=Math.round(new Date().getTime()/1000);
-                
                 if (current > min && current < max) {
-                    var x=current-min;
-                    var xMax=max-min;
                     var maxTimeLinePx = document.getElementById("interactive-roadmap-timeline").getAttribute("x2");
-                    var curentTimelinePx=x*maxTimeLinePx/xMax;
-                    var pc=x*100/xMax;
-                    document.getElementById("interactive-roadmap-current-time").setAttribute("x1", curentTimelinePx+"px");
-                    document.getElementById("interactive-roadmap-current-time").setAttribute("x2", curentTimelinePx+"px");
+                    var curentTimelinePx=(current-min)*maxTimeLinePx/(max-min);
+                    timeline.setAttribute("x1", curentTimelinePx+"px");
+                    timeline.setAttribute("x2", curentTimelinePx+"px");
                 }
             }
         </script>
-
-        {{ $delay := 0.3 }}
-        <table style="display:none;">
-                <tbody>
-                    <tr>
-                        <td style="font-weight: bold;">See The Future</td>
-                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                            {{ $tdToShow := mul $delay $idate }}
-                            {{ $tdToShow = add $tdToShow $delay }}
-
-                            {{ $releaseToShow := "" }}
-                            {{ $releaseUrlToShow := "" }}
-                            {{ range $irelease, $release := $.Site.Data.roadmap.releases }}
-                                {{ if eq $date $release.date }}
-                                    {{ $releaseToShow = $release.name }}
-                                    {{ $releaseUrlToShow = $release.url }}
-                                {{ end }}
-                            {{ end }}
-
-                            {{ if eq $releaseToShow "" }}
-                                <td></td>
-                            {{ else }}
-                                <td style="text-align: right;" class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
-                                    
-                                    {{ if ne $releaseUrlToShow "" }}
-                                    <a href="{{ $releaseUrlToShow }}" class="release">
-                                    {{ else }}
-                                    <span class="release">
-                                    {{ end }}
-                                        <svg height="100" width="100" viewbox="0 0 250 250">
-                                                <polygon points="0,0 200,0 250,50 200,100 20,100 20,250 0,250 0,0" style="fill:rgb(198, 187, 125);stroke:rgb(112, 106, 69);stroke-width:2" />
-                                                <text x="25" y="60" fill="rgb(239, 234, 216)" font-size="34"> {{ $releaseToShow }}</text>
-                                        </svg> 
-                                    {{ if ne $releaseUrlToShow "" }}
-                                    </a>
-                                    {{ else }}
-                                    </span>
-                                    {{ end }}
-                                </td>
-                            {{ end }}
-                        {{ end }}
-                    </tr>
-
-                    {{ $delay := 0.3 }}
-                    {{ range $iFeature, $feature := sort .Site.Data.roadmap.features "date" "desc" }}
-                        {{ $delayTofeature := 0 }}
-                        {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                            {{ if eq . $feature.date }}
-                                {{ $delayTofeature = mul $delay $idate }}
-                                {{ $delayTofeature = add $delayTofeature $delay }}
-                            {{ end }}
-                        {{ end }}
-                        <tr>
-                            <td class="wow fadeInDown feature" data-wow-delay="{{ $delayTofeature }}s" > {{ $feature.name }}</td>
-                            
-                            {{ $featureImplemented := 0 }}
-                            {{ range $idate, $date := $.Site.Data.roadmap.dates }}
-                                {{ $tdToShow := mul $delay $idate }}
-                                {{ $tdToShow = add $tdToShow $delay }}
-    
-                                {{ if eq . $feature.date }}
-                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s">
-                                        <svg height="25" width="25" viewbox="0 0 200 200" style="margin-top:5px;">
-                                            <polygon points="100,0 200,100 100,200 0,100" style="fill:rgb(167, 188, 153);stroke:rgb(100, 112, 91);stroke-width:2" />
-                                        </svg>
-                                    </td>
-                                {{ else }}
-                                    <td class="wow fadeInDown" data-wow-delay="{{ $tdToShow }}s" ></td>
-                                {{ end }}
-                            {{ end }}
-                        </tr>
-                    {{ end }}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td class="feature"></td>
-                        {{ range $index, $date := .Site.Data.roadmap.dates }}
-                        <td class="">{{ . }}</td>
-                        {{ end }}
-                    </tr>
-                </tfoot>
-            </table>
-
     </div>
 </section>
 {{ "<!-- roadmap Section End -->" | safeHTML }}
