@@ -89,3 +89,15 @@ items :
         Le code source de Kathra est désormais disponible dans <a href="https://gitlab.com/kathra/kathra-staging">ici</a>.
       en: >  
         Kathra's source code is published here <a href="https://gitlab.com/kathra/kathra-staging">ici</a>.
+
+  - title: 
+      fr: Kathra 1.0.0-RC-SNAPSHOT 
+      en: Kathra 1.0.0-RC-SNAPSHOT
+    date   : 2019-08-27
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        Les images et librairies Java en version 1.0.0-RC-SNAPSHOT sont disponibles sur <a href="https://hub.docker.com/u/kathra">Docker Hub</a> et <a href="https://oss.sonatype.org/content/repositories/snapshots/org/kathra/">Sonatype</a> 
+      en: >  
+        Kathra 1.0.0-RC-SNAPSHOT are availables on <a href="https://hub.docker.com/u/kathra">Docker Hub</a> and <a href="https://oss.sonatype.org/content/repositories/snapshots/org/kathra/">Sonatype</a> .
+
