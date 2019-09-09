@@ -80,7 +80,7 @@ items :
         KATHRA-CLI is command-line client permetting manage KATHRA's resources. For more informations, <a href="https://gitlab.com/kathra/kathra-staging/kathra/kathra-cli">see this repository.</a>
 
   - title: 
-      fr: Le code source est désormais disponible
+      fr: Le code source est désormais disponible !
       en: Source code is available !
     date   : 2019-08-01
     author : Julien Boubechtoula
@@ -91,8 +91,8 @@ items :
         Kathra's source code is published here <a href="https://gitlab.com/kathra/kathra-staging">ici</a>.
 
   - title: 
-      fr: Kathra 1.0.0-RC-SNAPSHOT 
-      en: Kathra 1.0.0-RC-SNAPSHOT
+      fr: Kathra 1.0.0-RC-SNAPSHOT.
+      en: Kathra 1.0.0-RC-SNAPSHOT.
     date   : 2019-08-27
     author : Julien Boubechtoula
     description: 
@@ -100,4 +100,15 @@ items :
         Les images et librairies Java en version 1.0.0-RC-SNAPSHOT sont disponibles sur <a href="https://hub.docker.com/u/kathra">Docker Hub</a> et <a href="https://oss.sonatype.org/content/repositories/snapshots/org/kathra/">Sonatype</a> 
       en: >  
         Kathra 1.0.0-RC-SNAPSHOT are availables on <a href="https://hub.docker.com/u/kathra">Docker Hub</a> and <a href="https://oss.sonatype.org/content/repositories/snapshots/org/kathra/">Sonatype</a> .
+
+  - title: 
+      fr: Getting started - Exemples vidéos.
+      en: Getting started - Videos examples.
+    date   : 2019-09-09
+    author : Julien Boubechtoula
+    description: 
+      fr: >  
+        Deux nouvelles vidéos vous montre comment installer Kathra à partir d'une distribution Ubuntu ou Debian. <a href="https://www.youtube.com/playlist?list=PLJ74xXFD_Jz34GVC5uc8BG7TSDVK0K4xi">Disponible ici</a>
+      en: >  
+        Two new videos show you how to install Kathra from Ubuntu or Debian Distrib. <a href="https://www.youtube.com/playlist?list=PLJ74xXFD_Jz34GVC5uc8BG7TSDVK0K4xi">Available here</a>
 
