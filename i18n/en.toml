@@ -46,6 +46,8 @@ other = "Install Kathra"
 other = "Create your API"
 ["GettingStartedTitle3"]
 other = "Consume it"
+["GettingStartedTitle4"]
+other = "Quick install from Ubuntu/Debian Distrib"
 
 ["GettingStartedDescription0"]
 other = "Install and configure your K8S"
@@ -55,6 +57,8 @@ other = "Install Kathra and your factory (Jenkins, GitLab, Nexus, Harbor)"
 other = "Create your first API and generate it in Java or Python"
 ["GettingStartedDescription3"]
 other = "Consume your REST Web Service"
+["GettingStartedDescription4"]
+other = "Too difficult ? See a video example"
 
 ["WebSite"]
 other = "Web site"
