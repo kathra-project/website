@@ -64,9 +64,9 @@ items :
     author : Julien Boubechtoula
     description: 
       fr: >  
-        L'automatisation du déploiement a été finalisée. Cette procédure permet de déployer Kathra, ainsi que sa factory sur un cluster Kubernetes. Pour plus d'information, <a href="https://gitlab.com/kathra/kathra-staging/deployment/"> consulter ce dépôt.</a>
+        L'automatisation du déploiement a été finalisée. Cette procédure permet de déployer Kathra, ainsi que sa factory sur un cluster Kubernetes. Pour plus d'information, <a href="https://gitlab.com/kathra/deployment/"> consulter ce dépôt.</a>
       en: >  
-        Auto-deployment has been finalized. This procedure permits to deploy Kathra and its factory on k8s cluster. For more details, <a href="https://gitlab.com/kathra/kathra-staging/deployment/">see this repository.</a>
+        Auto-deployment has been finalized. This procedure permits to deploy Kathra and its factory on k8s cluster. For more details, <a href="https://gitlab.com/kathra/deployment/">see this repository.</a>
 
   - title: 
       fr: KATHRA-CLI est disponible.
@@ -75,9 +75,9 @@ items :
     author : Julien Boubechtoula
     description: 
       fr: >  
-        KATHRA-CLI est un client en ligne de commande permettant de gérer les resources de KATHRA. Pour plus d'informations, <a href="https://gitlab.com/kathra/kathra-staging/kathra/kathra-cli"> consulter ce dépôt.</a>
+        KATHRA-CLI est un client en ligne de commande permettant de gérer les resources de KATHRA. Pour plus d'informations, <a href="https://gitlab.com/kathra/kathra/kathra-cli"> consulter ce dépôt.</a>
       en: >  
-        KATHRA-CLI is command-line client permetting manage KATHRA's resources. For more informations, <a href="https://gitlab.com/kathra/kathra-staging/kathra/kathra-cli">see this repository.</a>
+        KATHRA-CLI is command-line client permetting manage KATHRA's resources. For more informations, <a href="https://gitlab.com/kathra/kathra/kathra-cli">see this repository.</a>
 
   - title: 
       fr: Le code source est désormais disponible !
