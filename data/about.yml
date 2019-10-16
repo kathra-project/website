@@ -52,8 +52,8 @@ components:
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-deploymanager/deploymanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-deploymanager/deploymanager-java/kathra-deploymanager-k8s
     action:
-      fr: Deployer containers
-      en: Deploy containers
+      fr: Gérer l'exécution  
+      en: Manage runtime
 aboutItem:
   - title : Why Choose Us
     description: > 
