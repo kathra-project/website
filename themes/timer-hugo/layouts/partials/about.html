@@ -1,10 +1,142 @@
 {{ if .Site.Params.about.enable }}
 {{ "<!-- About Section Start -->" | safeHTML }}
+<style>
+
+        #brief {
+            border: 1px solid rgb(150, 153, 132);
+            border-radius: 5px;
+        }
+        #brief .bullet-api {
+            fill: rgba(167, 188, 153, 0.8);
+            stroke:cornsilk;
+            stroke-width: 1;
+        }
+        #brief .bullet-api:hover {
+            fill: rgba(167, 188, 153, 0.3);
+        }
+        #brief .line-api-connected {
+            fill: rgba(167, 188, 153, 0.3);
+            stroke:cornsilk;
+            stroke-width: 1;
+        }
+        #brief .bullet-api-connected {
+            stroke:cornsilk;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        #brief .component-action {
+            stroke:cornsilk;
+            fill:cornsilk;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 0.8rem;
+            font-weight: 200;
+            line-height: 1.5;
+        }
+        #brief .line{
+            stroke: cornsilk;
+            stroke-width: 2;
+        }
+        #brief .component-name {
+            stroke:cornsilk;
+            fill:cornsilk;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        #brief .component-image {
+            fill: cornsilk;
+            stroke: rgb(148, 144, 130);
+            border-radius: 10;
+        }
+        #brief .component-link:hover .component-image {
+            fill:rgb(148, 144, 130);
+        }
+        #brief .arrow {
+            stroke: cornsilk; 
+            stroke-width: 5; 
+            stroke-linecap: round; 
+            stroke-linejoin: round;
+            opacity: 0.5;
+        }
+
+</style>
+
 <section id="about" style="background-color:rgba(159, 188, 187, 0.3)">
     <div class="container">
         <div class="wow fadeInDown" style="display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
-            {{ with .Site.Params.about.image }}<img src="{{ . | absURL }}" style="border: 1px solid #9fbcbb;" alt="about-image">{{ end }}
+            
+            <svg id="brief" height="50vh" viewbox="0 0 1000 600">
+                <rect x="0" y="0" width="100%" height="600" style="fill:#3a3a3a;">
+                </rect>
+                <line class="line" x1="0" y1="300" x2="1000" y2="300"  />
+                
+                
+                {{ $xOffset := 50 }}
+                {{ $yOffset := 262 }}
+                {{ $xOffsetDelta := 100 }}
+                {{ range $i, $sequence :=  (seq 12) }}
+                    <polyline fill="none" class="arrow" points="{{ add 0.375 $xOffset }},{{ add 0.375 $yOffset }} {{ add 45.63 $xOffset }},{{ add 38.087 $yOffset }} {{ add 0.375 $xOffset }},{{ add 75.8 $yOffset }} "/>
+                    {{ $xOffset = add $xOffsetDelta $xOffset  }}
+                {{ end }}
+
+                {{ $xOffset := 50 }}
+                {{ $xOffsetDelta := 100 }}
+                {{ $componentActionTranslated := "" }}
+
+                {{ range $index, $component := .Site.Data.about.components }}
+                     {{ if in $.Site.Language.Lang "fr" }} 
+                        {{ $componentActionTranslated = $component.action.fr }}
+                    {{ else }}
+                        {{ $componentActionTranslated = $component.action.en }}
+                    {{ end }}
+
+                    {{ if eq (mod $index 2) 0 }}s
+                        <text class="component-action" x="{{ add 100 $xOffset }}" y="165" transform="rotate(-50.5 {{ add 100 $xOffset }}, 165)">{{ $componentActionTranslated }}</text>
+                        <line class="line" x1="{{ add 115 $xOffset }}" y1="180" x2="{{ add 180 $xOffset }}" y2="100" />
+                        <path d="M{{ add 75 $xOffset }},200 a1,1 0 0,0 50,0" transform="rotate(180, {{ add 100 $xOffset }}, 200)" class="bullet-api-connected" />
+                        <a href="{{ $component.apiUrl }}" target="_blank">
+                            <circle class="bullet-api" cx="{{ add 100 $xOffset }}" cy="200" r="20">
+                            </circle>
+                        </a>
+                        <line class="line" x1="{{ add 100 $xOffset }}" y1="220" x2="{{ add 100 $xOffset }}" y2="300" />
+                        <a>
+                            <!--<text class="component-name" x="{{ add 200 $xOffset }}" y="100" font-size="12">{{ $component.name }}</text>-->
+                        </a>
+                        <a href="{{ $component.apiImplUrl }}" class="component-link" >
+                            <rect x="{{ add 180 $xOffset }}" y="30" width="70" height="70" rx="5" ry="5" class="component-image" >
+                            </rect>	
+                            <image xlink:href="{{ $component.urlImage }}"  x="{{ add 190 $xOffset }}" y="40"  height="50" width="50" />	
+                        </a>
+                    {{ else }}
+                        
+                        <text class="component-action" x="{{ add 135 $xOffset }}" y="410" transform="rotate(+50.5 {{ add 135 $xOffset }}, 410)">{{ $componentActionTranslated }}</text>
+                        <line class="line" x1="{{ add 115 $xOffset }}" y1="420" x2="{{ add 180 $xOffset }}" y2="500" />
+                        <path d="M{{ add 75 $xOffset }},400 a1,1 0 0,0 50,0" class="bullet-api-connected" />
+                        <a href="{{ $component.apiUrl }}" target="_blank">
+                            <circle class="bullet-api" cx="{{ add 100 $xOffset }}" cy="400" r="20">
+                            </circle>
+                        </a>
+                        <line class="line" x1="{{ add 100 $xOffset }}" y1="380" x2="{{ add 100 $xOffset }}" y2="300" />
+                        <a>
+                            <!--<text class="component-name" x="{{ add 200 $xOffset }}" y="500" font-size="10">{{ $component.name }}</text>-->
+                        </a>
+                        <a href="{{ $component.apiImplUrl }}" class="component-link"  >
+                            <rect x="{{ add 180 $xOffset }}" y="500" width="70" height="70" rx="5" ry="5" class="component-image" >
+                            </rect>	
+                            <image xlink:href="{{ $component.urlImage }}"  x="{{ add 190 $xOffset }}" y="510"  height="50" width="50" />
+                        </a>
+                    {{ end }}
+
+                    {{ $xOffset = add $xOffsetDelta $xOffset  }}
+                {{ end }}
+
+
+
+
+            </svg>
         </div>
         <div class="wow fadeInUp" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
