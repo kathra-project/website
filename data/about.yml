@@ -7,28 +7,28 @@ description: >
   Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
 image   : images/about/about-company.jpg
 components:
-  - name: Keycloak
-    urlImage: https://www.katacoda.com/sebastienblanc/avatar
+  - name: UserManager
+    urlImage: https://avatars2.githubusercontent.com/u/4921466?s=400&v=4
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-usermanager/kathra-usermanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-usermanager/kathra-usermanager-java/kathra-usermanager-keycloak
     action:
       fr: Authentifier
-      en: Authentificate
-  - name: Swagger
+      en: Authenticate
+  - name: CodeGen
     urlImage: https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-codegen/kathra-codegen-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-codegen/kathra-codegen-java/kathra-codegen-swagger
     action: 
       fr: Générer code source
       en: Generate source code
-  - name: GitLab
+  - name: SourceManager
     urlImage: https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1200px-GitLab_Logo.svg.png
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-sourcemanager/kathra-sourcemanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-sourcemanager/kathra-sourcemanager-java/kathra-sourcemanager-gitlab
     action:
       fr: Gérer code source
       en: Manage source code
-  - name: Jenkins
+  - name: PipelineManager
     urlImage: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/226px-Jenkins_logo.svg.png
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-pipelinemanager/kathra-pipelinemanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-pipelinemanager/kathra-pipelinemanager-java/kathra-pipelinemanager-jenkins
@@ -40,14 +40,14 @@ components:
     action:
       fr: Publier artefacts
       en: Publish artefacts
-  - name: Harbor
+  - name: BinaryRepositoryManager
     urlImage: https://avatars2.githubusercontent.com/u/40275816?s=280&v=4
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-binaryrepositorymanager/kathra-binaryrepositorymanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-binaryrepositorymanager/kathra-binaryrepositorymanager-java/kathra-binaryrepositorymanager-harbor
     action:
       fr: Publier OCI images
       en: Publish OCI images
-  - name: Kubernetes
+  - name: DeployManager
     urlImage: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1200px-Kubernetes_logo_without_workmark.svg.png
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-deploymanager/deploymanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-deploymanager/deploymanager-java/kathra-deploymanager-k8s
