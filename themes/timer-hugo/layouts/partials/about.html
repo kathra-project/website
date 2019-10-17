@@ -1,10 +1,164 @@
 {{ if .Site.Params.about.enable }}
 {{ "<!-- About Section Start -->" | safeHTML }}
+<style>
+
+        #brief {
+            border: 1px solid rgb(150, 153, 132);
+            border-radius: 5px;
+        }
+        #brief .bullet-api {
+            fill: rgba(167, 188, 153, 0.8);
+            stroke:cornsilk;
+            stroke-width: 1;
+            opacity: 0.7;
+        }
+        #brief .bullet-api:hover {
+            opacity: 1;
+        }
+        #brief .line-api-connected {
+            fill: rgba(167, 188, 153, 0.3);
+            stroke:cornsilk;
+            stroke-width: 1;
+            opacity: 0.7;
+        }
+        #brief .bullet-api-connected {
+            stroke:cornsilk;
+            stroke-width: 2;
+            fill: none;
+            opacity: 0.7;
+        }
+
+        #brief .component-action {
+            stroke:cornsilk;
+            fill:cornsilk;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 0.9rem;
+            font-weight: 100;
+            line-height: 1.5;
+        }
+        #brief .line{
+            stroke: cornsilk;
+            stroke-width: 2;
+            opacity: 0.7;
+        }
+        #brief .component-name {
+            stroke:cornsilk;
+            fill:cornsilk;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        #brief .component-image {
+            fill: cornsilk;
+            stroke: rgb(95, 93, 85);
+            stroke-width: 2px;
+        }
+        #brief .component-link *,
+        #brief .kathra-core-link * {
+            opacity: 0.8;
+        }
+        #brief .component-link:hover *,
+        #brief .kathra-core-link:hover * {
+            opacity: 1;
+        }
+        #brief .arrow {
+            stroke: cornsilk; 
+            stroke-width: 5; 
+            stroke-linecap: round; 
+            stroke-linejoin: round;
+            opacity: 0;
+        }
+        #brief .kathra-core {
+            fill: cornsilk;
+        }
+        #brief .kathra-core-title {
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        #brief a:hover{
+            text-decoration: none;
+        }
+
+</style>
+
 <section id="about" style="background-color:rgba(159, 188, 187, 0.3)">
     <div class="container">
         <div class="wow fadeInDown" style="display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
-            {{ with .Site.Params.about.image }}<img src="{{ . | absURL }}" style="border: 1px solid #9fbcbb;" alt="about-image">{{ end }}
+            
+            <svg id="brief" height="50vh" viewbox="0 0 1000 600">
+                <rect x="0" y="0" width="100%" height="600" style="fill:#3a3a3a;">
+                </rect>
+                
+                
+                {{ $xOffset := 50 }}
+                {{ $yOffset := 262 }}
+                {{ $xOffsetDelta := 200 }}
+                {{ range $i, $sequence :=  (seq 12) }}
+                    <polyline fill="none" class="arrow" points="{{ add 0.375 $xOffset }},{{ add 0.375 $yOffset }} {{ add 45.63 $xOffset }},{{ add 38.087 $yOffset }} {{ add 0.375 $xOffset }},{{ add 75.8 $yOffset }} "/>
+                    {{ $xOffset = add $xOffsetDelta $xOffset  }}
+                {{ end }}
+
+                {{ $xOffset := 100 }}
+                {{ $xOffsetDelta := 100 }}
+                {{ $componentActionTranslated := "" }}
+
+                {{ range $index, $component := .Site.Data.about.components }}
+                     {{ if in $.Site.Language.Lang "fr" }} 
+                        {{ $componentActionTranslated = $component.action.fr }}
+                    {{ else }}
+                        {{ $componentActionTranslated = $component.action.en }}
+                    {{ end }}
+
+                    {{ if eq (mod $index 2) 0 }}s
+                        <text class="component-action" x="{{ add 90 $xOffset }}" y="160" transform="rotate(-51 {{ add 90 $xOffset }}, 160)">{{ $componentActionTranslated }}</text>
+                        <line class="line" x1="{{ add 115 $xOffset }}" y1="180" x2="{{ add 180 $xOffset }}" y2="100" />
+                        <path d="M{{ add 75 $xOffset }},200 a1,1 0 0,0 50,0" transform="rotate(180, {{ add 100 $xOffset }}, 200)" class="bullet-api-connected" />
+                        <a href="{{ $component.apiUrl }}" target="_blank">
+                            <circle class="bullet-api" cx="{{ add 100 $xOffset }}" cy="200" r="20">
+                            </circle>
+                        </a>
+                        <line class="line" x1="{{ add 100 $xOffset }}" y1="220" x2="{{ add 100 $xOffset }}" y2="270" />
+                        <a>
+                            <!--<text class="component-name" x="{{ add 200 $xOffset }}" y="100" font-size="12">{{ $component.name }}</text>-->
+                        </a>
+                        <a href="{{ $component.apiImplUrl }}" class="component-link" target="_blank" >
+                            <rect x="{{ add 180 $xOffset }}" y="30" width="70" height="70" rx="10" ry="10" class="component-image" >
+                            </rect>	
+                            <image xlink:href="{{ $component.urlImage }}"  x="{{ add 190 $xOffset }}" y="40"  height="50" width="50" />	
+                        </a>
+                    {{ else }}
+                        
+                        <text class="component-action" x="{{ add 150 $xOffset }}" y="390" transform="rotate(+50.5 {{ add 150 $xOffset }}, 390)">{{ $componentActionTranslated }}</text>
+                        <line class="line" x1="{{ add 115 $xOffset }}" y1="420" x2="{{ add 180 $xOffset }}" y2="500" />
+                        <path d="M{{ add 75 $xOffset }},400 a1,1 0 0,0 50,0" class="bullet-api-connected" />
+                        <a href="{{ $component.apiUrl }}" target="_blank">
+                            <circle class="bullet-api" cx="{{ add 100 $xOffset }}" cy="400" r="20">
+                            </circle>
+                        </a>
+                        <line class="line" x1="{{ add 100 $xOffset }}" y1="380" x2="{{ add 100 $xOffset }}" y2="325" />
+                        <a>
+                            <!--<text class="component-name" x="{{ add 200 $xOffset }}" y="500" font-size="10">{{ $component.name }}</text>-->
+                        </a>
+                        <a href="{{ $component.apiImplUrl }}" class="component-link" target="_blank"  >
+                            <rect x="{{ add 180 $xOffset }}" y="500" width="70" height="70" rx="10" ry="10" class="component-image" >
+                            </rect>	
+                            <image xlink:href="{{ $component.urlImage }}"  x="{{ add 190 $xOffset }}" y="510"  height="50" width="50" />
+                        </a>
+                    {{ end }}
+
+                    {{ $xOffset = add $xOffsetDelta $xOffset  }}
+                {{ end }}
+                <a class="kathra-core-link" href="https://gitlab.com/kathra/kathra" target="_blank">
+                <rect class="kathra-core" x="100" y="270" width="800" height="55" rx="10" ry="10" style="stroke-width:3" />
+                <text class="kathra-core-title" x="420" y="305" >KATHRA CORE</text>
+                </a>    
+
+
+            </svg>
         </div>
         <div class="wow fadeInUp" style="max-width: 80%; display: inline-block;" data-wow-delay=".3s"
             data-wow-duration="500ms">
