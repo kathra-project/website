@@ -21,29 +21,33 @@ copyright = "Everything is mine"
 [menu]
     # Navbar Menus
     [[menu.nav]]
+        name    = "News"
+        url     = "/news"
+        weight  = 1
+    [[menu.nav]]
         name    = "Product"
         url     = "#features-anchor"
-        weight  = 1
+        weight  = 2
     [[menu.nav]]
         name    = "Demo"
         url     = "#demo-anchor"
-        weight  = 2
+        weight  = 3
     [[menu.nav]]
         name    = "Get Started"
         url     = "#gettingstarted-anchor"
-        weight  = 2
+        weight  = 4
     [[menu.nav]]
         name    = "Source Code"
         url     = "https://gitlab.com/kathra"
-        weight  = 4
+        weight  = 5
     [[menu.nav]]
         name    = "Road Map"
         url     = "#roadmap-anchor"
-        weight  = 5
+        weight  = 6
     [[menu.nav]]
         name    = "Partners"
         url     = "#partners-anchor"
-        weight  = 6
+        weight  = 7
 
 
 

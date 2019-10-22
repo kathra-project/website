@@ -85,8 +85,13 @@
                 var firstSectionVisible = $('.section-anchor').filter(function() { 
                     return (isScrolledIntoView($(this).parent()));
                 }).first();
-                if (firstSectionVisible) {
+                if (firstSectionVisible.length > 0) {
                     links.filter('[href*=#'+$(firstSectionVisible).attr('id')+']').addClass(classHover);
+                } else {
+                    var activeHeaderValue=$('input[name=active-header]').val();
+                    if (activeHeaderValue) {
+                        links.filter('[href*='+activeHeaderValue+']').addClass(classHover);
+                    }
                 }
             };
         

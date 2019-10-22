@@ -6,7 +6,7 @@ items :
       fr: SMITE a été présenté au CRiP.
       en: SMITE is presented to CRiP.
     date   : 2019-01-22
-    author : Julien Boubechtoula
+    author : Kathra team
     description:
       fr: >
         SMITE a été présenté <a href="https://www.crip-asso.fr">CRiP</a>, pour plus d'information, voir <a href="https://presentation-smite.irtsysx.fr">la présentation</a>. 
@@ -17,7 +17,7 @@ items :
       fr: Go pour open sourcing !
       en: Go-ahead for open sourcing !
     date   : 2019-02-22
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         IRT SystemX donne le feu vert pour l'open sourcing de SMITE.
@@ -28,7 +28,7 @@ items :
       fr: SMITE change de nom.
       en: SMITE rebranding.
     date   : 2019-03-03
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         Dans le cadre de l'opensourcing, SMITE deviendra Kathra.
@@ -39,7 +39,7 @@ items :
       fr: SMITE 1.2 RC est disponible
       en: SMITE 1.2 RC is available
     date   : 2019-04-03
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         SMITE 1.2 Release Candidate est disponible. Nous validons actuellement les différents cas d'utilisations et corrigons les bugs. Pour plus d'information <a href="https://redmine.irt-systemx.fr/projects/smite-tracker/issues?utf8=%E2%9C%93&set_filter=1&sort=status%2Cid%3Adesc&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=467&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=&t%5B%5D="> voici le bug tracker</a>.
@@ -50,7 +50,7 @@ items :
       fr: Le code source sera disponible d'ici quelques semaines
       en: Source code will be available in few weeks.
     date   : 2019-05-21
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         Le code source de Kathra devrait être publié pour le 31 juillet.
@@ -61,7 +61,7 @@ items :
       fr: Script de déploiement disponible.
       en: Deployment script is ready.
     date   : 2019-07-08
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         L'automatisation du déploiement a été finalisée. Cette procédure permet de déployer Kathra, ainsi que sa factory sur un cluster Kubernetes. Pour plus d'information, <a href="https://gitlab.com/kathra/deployment/"> consulter ce dépôt.</a>
@@ -72,7 +72,7 @@ items :
       fr: KATHRA-CLI est disponible.
       en: KATHRA-CLI is ready.
     date   : 2019-07-31
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         KATHRA-CLI est un client en ligne de commande permettant de gérer les resources de KATHRA. Pour plus d'informations, <a href="https://gitlab.com/kathra/kathra/kathra-cli"> consulter ce dépôt.</a>
@@ -83,7 +83,7 @@ items :
       fr: Le code source est désormais disponible !
       en: Source code is available !
     date   : 2019-08-01
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         Le code source de Kathra est désormais disponible dans <a href="https://gitlab.com/kathra/kathra-staging">ici</a>.
@@ -94,7 +94,7 @@ items :
       fr: Kathra 1.0.0-RC-SNAPSHOT.
       en: Kathra 1.0.0-RC-SNAPSHOT.
     date   : 2019-08-27
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         Les images et librairies Java en version 1.0.0-RC-SNAPSHOT sont disponibles sur <a href="https://hub.docker.com/u/kathra">Docker Hub</a> et <a href="https://oss.sonatype.org/content/repositories/snapshots/org/kathra/">Sonatype</a> 
@@ -105,7 +105,7 @@ items :
       fr: Getting started - Exemples vidéos.
       en: Getting started - Videos examples.
     date   : 2019-09-09
-    author : Julien Boubechtoula
+    author : Kathra team
     description: 
       fr: >  
         Deux nouvelles vidéos vous montre comment installer Kathra à partir d'une distribution Ubuntu ou Debian. <a href="https://www.youtube.com/playlist?list=PLJ74xXFD_Jz34GVC5uc8BG7TSDVK0K4xi">Disponible ici</a>
