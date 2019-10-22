@@ -51,13 +51,13 @@ a:hover {
 
 .section-anchor {
   position: relative;
-  top: -195px;
+  top: -70px;
   display: hidden;
 }
 
 .news-anchor {
   position: relative;
-  top: -210px;
+  top: -110px;
   display: hidden;
 }
 
@@ -207,9 +207,9 @@ a:hover {
 /*=== MEDIA QUERY ===*/
 .top-bar {
   position: fixed;
-  height: 200px;
-  padding-top: 1.5em;
-  padding-bottom: 2em;
+  min-height: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   top: 0;
   width: 100%;
   background: #fff;
@@ -220,10 +220,13 @@ a:hover {
   z-index: 10;
   text-align: left;
 }
+.navbar.bg-light {
+  min-height: 70px;
+}
 
 .top-bar-mask {
   width: 100%;
-  height: 200px;
+  height: 70px;
 }
 
  section.top-bar > .container {
@@ -235,9 +238,31 @@ a:hover {
   margin-left: 0%;
 }
 
-#logo {
+#brand {
   position: fixed;
-  left:5%;
+  padding-left:90px;
+  padding-right: 5px;
+  top: 0px;
+}
+#brand img {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  width: 60px;
+  min-width: 0px;
+}
+
+#brand .product-name {
+  text-align:center;
+  font-size:1.8em;
+  font-weight:700;
+  margin: 10px 0px 0px 0px;
+}
+#brand .product-speech {
+  text-align: center;
+  font-size: .6em;
+  font-weight: 500;
+  margin: 5px 0px 0px 0px;
 }
 
 .navbar {
@@ -248,16 +273,28 @@ a:hover {
   padding-right:3%;
 }
 
+.navbar .flag {
+  width: 40px; 
+  height: 30px; 
+  margin-top: 5px;
+  opacity: 0.7;
+  vertical-align: top;
+}
+.navbar .flag:hover {
+  opacity: 0.9;
+}
+
 .navbar-nav {
   flex-direction: row;
   margin-left:unset;
   justify-content: space-evenly;
   width:100%;
-  padding-left: 500px;
+  padding-left: 300px;
 }
 .nav-item {
   margin-right: 15px;
   margin-left: 15px;
+  line-height:35px;
 }
 @media (min-width: 401px) {
   .navbar-brand img {
@@ -287,20 +324,23 @@ a:hover {
     flex-direction: column;
     text-align: right;
     padding-right: 90px;
-    height: 170px;
     margin-top: -10px;
   }
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .navbar-nav {
     flex-direction: row;
     font-size: 11px;
     justify-content: space-evenly;
-    padding-top: 145px;
-    padding-left:0px;
-    width:120%;
+    padding: 70px 0px 10px 0px;
+  }
+
+  #brand {
+    width: 100%;
+    padding: 0px;
+    margin: 5px 0px 0px 0px;
   }
 }
 @media (max-width: 400px) {
@@ -312,15 +352,14 @@ a:hover {
     flex-direction: row;
     font-size: 11px;
     justify-content: space-evenly;
-    padding-top: 145px;
+    padding-top: 70px;
     padding-left:10px;
-    width:120%;
   }
 }
 
 .navbar.bg-light {
   background: #fff !important;
-  height: 145px;
+  min-height: 50px;
 }
 
 .navbar .nav-item .nav-link {
@@ -552,13 +591,14 @@ a:hover {
   background: #02bdd5;
 }
 
-#about {
-  min-height: calc(100vh - 200px);
+.offset-menu {
+  min-height: calc(100vh - 75px);
 }
 
 #about .btn-get-started {
   background-color: rgba(159, 188, 187, 1); 
-  margin-right: 5px;
+  border-color: rgb(121, 143, 142); 
+  margin: 5px;
 }
 
 #about .btn-get-started:hover {
@@ -566,10 +606,10 @@ a:hover {
 }
 
 #about .btn-watch-demo {
-  color: rgb(180, 209, 208); 
+  color: rgba(159, 188, 187, 1); 
   background-color: white; 
-  border-color: rgb(180, 212, 211); 
-  margin-left: 5px;
+  border-color: rgb(121, 143, 142); 
+  margin: 5px;
 }
 
 #about .btn-watch-demo:hover {
@@ -790,9 +830,6 @@ figure figcaption p {
   margin-top: 5px;
 }
 
-#roadmap {
-  height: calc(100vh - 200px);
-}
 #roadmap .container {
   max-width: 90%;
   text-align:center;
@@ -804,10 +841,6 @@ figure figcaption p {
 
 #roadmap .media .media-left {
   padding-right: 25px;
-}
-
-#partners {
-  min-height: calc(100vh - 200px);
 }
 
 #partners .media .media-left {
@@ -830,7 +863,6 @@ figure figcaption p {
   color: #828282;
 }
 #gettingstarted {
-  min-height: calc(100vh - 200px);
   background-color: rgba(159,188,187,.3);
 }
 
@@ -839,10 +871,9 @@ figure figcaption p {
   display:inline-block;
 }
 #demo {
-  min-height: calc(100vh - 200px);
   background-color: rgba(188, 159, 159, 0.3);
 }
-#demo:hover ~ #logo {
+#demo:hover ~ #brand {
   display:none;
 }
 

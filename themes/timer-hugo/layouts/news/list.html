@@ -1,8 +1,30 @@
 {{ partial "header.html" . }}
+<style>
+    #news .section-heading {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    #news .item {
+        border-bottom: 1px dashed rgba(167, 188, 153, 1);;
+    }
+    
+    #news .item:nth-child(even) {
+        background-color : rgba(167, 188, 153, 0.3);
+    }
+    #news .item:last-child {
+        border-bottom: none;
+    }
+</style>
+
 <section id="news" style="background-color:rgba(159, 188, 187, 0.3)">
+    <input type="hidden" name="active-header" value="news" />
     <div class="container">
+        <div class="section-heading">
+            <h1 class="title" data-wow-delay=".3s" style="font-weight: bold; font-size: 30px">{{ T "LatestNews" }}</h1>
+        </div>
         {{ range $index, $element := sort $.Site.Data.news.items "date" "desc"  }}
-        <div class="row" style="padding: 30px;">
+        <div class="row item" style="padding: 30px;">
             <div class="container">
             <div id="new-{{ .title }}" class="news-anchor"></div>
                 <div class="row">

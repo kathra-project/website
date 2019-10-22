@@ -2,6 +2,10 @@
 other = "GENERATE - BUILD - DEPLOY - RUN"
 [home]
 other = "Home"
+[News]
+other = "Actualité" 
+[LatestNews]
+other = "Dernières actualités" 
 [Product]
 other = "Produit" 
 [Demo]

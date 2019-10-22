@@ -54,18 +54,13 @@
             <div class="col-lg-14" style="width: 100%;">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
                     
-                    <a id="logo" class="navbar-brand" href="{{ .Site.BaseURL }}" style="padding-left:80px;height: 130px; ">
-                        <img style="position: fixed;
-                                    top: 20px;
-                                    left: 20px;
-                                    width: 150px;
-                                    min-width: 0px;" 
-                            src="{{ .Site.BaseURL }}/images/kathra-logo.png" />
-                        <p style="text-align:center;font-size:3.5em;font-weight:700;line-height: 70px;margin: 20px 0px 0px 0px;">KATHRA</p>
-                        <p style="text-align:center; font-size: 0.8em">{{ T "LogoTitle" }}</p>
+                    <a id="brand" class="navbar-brand" href="{{ .Site.BaseURL }}">
+                        <img src="{{ .Site.BaseURL }}/images/kathra-logo.png" />
+                        <p class="product-name">KATHRA</p>
+                        <p class="product-speech">{{ T "LogoTitle" }}</p>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation" style="position: fixed;right:15px;">
+                        aria-expanded="false" aria-label="Toggle navigation" style="position: fixed;right:15px; top: 15px;">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -88,8 +83,8 @@
                             {{ range .Site.Home.AllTranslations }}
                                 {{ if ne .Language.Lang $currentLang }} 
                                 <li class="nav-item">
-                                    <a href="{{ .Permalink }}">
-                                        <img class="nav-link" style="width: 40px; height: 40px; opacity: 0.7;" src="{{ .Site.BaseURL }}/images/{{ .Language }}.svg" alt="{{ .Language }}" />
+                                    <a href="{{ .Permalink }}" class="nav-link">
+                                        <img class="flag" src="{{ .Site.BaseURL }}/images/{{ .Language }}.svg" alt="{{ .Language }}" />
                                     </a>
                                 </li>
                                 {{ end }}
