@@ -32,9 +32,7 @@ ul {
   padding-left: 0;
 }
 
-ul li {
-  list-style: none;
-}
+
 
 a {
   color: rgb(97, 91, 66);
@@ -364,7 +362,7 @@ a:hover {
 
 .navbar .nav-item .nav-link {
   color: #444 !important;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 100;
   transition: .3s all;
   text-transform: uppercase;

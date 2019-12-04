@@ -24,11 +24,11 @@ releases:
   - name : Kathra 1.0
     date : 2019 - T3
     dateReal : 2019-06-01
-    url  : https://gitlab.com/kathra/specifications
+    url  : https://gitlab.com/kathra/specifications/tree/1.0.0
   - name : Kathra 1.1
     date : 2020 - T1
     dateReal : 2020-03-01
-    url  : https://git.irt-systemx.fr/SMITE/specifications/tree/feature/v1.3
+    url  : https://gitlab.com/kathra/specifications/tree/specs/1.1.0
   - name : Kathra 1.2
     date : 2020 - T3
     dateReal : 2020-06-01
@@ -68,14 +68,14 @@ features :
       Runtime environment management
 
   - name : Release cycle
-    date   : 2020 - T2
-    release : Kathra 1.1
+    date   : 2020 - T3
+    release : Kathra 1.2
     description: >  
       Release cycle management	
 
   - name : Catalog
-    date   : 2020 - T3
-    release : Kathra 1.2
+    date   : 2020 - T2
+    release : Kathra 1.1
     description: >  
       Catalog management
 
