@@ -6,11 +6,17 @@
             {{ $indexBeginToDisplay := len .Site.Data.news.items }}
             {{ $indexBeginToDisplay = sub $indexBeginToDisplay 4 }}
             {{ range $index, $element := sort .Site.Data.news.items "date" "asc" }}
+            {{ $month := ""}}
             {{ if (ge $index $indexBeginToDisplay) }}
             <div class="col-sm-3 latestnewsbanner-element" style="float: right">
                 {{ $delay := mul (add $index 1) 100 }}
                 <div class="block wow fadeInLeft" data-wow-delay="{{ $delay }}ms" data-wow-duration="500ms">
-                    <h3>{{ dateFormat "2 Jan 2006" .date }}</h3>
+                    {{ $month = dateFormat "Jan" .date }}
+                    {{ if in $.Site.Language.Lang "fr" }} 
+                        <h3>{{ dateFormat "2" .date }} {{ index $.Site.Data.month.fr $month }} {{ dateFormat "2006" .date }}</h3>
+                    {{ else }}
+                        <h3>{{ dateFormat "2" .date }} {{ index $.Site.Data.month.en $month }} {{ dateFormat "2006" .date }}</h3>
+                    {{ end }}
                     <a href="./news#new-{{ .title }}">
                         {{ if in $.Site.Language.Lang "fr" }} 
                             {{ .title.fr }}

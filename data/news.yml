@@ -115,7 +115,7 @@ items :
   - title: 
       fr: Kathra 1.0.0 est disponible !
       en: Kathra 1.0.0 is here !
-    date   : 2019-12-05
+    date   : 2019-12-09
     author : Kathra team
     description: 
       fr: >  
@@ -127,7 +127,7 @@ items :
         <ul>
           <li>Authentification centralisée OpenID Connect avec Keycloak</li>
           <li>Génération d'API REST Java/Python à partir de fichier Swagger 2.0</li>
-          <li>Gestion des sources via Gitlab-CI</li>
+          <li>Gestion des sources via Gitlab-CE</li>
           <li>Intégration continue Jenkins</li>
           <li>Stockage des artifacts et images sur Nexus et Harbor</li>
           <li>Déploiement continue Jenkins sur Kubernetes</li>
@@ -150,7 +150,7 @@ items :
             <ul>
               <li>Support Kubernetes 1.16</li>
               <li>Intégration Helm 3</li>
-              <li>Upgrade des composants de la factory (Keycloak, Gitlab-CI, Jenkins, Nexus, Harbor)</li>
+              <li>Upgrade des composants de la factory (Keycloak, Gitlab-CE, Jenkins, Nexus, Harbor)</li>
               <li>Support Java 13</li>
             </ul>
           </li>
@@ -178,7 +178,7 @@ items :
         <ul>
           <li>Centralized authentication OpenID Connect wtih Keycloak</li>
           <li>Java/Python REST API Generation from Swagger 2.0 file</li>
-          <li>Source management with Gitlab-CI</li>
+          <li>Source management with Gitlab-CE</li>
           <li>Continuous integration with Jenkins</li>
           <li>Artifact and image storage on Nexus and Harbor</li>
           <li>Continuous deployment on Kubernetes</li>
@@ -201,7 +201,7 @@ items :
             <ul>
               <li>Support Kubernetes 1.16</li>
               <li>Integrate Helm 3</li>
-              <li>Upgrading factory tools (Keycloak, Gitlab-CI, Jenkins, Nexus, Harbor)</li>
+              <li>Upgrading factory tools (Keycloak, Gitlab-CE, Jenkins, Nexus, Harbor)</li>
               <li>Support Java 13</li>
             </ul>
           </li>
