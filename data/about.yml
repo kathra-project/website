@@ -38,8 +38,8 @@ components:
   - name: Nexus
     urlImage: https://avatars2.githubusercontent.com/u/44938?s=400&v=4
     action:
-      fr: Publier artefacts
-      en: Publish artefacts
+      fr: Publier artifacts
+      en: Publish artifacts
   - name: BinaryRepositoryManager
     urlImage: https://avatars2.githubusercontent.com/u/40275816?s=280&v=4
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-binaryrepositorymanager/kathra-binaryrepositorymanager-api

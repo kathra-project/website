@@ -6,15 +6,39 @@
     }
 
     #news .item {
-        border-bottom: 1px dashed rgba(167, 188, 153, 1);;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    #news .item .footer {
+        padding-top: 15px;
+    }
+    #news .item .footer p {
+        text-align: right;
+        width: 100%;
     }
     
     #news .item:nth-child(even) {
         background-color : rgba(167, 188, 153, 0.3);
     }
+    #news .item:nth-child(odd) {
+        background-color : rgba(235, 238, 217, 1);
+    }
     #news .item:last-child {
         border-bottom: none;
     }
+    #news ul {
+        padding-left: 35px;
+        margin-top: 5px;
+    }
+    #news ul li {
+        padding-left: 15px;
+        margin-top: 5px;
+        font-family: Raleway, sans-serif;
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
 </style>
 
 <section id="news" style="background-color:rgba(159, 188, 187, 0.3)">
@@ -27,7 +51,7 @@
         <div class="row item" style="padding: 30px;">
             <div class="container">
             <div id="new-{{ .title }}" class="news-anchor"></div>
-                <div class="row">
+                <div class="row header">
                     <h3>{{ if in $.Site.Language.Lang "fr" }} 
                             {{ .title.fr }}
                         {{ else }}
@@ -35,14 +59,14 @@
                         {{ end }}
                     </h3>
                 </div>
-                <div class="row">
+                <div class="row content">
                     <p> {{ if in $.Site.Language.Lang "fr" }} 
                             {{ .description.fr | safeHTML }}
                         {{ else }}
                             {{ .description.en | safeHTML }}
                         {{ end }}</p>
                 </div>
-                <div class="row">
+                <div class="row footer">
                     <p>By {{ .author }}, {{ .date }}</p>
                 </div>
             </div>
