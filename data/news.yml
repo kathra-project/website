@@ -144,9 +144,9 @@ items :
         </ul>
         </div>
         <div class="w-100">
-        <p> <h4>Pour le futur (v1.1)</h4></p>
+        <p> <h4>La suite ? (version 1.1)</h4></p>
         <ul>
-          <li>Mise à niveau de la stack : 
+          <li>Mise à niveau des outils : 
             <ul>
               <li>Support Kubernetes 1.16</li>
               <li>Intégration Helm 3</li>
@@ -195,9 +195,9 @@ items :
         </ul>
         </div>
         <div class="w-100">
-        <p> <h4>For the future (v1.1)</h4></p>
+        <p> <h4>Next episode ? (version 1.1)</h4></p>
         <ul>
-          <li>Updating global stack: 
+          <li>Upgrade tools: 
             <ul>
               <li>Support Kubernetes 1.16</li>
               <li>Integrate Helm 3</li>
