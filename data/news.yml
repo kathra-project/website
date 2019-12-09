@@ -163,8 +163,8 @@ items :
           </li>
           <li>Spécification des workflows et des API : 
             <ul>
-              <li>Catalogue du service (CatalogManager) : référencement des actifs</li>
-              <li>Environnement d'exécution (RuntimeManager) : gestion des environnments d'execution</li>
+              <li>Catalogue du service (CatalogManager) : référencement des componsants et leurs implémentations</li>
+              <li>Environnement d'exécution (RuntimeManager) : gestion des environnements d'exécution</li>
             </ul>
           </li>
         </ul>
@@ -215,7 +215,7 @@ items :
           <li>API specifications : 
             <ul>
               <li>CatalogManager : Manage packages indexing</li>
-              <li>RuntimeManager : Manage runtime environment</li>
+              <li>RuntimeManager : Manage runtime environments</li>
             </ul>
           </li>
         </ul>
