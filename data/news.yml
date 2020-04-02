@@ -220,3 +220,141 @@ items :
           </li>
         </ul>
         </div>
+        
+  - title: 
+      fr: Kathra sur Microsoft Azure.
+      en: Kathra on Microsoft Azure.
+    date   : 2020-02-26
+    author : Kathra team
+    description:
+      fr: >
+        <div class="w-100">
+        <p>
+        Kathra est désormais Cloud Ready. Vous pouvez l'installer sur Microsoft Azure via Terraform</br>
+        <img src="/images/azure.png" alt="Microsoft Azure">
+        <blockquote >
+          export ARM_SUBSCRIPTION_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_SECRET="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_TENANT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          git clone https://gitlab.com/kathra/deployment.git </br> 
+          ./deployment/terraform/kathra-on-azure.sh deploy --domain=kathra.my-own-domain.org </br> 
+        </blockquote>
+        </p>
+        </div>
+         
+      en: >
+        <div class="w-100">
+        <p>
+        Kathra's deployment is now cloud Ready. You can install it on Microsoft Azure via Terraform</br>
+        <img src="/images/azure.png" alt="Microsoft Azure">
+        
+        <blockquote>
+          export ARM_SUBSCRIPTION_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_SECRET="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_TENANT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          git clone https://gitlab.com/kathra/deployment.git </br> 
+          ./deployment/terraform/kathra-on-azure.sh deploy --domain=kathra.my-own-domain.org </br> 
+        </blockquote>
+        
+        </p>
+        </div>
+        
+  - title: 
+      fr: Release 1.1.0
+      en: Release 1.1.0
+    date   : 2020-03-09
+    author : Kathra team
+    description: 
+      fr: >  
+        <div class="w-100">
+        <p>Nouvelle release 1.1.0 </br> </br>
+         <h4>Fonctionnalités disponibles :</h4></p>
+        </div>
+        <div class="w-100">
+        <ul>
+          <li>Référencement d'implémentation dans le catalog de service</li>
+          <li>Génération de Chart Helm depuis Rest API</li>
+          <li>Integration continue des Chart Helm dans Harbor</li>
+          <li>Support Java 13</li>
+          <li>Installation sur Azure</li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Ressources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.1.0">Installation</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.1.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Code source</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Artifacts Java</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Images Docker</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Pour la suite..</h4></p>
+        <ul>
+          <li>Mise à niveau des outils : 
+            <ul>
+              <li>Support Kubernetes 1.16</li>
+            </ul>
+          </li>
+          <li>Workflows utilisateurs: 
+            <ul>
+              <li>Après intégration continue : Auto-déploiement d'un package sur un environnement Kubernetes via Helm</li>
+              <li>Configurer et déployer des environnements d'exécution à partir d'un cataloge de service.</li>
+            </ul>
+          </li>
+          <li>Spécification des workflows et des API : 
+            <ul>
+              <li>Environnement d'exécution (RuntimeManager) : gestion des environnements d'exécution</li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      en: >  
+        <div class="w-100">
+        <p>The first release of Kathra is available. </br> </br>
+        <h4>Features availables :</h4></p>
+        </div>
+        <div class="w-100">
+        <ul>
+          <li>Indexing component into service catalog</li>
+          <li>Chart Helm Generation</li>
+          <li>Continuous integration Helm Chart in Harbor</li>
+          <li>Support Java 13</li>
+          <li>Install on Azure</li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Resources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.1.0">For install</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.1.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Source code</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Java Artifacts</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Docker images</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Expected for version 1.2</h4></p>
+        <ul>
+          <li>Upgrade tools: 
+            <ul>
+              <li>Upgrading factory tools (Keycloak, Gitlab-CE, Jenkins, Nexus, Harbor)</li>
+              <li>Using Terraform for deployment</li>
+            </ul>
+          </li>
+          <li>User Workflows: 
+            <ul>
+              <li>Post CI : Auto-deploy package on Kubernetes using Helm (or Terraform)</li>
+              <li>Configure and deploy runtime environmenent from service catalog.</li>
+            </ul>
+          </li>
+          <li>API specifications : 
+            <ul>
+              <li>RuntimeManager : Manage runtime environments</li>
+            </ul>
+          </li>
+        </ul>
+        </div>

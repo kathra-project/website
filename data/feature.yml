@@ -26,11 +26,11 @@ item    :
     description : >
       Kathra is built to be secure by out of the box, with deep, granular integration of OpenID Connect based permission and access controls.
 
-  - icon  : ion-wrench
-    title : Kathra Framework
-    key: Framework
+  - icon  : ion-ios-cloud
+    title : Cloud Ready
+    key: CloudReady
     description : >
-      Exploit Kathra's library of frameworks to automatically implement common functionality. Contribute to the community by creating and sharing your own frameworks.
+      Kathra is able to be deployed on Microsoft Azure
   
   - icon  : ion-ios-lightbulb-outline
     title : Intuitive UI

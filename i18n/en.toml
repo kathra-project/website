@@ -30,8 +30,8 @@ other = "WHAT CAN KATHRA DO FOR ME ?"
 other = "Bootstrap your next project instantly with automatically generated git repositories - implementation, model, interface, and client - and the associated CI/CD pipelines."
 ["FeatureCodeGen"]
 other = "Concentrate on the code with automatic OpenAPI compliant code generation of your implementation. "
-["FeatureFramework"]
-other = "Exploit Kathra's library of frameworks to automatically implement common functionality. Contribute to the community by creating and sharing your own frameworks."
+["FeatureCloudReady"]
+other = "Kathra is able to be deployed on Microsoft Azure, and other cloud providers with Terraform."
 ["FeatureCICD"]
 other = "Kathra uses OCI compliant containers to automatically build and deploy your code in the appropriate environment for each branch - Master/Production, Dev/Staging, or Feature Branch/Name."
 ["FeatureSecurity"]
@@ -51,10 +51,12 @@ other = "Create your API"
 ["GettingStartedTitle3"]
 other = "Consume it"
 ["GettingStartedTitle4"]
-other = "Quick install from Ubuntu/Debian Distrib"
+other = "Quick install"
 
-["GettingStartedDescription0"]
-other = "Install and configure your K8S"
+["GettingStartedDescription01"]
+other = "With Minikube"
+["GettingStartedDescription02"]
+other = "With AKS"
 ["GettingStartedDescription1"]
 other = "Install Kathra and your factory (Jenkins, GitLab, Nexus, Harbor)"
 ["GettingStartedDescription2"]
