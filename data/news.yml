@@ -144,7 +144,7 @@ items :
         </ul>
         </div>
         <div class="w-100">
-        <p> <h4>La suite ? (version 1.1)</h4></p>
+        <p> <h4>La suite ?</h4></p>
         <ul>
           <li>Mise à niveau des outils : 
             <ul>
@@ -195,7 +195,7 @@ items :
         </ul>
         </div>
         <div class="w-100">
-        <p> <h4>Next episode ? (version 1.1)</h4></p>
+        <p> <h4>Next episode ?</h4></p>
         <ul>
           <li>Upgrade tools: 
             <ul>
@@ -215,6 +215,113 @@ items :
           <li>API specifications : 
             <ul>
               <li>CatalogManager : Manage packages indexing</li>
+              <li>RuntimeManager : Manage runtime environments</li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+
+  - title: 
+      fr: Release 1.1.0
+      en: Release 1.1.0
+    date   : 2020-04-02
+    author : Kathra team
+    description: 
+      fr: >  
+        <div class="w-100">
+        <p>Nouvelle release 1.1.0 </br> </br>
+         <h4>Fonctionnalités disponibles :</h4></p>
+        </div>
+        <div class="w-100">
+        <ul>
+          <li>Référencement d'implémentation dans le catalog de service</li>
+          <li>Génération de Chart Helm depuis Rest API</li>
+          <li>Integration continue des Chart Helm dans Harbor</li>
+          <li>Support Java 13</li>
+        </ul>
+        <img src="/images/news/2020-04-02.png" style="width: 80%; margin-left: 10%; margin-right: 10%; border-radius: 5px;" />
+        </div>
+        <div class="w-100">
+        <p> <h4>Ressources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.1.0">Installation</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.1.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Code source</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Artifacts Java</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Images Docker</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Pour la suite..</h4></p>
+        <ul>
+          <li>Installation : 
+            <ul>
+              <li>Support Microsoft Azure et Google Cloud Platform avec Terraform</li>
+            </ul>
+          </li>
+          <li>Mise à niveau des outils : 
+            <ul>
+              <li>Support Kubernetes 1.16</li>
+            </ul>
+          </li>
+          <li>Workflows utilisateurs: 
+            <ul>
+              <li>Après intégration continue : Auto-déploiement d'un package sur un environnement Kubernetes via Helm</li>
+              <li>Configurer et déployer des environnements d'exécution à partir d'un cataloge de service.</li>
+            </ul>
+          </li>
+          <li>Spécification des workflows et des API : 
+            <ul>
+              <li>Environnement d'exécution (RuntimeManager) : gestion des environnements d'exécution</li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      en: >  
+        <div class="w-100">
+        <h4>Features availables :</h4></p>
+        </div>
+        <div class="w-100">
+        <ul>
+          <li>Indexing component into service catalog</li>
+          <li>Chart Helm Generation</li>
+          <li>Continuous integration Helm Chart in Harbor</li>
+          <li>Java 13 Support</li>
+        </ul>
+        <img src="/images/news/2020-04-02.png" style="width: 80%; margin-left: 10%; margin-right: 10%; border-radius: 5px;" />
+        </div>
+        <div class="w-100">
+        <p> <h4>Resources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.1.0">For install</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.1.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Source code</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Java Artifacts</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Docker images</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>For the future..</h4></p>
+        <ul>
+          <li>Installation : 
+            <ul>
+              <li>Microsoft Azure and Google Cloud Platform Support with Terraform</li>
+            </ul>
+          </li>
+          <li>Upgrade tools: 
+            <ul>
+              <li>Upgrading factory tools (Keycloak, Gitlab-CE, Jenkins, Nexus, Harbor)</li>
+              <li>Using Terraform for deployment</li>
+            </ul>
+          </li>
+          <li>User Workflows: 
+            <ul>
+              <li>Post CI : Auto-deploy package on Kubernetes using Helm (or Terraform)</li>
+              <li>Configure and deploy runtime environmenent from service catalog.</li>
+            </ul>
+          </li>
+          <li>API specifications : 
+            <ul>
               <li>RuntimeManager : Manage runtime environments</li>
             </ul>
           </li>
