@@ -37,6 +37,8 @@ components:
       en: Orchestrate CI/CD
   - name: Nexus
     urlImage: https://avatars2.githubusercontent.com/u/44938?s=400&v=4
+    apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-binaryrepositorymanager/kathra-binaryrepositorymanager-api
+    apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-binaryrepositorymanager/kathra-binaryrepositorymanager-java/kathra-binaryrepositorymanager-nexus/
     action:
       fr: Publier artifacts
       en: Publish artifacts
@@ -52,17 +54,12 @@ components:
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-deploymanager/deploymanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-deploymanager/deploymanager-java/kathra-deploymanager-k8s
     action:
-      fr: Gérer l'exécution  
-      en: Manage runtime
-aboutItem:
-  - title : Why Choose Us
-    description: > 
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
-
-  - title : What You Get
-    description: > 
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
-
-  - title : Meet The Energy
-    description: > 
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+      fr: Déployer 
+      en: Deploy components
+  - name: DeployManager
+    urlImage: https://helm.sh/img/helm.svg
+    apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-catalogmanager/kathra-catalogmanager-api
+    apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-catalogmanager/kathra-catalogmanager-go/kathra-catalogmanager-helm
+    action:
+      fr: Référencer catalogue
+      en: Index catalog

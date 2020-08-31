@@ -220,11 +220,59 @@ items :
           </li>
         </ul>
         </div>
+<<<<<<< HEAD
 
   - title: 
       fr: Release 1.1.0
       en: Release 1.1.0
     date   : 2020-04-02
+=======
+        
+  - title: 
+      fr: Kathra sur Microsoft Azure.
+      en: Kathra on Microsoft Azure.
+    date   : 2020-02-26
+    author : Kathra team
+    description:
+      fr: >
+        <div class="w-100">
+        <p>
+        Kathra est désormais Cloud Ready. Vous pouvez l'installer sur Microsoft Azure via Terraform</br>
+        <img src="/images/azure.png" alt="Microsoft Azure">
+        <blockquote >
+          export ARM_SUBSCRIPTION_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_SECRET="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_TENANT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          git clone https://gitlab.com/kathra/deployment.git </br> 
+          ./deployment/terraform/kathra-on-azure.sh deploy --domain=kathra.my-own-domain.org </br> 
+        </blockquote>
+        </p>
+        </div>
+         
+      en: >
+        <div class="w-100">
+        <p>
+        Kathra's deployment is now cloud Ready. You can install it on Microsoft Azure via Terraform</br>
+        <img src="/images/azure.png" alt="Microsoft Azure">
+        
+        <blockquote>
+          export ARM_SUBSCRIPTION_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_CLIENT_SECRET="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          export ARM_TENANT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+          git clone https://gitlab.com/kathra/deployment.git </br> 
+          ./deployment/terraform/kathra-on-azure.sh deploy --domain=kathra.my-own-domain.org </br> 
+        </blockquote>
+        
+        </p>
+        </div>
+        
+  - title: 
+      fr: Release 1.1.0
+      en: Release 1.1.0
+    date   : 2020-03-09
+>>>>>>> news/azureDeployment
     author : Kathra team
     description: 
       fr: >  
@@ -238,8 +286,13 @@ items :
           <li>Génération de Chart Helm depuis Rest API</li>
           <li>Integration continue des Chart Helm dans Harbor</li>
           <li>Support Java 13</li>
+<<<<<<< HEAD
         </ul>
         <img src="/images/news/2020-04-02.png" style="width: 80%; margin-left: 10%; margin-right: 10%; border-radius: 5px;" />
+=======
+          <li>Installation sur Azure</li>
+        </ul>
+>>>>>>> news/azureDeployment
         </div>
         <div class="w-100">
         <p> <h4>Ressources :</h4></p>
@@ -254,11 +307,14 @@ items :
         <div class="w-100">
         <p> <h4>Pour la suite..</h4></p>
         <ul>
+<<<<<<< HEAD
           <li>Installation : 
             <ul>
               <li>Support Microsoft Azure et Google Cloud Platform avec Terraform</li>
             </ul>
           </li>
+=======
+>>>>>>> news/azureDeployment
           <li>Mise à niveau des outils : 
             <ul>
               <li>Support Kubernetes 1.16</li>
@@ -279,6 +335,10 @@ items :
         </div>
       en: >  
         <div class="w-100">
+<<<<<<< HEAD
+=======
+        <p>The first release of Kathra is available. </br> </br>
+>>>>>>> news/azureDeployment
         <h4>Features availables :</h4></p>
         </div>
         <div class="w-100">
@@ -286,9 +346,15 @@ items :
           <li>Indexing component into service catalog</li>
           <li>Chart Helm Generation</li>
           <li>Continuous integration Helm Chart in Harbor</li>
+<<<<<<< HEAD
           <li>Java 13 Support</li>
         </ul>
         <img src="/images/news/2020-04-02.png" style="width: 80%; margin-left: 10%; margin-right: 10%; border-radius: 5px;" />
+=======
+          <li>Support Java 13</li>
+          <li>Install on Azure</li>
+        </ul>
+>>>>>>> news/azureDeployment
         </div>
         <div class="w-100">
         <p> <h4>Resources :</h4></p>
@@ -301,6 +367,7 @@ items :
         </ul>
         </div>
         <div class="w-100">
+<<<<<<< HEAD
         <p> <h4>For the future..</h4></p>
         <ul>
           <li>Installation : 
@@ -308,6 +375,10 @@ items :
               <li>Microsoft Azure and Google Cloud Platform Support with Terraform</li>
             </ul>
           </li>
+=======
+        <p> <h4>Expected for version 1.2</h4></p>
+        <ul>
+>>>>>>> news/azureDeployment
           <li>Upgrade tools: 
             <ul>
               <li>Upgrading factory tools (Keycloak, Gitlab-CE, Jenkins, Nexus, Harbor)</li>
@@ -326,4 +397,109 @@ items :
             </ul>
           </li>
         </ul>
+<<<<<<< HEAD
+=======
+        </div>
+        
+  - title: 
+      fr: Version 1.2.0 - Google Cloud Platform et Microsoft Azure
+      en: Release 1.2.0 - Google Cloud Platform and Microsoft Azure
+    date   : 2020-08-31
+    author : Kathra team
+    description: 
+      fr: >  
+        <div class="w-100">
+        Nouveautés de la release :
+        <ul>
+          <li>S'affranchir du wrapper d'installation legacy, simplifier et migrer vers une solution IaC (Terraform)</li>
+          <li>Support Kubernetes 1.16</li>
+          <li>Intégration native vers des clouds providers :
+            <ul>
+              <li>Microsoft Azure</li>
+              <li>Google Cloud Platform</li>
+            </ul>
+          </li>
+          <li>Upgrade des outils de la factory :
+            <ul>
+              <li>Keycloak 10</li>
+              <li>Gitlab 12</li>
+              <li>Jenkins 2.190.1</li>
+              <li>Nexus 3.21</li>
+              <li>Harbor 1.10</li>
+            </ul>
+          </li>
+          <li>Intégration OAuth au sein de GitLab-CI</li>
+          <li>Nouveau backend Nexus Binary Repository</li>
+          <li>Pré-intégrer une solution d'analyse de code (SonarQube) au sein des pipelines</li>
+          <li>Implémenter un mécanisme de réconciliation de resources en cas d'erreurs</li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Ressources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.2.0">Installation</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.2.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Code source</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Artifacts Java</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Images Docker</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Pour la suite..</h4></p>
+        <ul>
+          <li>Construction d'environnements : 
+            <ul>
+              <li>Génération de code IaC (ajout, suppression et configuration depuis catalogue de services)</li>
+              <li>Pipeline de déploiement d'environnements IaC</li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      en: >  
+        <div class="w-100">
+        News from Release 1.2.0:
+        <ul>
+          <li>Remove legacy install wrapper and migrate to Terraform</li>
+          <li>Kubernetes Support 1.16</li>
+          <li>Native integration to cloud providers :
+            <ul>
+              <li>Microsoft Azure</li>
+              <li>Google Cloud Platform</li>
+            </ul>
+          </li>
+          <li>Upgrade factory tools :
+            <ul>
+              <li>Keycloak 10</li>
+              <li>Gitlab 12</li>
+              <li>Jenkins 2.190.1</li>
+              <li>Nexus 3.21</li>
+              <li>Harbor 1.10</li>
+            </ul>
+          </li>
+          <li>Enable OAuth protocol into GitLab-CI</li>
+          <li>New backend Nexus Binary Repository</li>
+          <li>Add source code quality analysis with SonarQube through pipeline library</li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Ressources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.2.0">For install</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.2.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Source code</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Java Artifacts</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Docker images</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Next steps</h4></p>
+        <ul>
+          <li>Environnment building : 
+            <ul>
+              <li>Generate IaC source code from service catalog</li>
+              <li>Construct and deploy environments IaC</li>
+            </ul>
+          </li>
+        </ul>
+>>>>>>> news/azureDeployment
         </div>

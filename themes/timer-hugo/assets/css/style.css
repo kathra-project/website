@@ -41,6 +41,16 @@ a:hover {
   color: rgb(97, 91, 66);
 }
 
+blockquote  {
+  margin-top: 10px; 
+  background-color: #3a3a3a;
+  color: #fff; 
+  border-radius: 5px; 
+  border: 1px dashed black; 
+  padding: 10px;
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+}
+
 .slick-slide:focus {
   outline: 0;
 }
