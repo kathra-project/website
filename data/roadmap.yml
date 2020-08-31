@@ -25,15 +25,15 @@ releases:
   - name : Kathra 1.0
     date : 2019 - T3
     dateReal : 2019-06-01
-    url  : https://gitlab.com/kathra/specifications/tree/1.0.0
+    url  : https://gitlab.com/kathra/specifications/-/tree/1.0.0
   - name : Kathra 1.1
     date : 2020 - T1
     dateReal : 2020-03-01
-    url  : https://gitlab.com/kathra/specifications/tree/specs/1.1.0
+    url  : https://gitlab.com/kathra/specifications/-/tree/1.1.0
   - name : Kathra 1.2
     date : 2020 - T3
     dateReal : 2020-06-01
-    url  : ""
+    url  : https://gitlab.com/kathra/specifications/-/tree/1.2.0
   - name : Kathra 1.3
     date : 2021 - T1
     dateReal : 2021-01-01
@@ -58,17 +58,11 @@ features :
     description: >  
       Open sourcing project, rebranding to Kathra
 
-  - name : Runtime environment
+  - name : Runtime environments
     date   : 2020 - T4
-    release : Kathra 1.2
+    release : Kathra 1.3
     description: >  
-      Runtime environment management
-
-  - name : Release cycle
-    date   : 2020 - T3
-    release : Kathra 1.2
-    description: >  
-      Release cycle management	
+      Runtime environment management	
 
   - name : Catalog
     date   : 2020 - T2
@@ -76,8 +70,14 @@ features :
     description: >  
       Catalog management
 
+  - name : Factory upgrade
+    date   : 2020 - T3
+    release : Kathra 1.2
+    description: >  
+      Open API v3
+
   - name : Open API v3
-    date   : 2020 - T4
-    release : Kathra 1.3
+    date   : 2021 - T4
+    release : Kathra 1.4
     description: >  
       Open API v3

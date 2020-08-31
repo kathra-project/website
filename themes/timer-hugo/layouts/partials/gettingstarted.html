@@ -68,10 +68,16 @@
             
             #gettingstarted blockquote  {
                 display: none;
-                min-height: 180px;
+                min-height: 350px;
             }
             #gettingstarted .blockquoteActive  {
                 display: block;
+            }
+            #gettingstarted .comment {
+                color: lime;
+                font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+                padding: 0px;
+                margin: 0px;
             }
 
 
@@ -100,15 +106,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="step-label2 wow fadeInDown" data-wow-delay="0.5s">
-                                        {{ T "GettingStartedTitle0"}}</div>
+                                        {{ T "GettingStartedTitle1"}}</div>
                                 </div>
                                 <div class="row step-description2 wow fadeInDown" data-wow-delay="0.5s">
-                                    <ul>
-                                        <li><a target="_blank"
-                                                href="https://gitlab.com/kathra/deployment/blob/master/Kathra-On-Minikube.md">{{ T "GettingStartedDescription01"}}</a></li>
-                                        <li><a target="_blank"
-                                            href="https://gitlab.com/kathra/deployment/-/blob/feature/terraform/README.md#for-production-on-azure">{{ T "GettingStartedDescription02"}}</a></li>  
-                                    </ul>
+                                    <a href="https://gitlab.com/kathra/deployment/blob/master/README.md"
+                                        target="_blank">{{ T "GettingStartedDescription1"}}</a>
                                 </div>
                             </div>
                         </div>
@@ -121,11 +123,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="step-label2 wow fadeInDown" data-wow-delay="1.0s">
-                                        {{ T "GettingStartedTitle1"}}</div>
+                                        {{ T "GettingStartedTitle2"}}</div>
                                 </div>
                                 <div class="row step-description2 wow fadeInDown" data-wow-delay="1.0s">
-                                    <a href="https://gitlab.com/kathra/deployment/blob/master/README.md#step-2-install-kathra-and-the-software-factory"
-                                        target="_blank">{{ T "GettingStartedDescription1"}}</a>
+                                    <a
+                                        href="https://gitlab.com/kathra/kathra/documentation/blob/master/createComponent/createComponent.md" target="_blank">{{ T "GettingStartedDescription2"}}</a>
                                 </div>
                             </div>
                         </div>
@@ -140,28 +142,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="step-label2 wow fadeInDown" data-wow-delay="1.5s">
-                                        {{ T "GettingStartedTitle2"}}</div>
-                                </div>
-                                <div class="row step-description2 wow fadeInDown" data-wow-delay="1.5s">
-                                    <a
-                                        href="https://gitlab.com/kathra/kathra/documentation/blob/master/createComponent/createComponent.md" target="_blank">{{ T "GettingStartedDescription2"}}</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="container">
-                                <div class="row">
-                                    <a class="step-icon2 wow fadeInDown" data-wow-delay="2.0s"
-                                        style="background-color: rgba(167, 188, 153); border: 1px solid rgba(147, 168, 133);"
-                                        href="https://youtu.be/6QIC6PNFOt8?t=210"
-                                        target="_blank">4</a>
-                                </div>
-                                <div class="row">
-                                    <div class="step-label2 wow fadeInDown" data-wow-delay="2.0s">
                                         {{ T "GettingStartedTitle3"}}</div>
                                 </div>
-                                <div class="row step-description2 wow fadeInDown" data-wow-delay="2.0s">
+                                <div class="row step-description2 wow fadeInDown" data-wow-delay="1.5s">
                                     <ul>
                                         <li>{{ T "GettingStartedDescription3"}}</li>
                                     </ul>
@@ -184,20 +167,45 @@
                                 <ul class="nav nav-tabs justify-content-center" style="margin-top: 15px;">
                                     <li id="minikubeProviderTab" class="active providerTab"><img onclick="selectProvider('minikubeProvider')" src="{{ .Site.BaseURL }}/images/minikube.png" alt="Deploy on Minikube" /></li>
                                     <li id="azureProviderTab" class="providerTab"><img onclick="selectProvider('azureProvider')" src="{{ .Site.BaseURL }}/images/azure.png" alt="Deploy on Azure" /></li>
+                                    <li id="gcpProviderTab" class="providerTab"><img onclick="selectProvider('gcpProvider')" src="{{ .Site.BaseURL }}/images/gcp.png" alt="Deploy on Google Cloud Platform" /></li>
+                                    <li id="windowsProviderTab" class="providerTab"><img onclick="selectProvider('windowsProvider')" src="{{ .Site.BaseURL }}/images/docker-windows.png" alt="Deploy on Docker Desktop for Windows" /></li>
                                 </ul>
                                 <blockquote id="minikubeProviderBlockQuote" class="blockquoteActive">
+                                    <p class="comment"># From Ubuntu/Debian Distrib</p>
                                     git clone https://gitlab.com/kathra/deployment.git <br/>
-                                    ./deployment/install-minikube.sh --domain=kathra.my-own-domain.org --generateCertsDnsChallenge  --cpus=8 --memory=20000<br/>
-                                    ./deployment/install.sh --domain=kathra.my-own-domain.org
+                                    cd deployment/terraform/terraform_modules/minikube-stack </br> </br> 
+                                    <p class="comment"># Way 1 - Manual ACME - DNS Challenge</p>
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --manual-acme </br> </br> 
+                                    <p class="comment"># Way 2 - Auto ACME with Terraform provider (https://www.terraform.io/docs/providers/acme/dns_providers/)</p>
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --acme-dns-provider=ovh --acme-dns-config='{"OVH_APPLICATION_KEY": "app-key", "OVH_APPLICATION_SECRET": "app-secret","OVH_CONSUMER_KEY": "consumer-key","OVH_ENDPOINT": "ovh-eu"}'
+                                </br> </br> 
+                                    <p class="comment"># Way 3 - Own Widlcard TLS Certificate (*.kathra.my-own-domain.org)</p>
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --tlsCert=file.crt --tlsKey=file.key
                                 </blockquote>
 
                                 <blockquote id="azureProviderBlockQuote" >
+                                    <p class="comment"># Define env. variables from Azure Account</p>
                                     export ARM_SUBSCRIPTION_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
                                     export ARM_CLIENT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
                                     export ARM_CLIENT_SECRET="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
-                                    export ARM_TENANT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> 
+                                    export ARM_TENANT_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" </br> </br> 
+                                    <p class="comment"># Deploy stack into Azure</p>
                                     git clone https://gitlab.com/kathra/deployment.git </br> 
-                                    ./deployment/terraform/kathra-on-azure.sh deploy --domain=kathra.my-own-domain.org </br> 
+                                    cd deployment/terraform/terraform_modules/azure-stack </br> 
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --azure-group-name=kathra </br> 
+                                </blockquote>
+
+                                <blockquote id="gcpProviderBlockQuote" > 
+                                    <p class="comment"># Init your gcloud client</p>
+                                    gcloud init <br/> <br/>
+                                    <p class="comment"># Deploy stack</p>
+                                    git clone https://gitlab.com/kathra/deployment.git </br> 
+                                    cd deployment/terraform/terraform_modules/gcp-stack </br> 
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --gcp-project-name=kathra-project --gcp-service-account=kathra-service-account</br> 
+                                </blockquote>
+
+                                <blockquote id="windowsProviderBlockQuote" >
+                                    Not yet...  </br> 
                                 </blockquote>
                             </div>
                         </div>

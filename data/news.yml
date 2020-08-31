@@ -358,3 +358,105 @@ items :
           </li>
         </ul>
         </div>
+        
+  - title: 
+      fr: Version 1.2.0 - Google Cloud Platform et Microsoft Azure
+      en: Release 1.2.0 - Google Cloud Platform and Microsoft Azure
+    date   : 2020-08-31
+    author : Kathra team
+    description: 
+      fr: >  
+        <div class="w-100">
+        Nouveautés de la release :
+        <ul>
+          <li>S'affranchir du wrapper d'installation legacy, simplifier et migrer vers une solution IaC (Terraform)</li>
+          <li>Support Kubernetes 1.16</li>
+          <li>Intégration native vers des clouds providers :
+            <ul>
+              <li>Microsoft Azure</li>
+              <li>Google Cloud Platform</li>
+            </ul>
+          </li>
+          <li>Upgrade des outils de la factory :
+            <ul>
+              <li>Keycloak 10</li>
+              <li>Gitlab 12</li>
+              <li>Jenkins 2.190.1</li>
+              <li>Nexus 3.21</li>
+              <li>Harbor 1.10</li>
+            </ul>
+          </li>
+          <li>Intégration OAuth au sein de GitLab-CI</li>
+          <li>Nouveau backend Nexus Binary Repository</li>
+          <li>Pré-intégrer une solution d'analyse de code (SonarQube) au sein des pipelines</li>
+          <li>Implémenter un mécanisme de réconciliation de resources en cas d'erreurs</li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Ressources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.2.0">Installation</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.2.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Code source</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Artifacts Java</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Images Docker</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Pour la suite..</h4></p>
+        <ul>
+          <li>Construction d'environnements : 
+            <ul>
+              <li>Génération de code IaC (ajout, suppression et configuration depuis catalogue de services)</li>
+              <li>Pipeline de déploiement d'environnements IaC</li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      en: >  
+        <div class="w-100">
+        News from Release 1.2.0:
+        <ul>
+          <li>Remove legacy install wrapper and migrate to Terraform</li>
+          <li>Kubernetes Support 1.16</li>
+          <li>Native integration to cloud providers :
+            <ul>
+              <li>Microsoft Azure</li>
+              <li>Google Cloud Platform</li>
+            </ul>
+          </li>
+          <li>Upgrade factory tools :
+            <ul>
+              <li>Keycloak 10</li>
+              <li>Gitlab 12</li>
+              <li>Jenkins 2.190.1</li>
+              <li>Nexus 3.21</li>
+              <li>Harbor 1.10</li>
+            </ul>
+          </li>
+          <li>Enable OAuth protocol into GitLab-CI</li>
+          <li>New backend Nexus Binary Repository</li>
+          <li>Add source code quality analysis with SonarQube through pipeline library</li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Ressources :</h4></p>
+        <ul>
+          <li><a href="https://gitlab.com/kathra/deployment/tree/1.2.0">For install</a></li>
+          <li><a href="https://gitlab.com/kathra/kathra/documentation/tree/1.2.0">Documentation</a></li>
+          <li><a href="https://gitlab.com/kathra/">Source code</a></li>
+          <li><a href="https://search.maven.org/search?q=org.kathra">Java Artifacts</a></li>
+          <li><a href="https://hub.docker.com/search?q=kathra&type=image&sort=updated_at&order=desc">Docker images</a></li>
+        </ul>
+        </div>
+        <div class="w-100">
+        <p> <h4>Next steps</h4></p>
+        <ul>
+          <li>Environnment building : 
+            <ul>
+              <li>Generate IaC source code from service catalog</li>
+              <li>Construct and deploy environments IaC</li>
+            </ul>
+          </li>
+        </ul>
+        </div>

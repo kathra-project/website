@@ -37,6 +37,8 @@ components:
       en: Orchestrate CI/CD
   - name: Nexus
     urlImage: https://avatars2.githubusercontent.com/u/44938?s=400&v=4
+    apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-binaryrepositorymanager/kathra-binaryrepositorymanager-api
+    apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-binaryrepositorymanager/kathra-binaryrepositorymanager-java/kathra-binaryrepositorymanager-nexus/
     action:
       fr: Publier artifacts
       en: Publish artifacts
@@ -54,3 +56,10 @@ components:
     action:
       fr: Déployer 
       en: Deploy components
+  - name: DeployManager
+    urlImage: https://helm.sh/img/helm.svg
+    apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-catalogmanager/kathra-catalogmanager-api
+    apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-catalogmanager/kathra-catalogmanager-go/kathra-catalogmanager-helm
+    action:
+      fr: Référencer catalogue
+      en: Index catalog
