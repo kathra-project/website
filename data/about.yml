@@ -61,5 +61,5 @@ components:
     apiUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-catalogmanager/kathra-catalogmanager-api
     apiImplUrl: https://gitlab.com/kathra/kathra/kathra-services/kathra-catalogmanager/kathra-catalogmanager-go/kathra-catalogmanager-helm
     action:
-      fr: Référencer catalogue
-      en: Index catalog
+      fr: Référencer services
+      en: Index services
