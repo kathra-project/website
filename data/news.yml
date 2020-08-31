@@ -144,7 +144,7 @@ items :
         </ul>
         </div>
         <div class="w-100">
-        <p> <h4>La suite ?</h4></p>
+        <p> <h4>La suite ? (version 1.1)</h4></p>
         <ul>
           <li>Mise à niveau des outils : 
             <ul>
@@ -195,7 +195,7 @@ items :
         </ul>
         </div>
         <div class="w-100">
-        <p> <h4>Next episode ?</h4></p>
+        <p> <h4>Next episode ? (version 1.1)</h4></p>
         <ul>
           <li>Upgrade tools: 
             <ul>
@@ -220,13 +220,6 @@ items :
           </li>
         </ul>
         </div>
-<<<<<<< HEAD
-
-  - title: 
-      fr: Release 1.1.0
-      en: Release 1.1.0
-    date   : 2020-04-02
-=======
         
   - title: 
       fr: Kathra sur Microsoft Azure.
@@ -272,7 +265,6 @@ items :
       fr: Release 1.1.0
       en: Release 1.1.0
     date   : 2020-03-09
->>>>>>> news/azureDeployment
     author : Kathra team
     description: 
       fr: >  
@@ -286,13 +278,8 @@ items :
           <li>Génération de Chart Helm depuis Rest API</li>
           <li>Integration continue des Chart Helm dans Harbor</li>
           <li>Support Java 13</li>
-<<<<<<< HEAD
-        </ul>
-        <img src="/images/news/2020-04-02.png" style="width: 80%; margin-left: 10%; margin-right: 10%; border-radius: 5px;" />
-=======
           <li>Installation sur Azure</li>
         </ul>
->>>>>>> news/azureDeployment
         </div>
         <div class="w-100">
         <p> <h4>Ressources :</h4></p>
@@ -307,14 +294,6 @@ items :
         <div class="w-100">
         <p> <h4>Pour la suite..</h4></p>
         <ul>
-<<<<<<< HEAD
-          <li>Installation : 
-            <ul>
-              <li>Support Microsoft Azure et Google Cloud Platform avec Terraform</li>
-            </ul>
-          </li>
-=======
->>>>>>> news/azureDeployment
           <li>Mise à niveau des outils : 
             <ul>
               <li>Support Kubernetes 1.16</li>
@@ -335,10 +314,7 @@ items :
         </div>
       en: >  
         <div class="w-100">
-<<<<<<< HEAD
-=======
         <p>The first release of Kathra is available. </br> </br>
->>>>>>> news/azureDeployment
         <h4>Features availables :</h4></p>
         </div>
         <div class="w-100">
@@ -346,15 +322,9 @@ items :
           <li>Indexing component into service catalog</li>
           <li>Chart Helm Generation</li>
           <li>Continuous integration Helm Chart in Harbor</li>
-<<<<<<< HEAD
-          <li>Java 13 Support</li>
-        </ul>
-        <img src="/images/news/2020-04-02.png" style="width: 80%; margin-left: 10%; margin-right: 10%; border-radius: 5px;" />
-=======
           <li>Support Java 13</li>
           <li>Install on Azure</li>
         </ul>
->>>>>>> news/azureDeployment
         </div>
         <div class="w-100">
         <p> <h4>Resources :</h4></p>
@@ -367,18 +337,8 @@ items :
         </ul>
         </div>
         <div class="w-100">
-<<<<<<< HEAD
-        <p> <h4>For the future..</h4></p>
-        <ul>
-          <li>Installation : 
-            <ul>
-              <li>Microsoft Azure and Google Cloud Platform Support with Terraform</li>
-            </ul>
-          </li>
-=======
         <p> <h4>Expected for version 1.2</h4></p>
         <ul>
->>>>>>> news/azureDeployment
           <li>Upgrade tools: 
             <ul>
               <li>Upgrading factory tools (Keycloak, Gitlab-CE, Jenkins, Nexus, Harbor)</li>
@@ -397,8 +357,6 @@ items :
             </ul>
           </li>
         </ul>
-<<<<<<< HEAD
-=======
         </div>
         
   - title: 
@@ -501,5 +459,4 @@ items :
             </ul>
           </li>
         </ul>
->>>>>>> news/azureDeployment
         </div>
