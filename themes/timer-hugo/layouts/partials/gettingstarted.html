@@ -205,7 +205,16 @@
                                 </blockquote>
 
                                 <blockquote id="windowsProviderBlockQuote" >
-                                    Not yet...  </br> 
+                                    <p class="comment"># From Git Bash (Windows) started as administrator with Docker Desktop installed</p>
+                                    git clone https://gitlab.com/kathra/deployment.git <br/>
+                                    cd deployment/terraform/terraform_modules/docker-desktop-stack</br> </br> 
+                                    <p class="comment"># Way 1 - Manual ACME - DNS Challenge</p>
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --manual-acme </br> </br> 
+                                    <p class="comment"># Way 2 - Auto ACME with Terraform provider (https://www.terraform.io/docs/providers/acme/dns_providers/)</p>
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --acme-dns-provider=ovh --acme-dns-config='{"OVH_APPLICATION_KEY": "app-key", "OVH_APPLICATION_SECRET": "app-secret","OVH_CONSUMER_KEY": "consumer-key","OVH_ENDPOINT": "ovh-eu"}'
+                                </br> </br> 
+                                    <p class="comment"># Way 3 - Own Widlcard TLS Certificate (*.kathra.my-own-domain.org)</p>
+                                    ./main.sh deploy --domain=kathra.my-own-domain.org --tlsCert=file.crt --tlsKey=file.key
                                 </blockquote>
                             </div>
                         </div>
